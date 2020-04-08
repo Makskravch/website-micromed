@@ -3,3 +3,11 @@
 @import "mixins.scss";
 @import "extends.scss";
 @import "reset.scss";
+
+// GENERAL
+// HEADER
+@import "general/header/header";
+// NAV
+@import "general/nav/nav";
+// MENU
+@import "general/menu/menu";

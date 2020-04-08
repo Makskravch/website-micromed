@@ -54,9 +54,9 @@
 }
 
 @mixin respond-to($media) {
-	// 0 - 479
+	// 0 - 480
 	@if $media == mobile_small {
-		@media only screen and (max-width: $mobile-landscape - 1) {
+		@media only screen and (max-width: $mobile-landscape) {
 			@content;
 		}
 	}
@@ -66,9 +66,21 @@
 			@content;
 		}
 	}
-	// 0 - 1023
+	// 0 - 1024
 	@if $media == tablet {
-		@media only screen and (max-width: $tablet-landscape - 1) {
+		@media only screen and (max-width: $tablet-landscape) {
+			@content;
+		}
+	}
+	// 0 - 1330
+	@if $media == desktop {
+		@media only screen and (max-width: $tablet-landscape) {
+			@content;
+		}
+	}
+	// 0 - 1600
+	@if $media == desktop_extra {
+		@media only screen and (max-width: $tablet-landscape) {
 			@content;
 		}
 	}
