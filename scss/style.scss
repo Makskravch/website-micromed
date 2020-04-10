@@ -5,9 +5,13 @@
 @import "reset.scss";
 
 // GENERAL
-// HEADER
-@import "general/header/header";
-// NAV
-@import "general/nav/nav";
 // MENU
 @import "general/menu/menu";
+// SEARCH
+@import "general/search/search";
+// CARD
+@import "general/card/card";
+// NAV
+@import "general/nav/nav";
+// HEADER
+@import "general/header/header";

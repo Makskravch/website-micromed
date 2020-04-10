@@ -1,5 +1,6 @@
 .nav {
     flex-basis: 786px;
+    flex-grow: 1;
     border-bottom: 1px solid $gray_1;
 
     &__list {
@@ -10,6 +11,7 @@
 
     &__item {
         flex-basis: 262px;
+        flex-grow: 1;
         border-left: 1px solid $gray_1;
     }
 

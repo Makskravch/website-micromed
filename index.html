@@ -9,8 +9,141 @@
 </head>
   
 <body>
+	<!-- SEARCH -->
+	<div class="search" id="search">
+		<div class="search__inner">
+			<!-- Close buttton -->
+			<div class="search__btn search__btn--close">
+				<div class="search__btn_icon">
+					<svg class="search__btn_svg" width="20" height="21" viewBox="0 0 20 21" xmlns="http://www.w3.org/2000/svg">
+						<path d="M6.71743 3.78249L16.6169 13.682L13.0814 17.2175L3.1819 7.31802L6.71743 3.78249Z" />
+						<path d="M16.6169 7.31802L6.71743 17.2175L3.1819 13.682L13.0814 3.78249L16.6169 7.31802Z" />
+					</svg>
+				</div>
+			</div>
+			<!-- Search header -->
+			<div class="search__header">
+				<p class="search__title">
+					Пошук
+				</p>
+				<label class="search__label">
+					<input type="text" class="search__input" autocomplete="off" name="search" placeholder="Що бажаєте знайти?">
+					<div class="search__icon">
+						<svg class="search__svg" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+							<path d="M17.6125 15.4914C18.7935 13.8786 19.4999 11.8976 19.4999 9.75004C19.4999 4.37405 15.1259 0 9.74993 0C4.37398 0 0 4.37405 0 9.75004C0 15.126 4.37403 19.5001 9.74998 19.5001C11.8975 19.5001 13.8787 18.7936 15.4915 17.6125L21.8789 24L24 21.8789C24 21.8789 17.6125 15.4914 17.6125 15.4914ZM9.74998 16.5C6.02782 16.5 3.00001 13.4722 3.00001 9.75004C3.00001 6.02785 6.02782 3.00003 9.74998 3.00003C13.4721 3.00003 16.5 6.02785 16.5 9.75004C16.5 13.4722 13.4721 16.5 9.74998 16.5Z" />
+						</svg>
+					</div>
+				</label>
+			</div>
+			<!-- Search footer -->
+			<div class="search__footer">
+				<p class="search__title">
+					Найчастіше шукають
+				</p>
+				<div class="search__popular">
+					<ul class="search__popular_list">
+						<li class="search__popular_item">
+							#мікроскоп дитячій 
+						</li>
+						<li class="search__popular_item">
+							#стеріомікроскоп
+						</li>
+						<li class="search__popular_item">
+							#медичні рукавички
+						</li>
+						<li class="search__popular_item">
+							#термостат
+						</li>
+						<li class="search__popular_item">
+							#баня водна
+						</li>
+						<li class="search__popular_item">
+							#центрифуга
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- CARD -->
+	<div class="card card--open" id="card">
+		<div class="card__inner">
+			<!-- Card header -->
+			<div class="card__header">
+				<div class="card__btn card__btn--close">
+					<span class="card__btn_icon">
+						<svg class="card__btn_svg" width="8" height="12" viewBox="0 0 8 12" xmlns="http://www.w3.org/2000/svg">
+							<path d="M7 1L2 6L7 11" stroke-width="2"/>
+						</svg>
+					</span>
+					<span class="card__btn_text">
+						Продовжити покупки
+					</span>
+				</div>
+				<p class="card__title" data-count="39">
+					Корзина
+				</p>
+			</div>
+			<!-- Card form -->
+			<form action="" method="GET" name="card" class="card__form" id="card">
+				<div class="card__order">
+					<ul class="card__order_list">
+						<li class="card__order_item">
+							<div class="card__order_photo">
+								<img src="img/card/1.png" alt="image" class="card__order_img">
+							</div>
+							<a href="#" class="card__order_title">
+								Микроскоп биологический XS-3320 MICROmed
+							</a>
+							<div class="card__order_count">
+								
+							</div>
+							<p class="card__order_cost">
+								10 560
+							</p>
+							<div class="card__order_delete">
+								<svg class="card__order_delete_svg" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+									<path d="M4.24264 14.2426L14.1421 4.34315L15.5563 5.75736L5.65685 15.6569L4.24264 14.2426Z" />
+									<path d="M5.65685 4.34315L15.5563 14.2426L14.1421 15.6569L4.24264 5.75736L5.65685 4.34315Z" />
+								</svg>
+							</div>
+						</li>
+						<li class="card__order_item">
+							<div class="card__order_photo">
+								<img src="" alt="image" class="card__order_img">
+							</div>
+							<a href="#" class="card__order_title">
+								
+							</a>
+							<div class="card__order_count">
+								
+							</div>
+							<p class="card__order_cost">
+								
+							</p>
+							<div class="card__order_delete">
+								<svg class="card__order_delete_svg" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+									<path d="M4.24264 14.2426L14.1421 4.34315L15.5563 5.75736L5.65685 15.6569L4.24264 14.2426Z" />
+									<path d="M5.65685 4.34315L15.5563 14.2426L14.1421 15.6569L4.24264 5.75736L5.65685 4.34315Z" />
+								</svg>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<!-- Form footer -->
+				<div class="card__footer">
+					<button class="card__submit" type="submit">
+						Зробити замовлення
+					</button>
+					<p class="card__total">
+						217 670 ГРН
+					</p>
+				</div>
+			</form>
+		</div>
+	</div>
 	<!-- MENU -->
-	<div class="menu">
+	<div class="menu" id="menu">
 		<div class="menu__inner">
 			<ul class="menu__list">
 				<li class="menu__item">
@@ -56,6 +189,12 @@
 				<li class="menu__item">
 					<a href="#" class="menu__link">
 						Завантажити ціни
+						<span class="menu__link_icon">
+							<svg class="menu__link_svg" width="14" height="12" viewBox="0 0 14 12" xmlns="http://www.w3.org/2000/svg">
+								<path d="M7 12L0 6.54545H14L7 12Z" />
+								<path d="M4.2 0H9.8V6.54545H4.2V0Z" />
+							</svg>
+						</span>
 					</a>
 				</li>
 				<li class="menu__item">
@@ -103,7 +242,7 @@
 			<!-- Header left -->
 			<div class="header__left">
 				<!-- Menu open/close button -->
-				<div class="menu__btn">
+				<div class="header__menu menu__btn">
 					<svg class="menu__btn_svg menu__btn_svg--open" width="14" height="13" viewBox="0 0 14 13" xmlns="http://www.w3.org/2000/svg">
 						<path d="M0 0H5.33333V4.8H0V0Z" />
 						<path d="M0 8.2H5.33333V13H0V8.2Z" />
@@ -127,7 +266,7 @@
 			<!-- Header right -->
 			<div class="header__right">
 				<!-- NAV -->
-				<nav class="nav" id="nav">
+				<nav class="header__nav nav" id="nav">
 					<ul class="nav__list">
 						<li class="nav__item">
 							<a href="#" class="nav__link">
@@ -173,7 +312,7 @@
 					</ul>
 				</div>
 				<!-- Search -->
-				<div class="header__search">
+				<div class="header__search search__btn">
 					<div class="header__search_inner">
 						<div class="header__search_icon">
 							<svg class="header__search_svg" width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
@@ -192,7 +331,7 @@
 					</p>
 				</div>
 				<!-- Card -->
-				<div class="header__card">
+				<div class="header__card card__btn">
 					<div class="header__card_icon" data-orders="10">
 						<svg class="header__card_svg" width="30" height="26" viewBox="0 0 30 26" xmlns="http://www.w3.org/2000/svg">
 							<path d="M21.4381 20.1879C19.8063 20.1879 18.4832 21.4887 18.4832 23.0937C18.4832 24.699 19.8059 26 21.4377 26C23.07 26 24.3926 24.699 24.3926 23.0941C24.3911 21.4896 23.0691 20.1895 21.4381 20.1879ZM21.4381 24.6988C20.5366 24.6988 19.8063 23.9803 19.8063 23.0941C19.8063 22.2076 20.5366 21.4891 21.4377 21.4891C22.3392 21.4887 23.0695 22.2076 23.0695 23.0937C23.0685 23.9797 22.3388 24.6973 21.4381 24.6988Z" />
