@@ -26,9 +26,8 @@
         display: inline-flex;
         flex-direction: column;
         justify-content: space-between;
-        min-height: 100%;
-        width: 41.7%;
-        min-width: 600px;
+        height: 100%;
+        width: 100%;
         max-width: 800px;
         transform: translateX(100%);
         background-color: $white_0;
@@ -48,10 +47,6 @@
 
     &__btn {
         cursor: pointer;
-
-        // &--close {
-
-        // }
 
         &_icon {
             display: inline-block;
@@ -85,46 +80,59 @@
         display: flex;
         flex-direction: column;
         flex-grow: 1;
+        height: calc(100vh - 100px);
+        overflow-x: hidden;
         padding: 0 7.5%;
     }
 
     &__order {
         flex-grow: 1;
 
-        &_list {
-            overflow-x: hidden;
-        }
-
         &_item {
             display: grid;
-            grid-template-columns: repeat(5, auto);
-            grid-template-rows: 90px;
+            grid-template-columns: 100px 1fr 60px 130px 20px;
+            grid-template-rows: minmax(90px, auto);
+            grid-gap: 30px;
             justify-content: space-between;
             align-items: center;
             padding: 40px 0;
             border-bottom: 1px solid $gray_1;
         }
 
-        // &_photo {
-            
-        // }
-
-        // &_img {
-
-        // }
-
         &_title {
             @include font(14px, 20px, "Montserrat-Medium");
 
-            padding: 0 15px;
             color: $gray_7;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        &_count {
+            display: flex;
+
+            &_input {
+                width: 30px;
+                padding: 0;
+                border: 0;
+                margin: 0 5px;
+                text-align: center;
+            }
+        }
+
+        &_button {
+            padding: 0;
+            border: 0;
+            background-color: transparent;
+            cursor: pointer;
         }
 
         &_cost {
             @include font(16px, 20px, "Montserrat-Bold");
 
-            padding: 0 15px;
             color: $black_0;
+            text-align: right;
             white-space: nowrap;
 
             &::after {
@@ -133,7 +141,7 @@
             }
         }
 
-        &_delete {
+        &_remove {
             width: 20px;
             fill: $red_0;
             cursor: pointer;
@@ -144,7 +152,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 8.82% 0;
+        padding: 60px 0;
     }
 
     &__submit {
@@ -163,5 +171,10 @@
         @include font(26px, 32px, "Montserrat-Bold");
 
         color: $black_0;
+
+        &::after {
+            content: "грн";
+            text-transform: uppercase;
+        }
     }
 }
