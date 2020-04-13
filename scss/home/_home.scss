@@ -1,0 +1,139 @@
+.home {
+
+    &__slider {
+
+        &_list {
+
+            &.slick-dotted {
+                margin-bottom: 0;
+            }
+        }
+
+        &_item {
+            background: linear-gradient(300.19deg, $blue_4 24.05%, $blue_5 100.63%);
+
+            &_inner {
+                @include background(url("../../img/svg/home/slider/MICROMED.svg"), 0%, 83%, contain);
+
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                height: calc(100vh - 100px);
+                padding-left: 100px;
+            }
+        }
+
+        &_text {
+            width: 50%;
+            max-width: 655px;
+        }
+
+        &_title {
+            @include font(51px, 55px, "Montserrat-Bold");
+
+            margin-bottom: 55px;
+            color: $white_0;
+
+            &_span {
+                @include font(18px, 22px, "Montserrat-Regular");
+
+                color: $blue_3;
+            }
+        }
+
+        &_description {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &_paragraph {
+            @include font(14px, 24px, "Montserrat-Regular");
+
+            width: 63.96%;
+            color: $white_0;
+        }
+
+        &_link {
+            @include font(14px, 17px, "Montserrat-Bold");
+
+            padding: 27px 47px;
+            border: 1px solid $white_0;
+            border-radius: 100px;
+            color: $white_0;
+            text-transform: uppercase;
+            will-change: background-color, color;
+            transition: background-color 0.2s, color 0.2s;
+
+            &:hover {
+                background-color: $white_0;
+                color: $blue_0;
+            }
+        }
+
+        &_image {
+            position: relative;
+            height: 100%;
+            width: 57.14%;
+
+            &_main {
+                position: relative;
+                display: flex;
+                align-items: flex-end;
+                width: 68.46%;
+                height: 100%;
+                padding-top: 57px;
+                z-index: 1;
+            }
+
+            &_tr {
+                position: absolute;
+                top: 0;
+                right: 0;
+                display: flex;
+                justify-content: flex-end;
+                height: 60.22%;
+                mix-blend-mode: multiply;
+            }
+
+            &_br {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                display: flex;
+                justify-content: flex-end;
+                height: 39.78%;
+                mix-blend-mode: multiply;
+            }
+        }
+
+        &_pagination {
+            position: absolute;
+            left: 100px;
+            bottom: 15.31%;
+            display: flex;
+
+            li {
+                width: 9px;
+                height: 9px;
+                border: 2px solid $blue_6;
+                border-radius: 50%;
+                margin-right: 25px;
+                cursor: pointer;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+
+            .slick-active {
+                border-color: $white_0;
+                background-color: $white_0;
+            }
+
+            button {
+                display: none;
+            }
+        }
+    }
+}

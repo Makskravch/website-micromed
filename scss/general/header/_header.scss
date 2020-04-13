@@ -56,7 +56,7 @@
             transform: translateY(-100%);
             will-change: transform;
             transition: transform 0.2s;
-            z-index: -1;
+            z-index: 2;
         }
 
         &_item {
@@ -72,6 +72,7 @@
                 padding: 15px;
                 border: 1px solid $gray_1;
                 border-top: 0;
+                background-color: $white_0;
                 color: $black_0;
                 cursor: pointer;
             }
@@ -87,11 +88,13 @@
             padding: 15px;
             border: 1px solid $gray_1;
             border-top: 0;
-            // background-color: $white_0;
+            background-color: $white_0;
             color: $black_0;
             white-space: nowrap;
 
             &--arrow-down {
+                position: relative;
+                z-index: 3;
 
                 &::after {
                     content: "";

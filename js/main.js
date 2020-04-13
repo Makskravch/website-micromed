@@ -40,4 +40,31 @@ $(document).ready(function() {
             }
         })
     }
+
+    
+    // Home slider
+    if ($('.home__slider_list').length) {
+        $('.home__slider_list').slick({
+            infinite: false,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            draggable: false,
+            dots: true,
+            dotsClass: 'home__slider_pagination',
+            // fade: true,
+            // autoplay: true,
+            // infinite: true,
+            speed: 1000,
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        arrows: false,
+                        infinite: true
+                    }
+                },
+            ]
+        });
+    }
 })
