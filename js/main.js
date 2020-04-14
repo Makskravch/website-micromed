@@ -42,7 +42,7 @@ $(document).ready(function() {
     }
 
     
-    // Home slider
+    // Home main slider
     if ($('.home__slider_list').length) {
         $('.home__slider_list').slick({
             infinite: false,

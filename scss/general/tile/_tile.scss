@@ -1,0 +1,382 @@
+// <div class="tile tile--discontinued tile--availability tile--sale tile--new tile--top">
+//     <div class="tile__inner">
+//         <a href="#" class="tile__link">
+//             <div class="tile__photo">
+//                 <img src="" alt="image" class="tile__img">
+//             </div>
+//             <p class="tile__title">
+
+//                 <span class="tile__category">
+
+//                 </span>
+//             </p>
+//         </a>
+//         <div class="tile__footer">
+//             <p class="tile__cost">
+//                 <span class="tile__cost_sale">
+
+//                 </span>
+//                 <span class="tile__cost_price">
+
+//                 </span>
+//             </p>
+//             <a href="#" class="tile__card_link">
+//                 <i class="tile__card_icon">
+//                     <svg class="tile__card_svg" width="30" height="26" viewBox="0 0 30 26" xmlns="http://www.w3.org/2000/svg">
+//                         <path d="M21.4381 20.1879C19.8063 20.1879 18.4832 21.4887 18.4832 23.0937C18.4832 24.699 19.8059 26 21.4377 26C23.07 26 24.3926 24.699 24.3926 23.0941C24.3911 21.4896 23.0691 20.1895 21.4381 20.1879ZM21.4381 24.6988C20.5366 24.6988 19.8063 23.9803 19.8063 23.0941C19.8063 22.2076 20.5366 21.4891 21.4377 21.4891C22.3392 21.4887 23.0695 22.2076 23.0695 23.0937C23.0685 23.9797 22.3388 24.6973 21.4381 24.6988Z" />
+//                         <path d="M29.3381 4.09892H5.86423L5.45136 2.44698C5.09478 1.00592 3.77939 -0.00607874 2.27173 2.7483e-05H0.661423C0.296151 2.7483e-05 0 0.291293 0 0.650745C0 1.00999 0.296151 1.30126 0.661423 1.30126H2.27173C3.16887 1.29413 3.95343 1.89498 4.16659 2.75229L7.37851 15.6529C7.73696 17.0911 9.05339 18.0986 10.5588 18.0872H24.298C25.8245 18.0992 27.1529 17.0634 27.4894 15.5993L29.9832 4.87908C30.0283 4.68857 29.9814 4.48829 29.8557 4.33624C29.7293 4.18338 29.5387 4.09586 29.3381 4.09892ZM26.1999 15.3134C25.9983 16.1839 25.2059 16.7976 24.298 16.786H10.5588C9.66287 16.7955 8.87789 16.1973 8.6639 15.3416L6.18791 5.40015H28.5081L26.1999 15.3134Z" />
+//                         <path d="M12.4901 20.1879C10.8582 20.1879 9.53519 21.4887 9.53519 23.0937C9.53519 24.699 10.858 26 12.4899 26C14.1219 26 15.4447 24.699 15.4447 23.0941C15.4433 21.4896 14.1213 20.1895 12.4901 20.1879ZM12.4901 24.6988C11.5888 24.6988 10.8582 23.9803 10.8582 23.0941C10.8582 22.2076 11.5888 21.4891 12.4899 21.4891C13.3911 21.4887 14.1217 22.2076 14.1217 23.0937C14.1207 23.9797 13.3907 24.6973 12.4901 24.6988Z" />
+//                     </svg>
+//                 </i>
+//                 В корзину
+//             </a>
+//         </div>
+//     </div>
+// </div>
+
+
+.tile {
+    position: relative;
+    height: 100%;
+
+    &--discontinued {
+
+        .tile__discontinued {
+            display: flex;
+        }
+
+        .tile__card_link {
+            display: none;
+        }
+
+        .tile__title {
+            opacity: 0.5;
+        }
+
+        .tile__cost {
+            opacity: 0.5;
+        }
+
+        .tile__discontinued_link {
+            display: flex;
+        }
+    }
+
+    &--availability {
+
+        .tile__availability {
+            display: flex;
+        }
+
+        .tile__card_link {
+            display: none;
+        }
+
+        .tile__availability_link {
+            display: flex;
+        }
+    }
+
+    &--top {
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 0;
+            border: 32px solid $blue_0;
+            border-bottom-color: transparent;
+            border-right-color: transparent;
+        }
+
+        
+        &::after {
+            @include font(12px, 15px, "Montserrat-Bold");
+
+            content: 'top';
+            position: absolute;
+            top: 32px;
+            left: 32px;
+            transform: rotate(-45deg) translate(-50%, calc(-100% - 6px));
+            transform-origin: 0% 0%;
+            color: $white_0;
+            text-transform: uppercase;
+        }
+    }
+
+    &--new {
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 0;
+            border: 32px solid $green_0;
+            border-bottom-color: transparent;
+            border-right-color: transparent;
+        }
+
+        
+        &::after {
+            @include font(12px, 15px, "Montserrat-Bold");
+
+            content: 'new';
+            position: absolute;
+            top: 32px;
+            left: 32px;
+            transform: rotate(-45deg) translate(-50%, calc(-100% - 6px));
+            transform-origin: 0% 0%;
+            color: $white_0;
+            text-transform: uppercase;
+        }
+    }
+
+    &--sale {
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 0;
+            border: 32px solid $red_1;
+            border-bottom-color: transparent;
+            border-right-color: transparent;
+        }
+
+        
+        &::after {
+            @include font(12px, 15px, "Montserrat-Bold");
+
+            content: 'sale';
+            position: absolute;
+            top: 32px;
+            left: 32px;
+            transform: rotate(-45deg) translate(-50%, calc(-100% - 6px));
+            transform-origin: 0% 0%;
+            color: $white_0;
+            text-transform: uppercase;
+        }
+
+        .tile__cost_sale {
+            display: inline;
+        }
+
+        .tile__cost_price {
+            font-family: "Montserrat-Regular";
+            color: $gray_8;
+            text-decoration: line-through;
+        }
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        padding: 50px 15px;
+    }
+
+    &__link {
+        margin-bottom: 30px;
+    }
+
+    &__photo {
+        position: relative;
+        margin: 0 auto 28px;
+        max-width: 230px;
+        padding-bottom: 230px;
+    }
+
+    &__img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    &__discontinued {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        background-color: $white_1;
+        text-align: center;
+        z-index: 1;
+
+        &_title {
+            @include font(18px, 22px, "Montserrat-Bold");
+
+            color: $black_0;
+        }
+
+        &_link {
+            @include font(14px, 17px, "Montserrat-Bold");
+
+            display: none;
+            justify-content: center;
+            align-items: center;
+            width: 160px;
+            margin: 0 auto;
+            min-height: 56px;
+            padding: 10px 25px;
+            border: 1px solid $blue_0;
+            border-radius: 100px;
+            color: $blue_0;
+            text-align: center;
+            will-change: background-color, color;
+            transition: background-color 0.2s, color 0.2s;
+
+            &:hover {
+                background-color: $blue_0;
+                color: $white_0;
+            }
+        }
+    }
+
+    &__availability {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        background-color: $white_1;
+        text-align: center;
+        z-index: 1;
+
+        &_title {
+            @include font(18px, 22px, "Montserrat-Bold");
+
+            margin-bottom: 8px;
+            color: $black_0;
+        }
+
+        &_expected {
+            @include font(14px, 17px, "Montserrat-Medium");
+
+            padding: 16px 18px;
+            background-color: $blue_0;
+            color: $white_0;
+            white-space: nowrap;
+        }
+
+        &_link {
+            @include font(14px, 17px, "Montserrat-Bold");
+
+            display: none;
+            justify-content: center;
+            align-items: center;
+            width: 160px;
+            margin: 0 auto;
+            min-height: 56px;
+            padding: 10px 25px;
+            border: 1px solid $blue_0;
+            border-radius: 100px;
+            color: $blue_0;
+            text-align: center;
+            will-change: background-color, color;
+            transition: background-color 0.2s, color 0.2s;
+
+            &:hover {
+                background-color: $blue_0;
+                color: $white_0;
+            }
+        }
+    }
+
+    &__title {
+        @include font(14px, 20px, "Montserrat-Medium");
+
+        max-width: 270px;
+        margin: 0 auto;
+        color: $gray_7;
+        text-align: center;
+    }
+
+    &__category {
+        @include font(12px, 15px, "Montserrat-Bold");
+
+        display: block;
+        margin-top: 8px;
+        color: $gray_8;
+    }
+
+    &__footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 130px;
+    }
+
+    &__cost {
+        @include font(18px, 22px, "Montserrat-Bold");
+
+        color: $black_0;
+        text-align: center;
+
+        &_sale {
+            display: none;
+            margin-right: 7px;
+            color: $red_1;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        &_price {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+
+    &__card {
+
+        &_link {
+            @include font(14px, 17px, "Montserrat-Bold");
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 160px;
+            margin: 0 auto;
+            min-height: 56px;
+            padding: 10px 25px;
+            border: 1px solid $blue_0;
+            border-radius: 100px;
+            color: $blue_0;
+            fill: $blue_0;
+            text-align: center;
+            will-change: background-color, color, fill;
+            transition: background-color 0.2s, color 0.2s, fill 0.2s;
+
+            &:hover {
+                background-color: $blue_0;
+                color: $white_0;
+                fill: $white_0;
+            }
+        }
+
+        &_icon {
+            width: 20px;
+            margin-right: 8px;
+        }
+    }
+}

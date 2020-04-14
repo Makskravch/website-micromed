@@ -188,6 +188,8 @@
             fill: $black_0;
 
             &::before {
+                @include font(10px, 12px, "Montserrat-Bold");
+
                 content: attr(data-orders) "";
                 position: absolute;
                 top: 0;
