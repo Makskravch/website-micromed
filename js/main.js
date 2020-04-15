@@ -67,4 +67,85 @@ $(document).ready(function() {
             ]
         });
     }
+
+    // Home tile section (sale)
+    if ($('.slider__tile_sale').length) {
+        $('.slider__tile_sale').slick({
+            slidesToShow: 5,
+            slidesToScroll: 1,
+            arrows: true,
+            draggable: true,
+            autoplay: true,
+            infinite: true,
+            speed: 2000,
+            responsive: [
+                {
+                    breakpoint: 1440,
+                    settings: {
+                        slidesToShow: 4,
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        arrows: false,
+                    }
+                },
+            ]
+        });
+    }
+
+    // Home tile section (new)
+    if ($('.slider__tile_new').length) {
+        $('.slider__tile_new').slick({
+            slidesToShow: 5,
+            slidesToScroll: 1,
+            arrows: true,
+            draggable: true,
+            autoplay: true,
+            infinite: true,
+            speed: 2000,
+            responsive: [
+                {
+                    breakpoint: 1440,
+                    settings: {
+                        slidesToShow: 4,
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        arrows: false,
+                    }
+                },
+            ]
+        });
+    }
+
+    // Home tile section (top)
+    if ($('.slider__tile_top').length) {
+        $('.slider__tile_top').slick({
+            slidesToShow: 5,
+            slidesToScroll: 1,
+            arrows: true,
+            draggable: true,
+            autoplay: true,
+            infinite: true,
+            speed: 2000,
+            responsive: [
+                {
+                    breakpoint: 1440,
+                    settings: {
+                        slidesToShow: 4,
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        arrows: false,
+                    }
+                },
+            ]
+        });
+    }
 })

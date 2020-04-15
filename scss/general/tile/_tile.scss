@@ -37,7 +37,9 @@
 
 .tile {
     position: relative;
-    height: 100%;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
 
     &--discontinued {
 
@@ -175,15 +177,11 @@
     }
 
     &__inner {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        height: 100%;
         padding: 50px 15px;
     }
 
     &__link {
+        display: block;
         margin-bottom: 30px;
     }
 
@@ -191,7 +189,7 @@
         position: relative;
         margin: 0 auto 28px;
         max-width: 230px;
-        padding-bottom: 230px;
+        padding-bottom: 65.16%;
     }
 
     &__img {
@@ -300,13 +298,18 @@
         }
     }
 
+    &__description {
+        text-align: center;
+    }
+
     &__title {
         @include font(14px, 20px, "Montserrat-Medium");
 
+        height: 40px;
         max-width: 270px;
         margin: 0 auto;
         color: $gray_7;
-        text-align: center;
+        overflow: hidden;
     }
 
     &__category {
@@ -317,19 +320,14 @@
         color: $gray_8;
     }
 
-    &__footer {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        min-height: 130px;
-    }
-
     &__cost {
         @include font(18px, 22px, "Montserrat-Bold");
 
+        height: 44px;
+        margin-bottom: 30px;
         color: $black_0;
         text-align: center;
+        overflow: hidden;
 
         &_sale {
             display: none;
@@ -341,6 +339,7 @@
         }
 
         &_price {
+            margin-right: 7px;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
