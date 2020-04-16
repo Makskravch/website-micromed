@@ -160,13 +160,14 @@
             background: linear-gradient(296.78deg, #2D6BE1 24.05%, #12419D 100.63%);
 
             &_title {
-                @include font(56px, 68px, "Montserrat-Bold");
+                @include font(56px, 68px, "Montserrat-Black");
 
                 position: absolute;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
                 color: $white_0;
+                text-transform: uppercase;
             }
         }
 
@@ -272,6 +273,28 @@
             &_line {
                 display: block;
             }
+        }
+    }
+
+    &__seo {
+
+        &_inner {
+            padding: 5.21%;
+        }
+
+        &_title {
+            @include font(22px, 24px, "Montserrat-Bold");
+
+            margin-bottom: 47px;
+            color: $black_0;
+        }
+
+        &_description {
+            @include font(14px, 24px, "Montserrat-Regular");
+
+            columns: 3;
+            column-gap: 42px;
+            color: $gray_10;
         }
     }
 }
