@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+    const body = $('body');
+    
     // MENU
     if ($('#menu').length) {
 
@@ -9,6 +11,7 @@ $(document).ready(function() {
         $(document).click(function(e) {
 
             if ($(e.target).closest('.menu__btn').length || $(e.target).hasClass('menu')) {
+                body.toggleClass('overflow')
                 menuBtn.toggleClass('menu__btn--open')
                 menu.toggleClass('menu--open')
             }
@@ -23,6 +26,7 @@ $(document).ready(function() {
         $(document).click(function(e) {
 
             if ($(e.target).closest('.search__btn').length || $(e.target).hasClass('search')) {
+                body.toggleClass('overflow')
                 search.toggleClass('search--open')
             }
         })
@@ -36,6 +40,7 @@ $(document).ready(function() {
         $(document).click(function(e) {
 
             if ($(e.target).closest('.card__btn').length || $(e.target).hasClass('card')) {
+                body.toggleClass('overflow')
                 card.toggleClass('card--open')
             }
         })

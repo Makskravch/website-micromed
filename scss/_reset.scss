@@ -22,6 +22,7 @@ body, h1, h2, h3, h4, h5, h6, p, ul, li {
 body {
 	font-family: 'Helvetica Neue', 'Arial', sans-serif;
 	background-color: $white_0;
+	overflow-x: hidden;
 }
 
 ul, li {
@@ -64,4 +65,8 @@ input {
 	&[type=number] {
 		-moz-appearance: textfield;
 	}
+}
+
+.overflow {
+	overflow: hidden;
 }
