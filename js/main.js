@@ -47,7 +47,7 @@ $(document).ready(function() {
     }
 
     
-    // Home main slider
+    // HOME main slider
     if ($('.home__slider_list').length) {
         $('.home__slider_list').slick({
             infinite: false,
@@ -73,7 +73,7 @@ $(document).ready(function() {
         });
     }
 
-    // Home tile section (sale)
+    // HOME tile section (sale)
     if ($('.slider__tile_sale').length) {
         $('.slider__tile_sale').slick({
             slidesToShow: 5,
@@ -100,7 +100,7 @@ $(document).ready(function() {
         });
     }
 
-    // Home tile section (new)
+    // HOME tile section (new)
     if ($('.slider__tile_new').length) {
         $('.slider__tile_new').slick({
             slidesToShow: 5,
@@ -127,7 +127,7 @@ $(document).ready(function() {
         });
     }
 
-    // Home tile section (top)
+    // HOME tile section (top)
     if ($('.slider__tile_top').length) {
         $('.slider__tile_top').slick({
             slidesToShow: 5,
@@ -152,5 +152,41 @@ $(document).ready(function() {
                 },
             ]
         });
+    }
+
+    // PRODUCT PAGE
+    // Preview tabs (photo)
+    if ($("#product__preview").length) {
+
+        let img, 
+            container = $('.product__photo_inner')
+
+        $("#product__preview").click(function(e) {
+            if ($(e.target).closest('.product__preview_item')) {
+                img = $(e.target).closest('.product__preview_item').find('.product__preview_img')
+                src = img.attr('src')
+                container.find('img').attr('src', src)
+            }
+        })
+    }
+
+    // Preview tabs (description)
+    if ($("#product__description").length) {
+
+        let tabs = $('.product__description_tab_item')
+        let panes = $('.product__description_pane_item')
+
+        $("#product__description").click(function(e) {
+            tabs.removeClass('product__description_tab_item--active');
+            $(e.target).closest('.product__description_tab_item').addClass('product__description_tab_item--active')
+
+            panes.removeClass('product__description_pane_item--active');
+
+            for (let i = 0; i < tabs.length; i++) {
+                if ($(tabs[i]).hasClass('product__description_tab_item--active')) {
+                    $(panes[i]).addClass('product__description_pane_item--active')
+                }
+            }
+        })
     }
 })

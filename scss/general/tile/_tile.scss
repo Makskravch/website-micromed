@@ -3,13 +3,28 @@
 //         <a href="#" class="tile__link">
 //             <div class="tile__photo">
 //                 <img src="" alt="image" class="tile__img">
+//                 <div class="tile__availability">
+//                     <p class="tile__availability_title">
+//                         Немає в наявності
+//                     </p>
+//                     <p class="tile__availability_expected">
+//                         Очікується 10.03.2020
+//                     </p>
+//                 </div>
+//                 <div class="tile__discontinued">
+//                     <p class="tile__discontinued_title">
+//                         Знятий з виробництва
+//                     </p>
+//                 </div>
 //             </div>
-//             <p class="tile__title">
+//             <div class="tile__description">
+//                 <p class="tile__title">
 
-//                 <span class="tile__category">
+//                 </p>
+//                 <p class="tile__category">
 
-//                 </span>
-//             </p>
+//                 </p>
+//             </div>
 //         </a>
 //         <div class="tile__footer">
 //             <p class="tile__cost">
@@ -29,6 +44,12 @@
 //                     </svg>
 //                 </i>
 //                 В корзину
+//             </a>
+//             <a href="#" class="tile__availability_link">
+//                 Повідомити про наявність
+//             </a>
+//             <a href="#" class="tile__discontinued_link">
+//                 Переглянути аналоги
 //             </a>
 //         </div>
 //     </div>
@@ -271,7 +292,6 @@
             padding: 16px 18px;
             background-color: $blue_0;
             color: $white_0;
-            white-space: nowrap;
         }
 
         &_link {
@@ -309,6 +329,7 @@
         max-width: 270px;
         margin: 0 auto;
         color: $gray_7;
+        text-align: center;
         overflow: hidden;
     }
 
@@ -318,6 +339,7 @@
         display: block;
         margin-top: 8px;
         color: $gray_8;
+        text-align: center;
     }
 
     &__cost {

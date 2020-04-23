@@ -1,0 +1,63 @@
+// <div class="breadcrumbs">
+//     <ul class="breadcrumbs__list">
+//         <li class="breadcrumbs__item">
+//             <a href="#" class="breadcrumbs__link">
+
+//             </a>
+//         </li>
+//         <li class="breadcrumbs__item">
+//             <a href="#" class="breadcrumbs__link">
+
+//             </a>
+//         </li>
+//         <li class="breadcrumbs__item">
+//             <a href="#" class="breadcrumbs__link">
+
+//             </a>
+//         </li>
+//         <li class="breadcrumbs__item">
+//             <a href="#" class="breadcrumbs__link">
+
+//             </a>
+//         </li>
+//         <li class="breadcrumbs__item">
+//             <span class="breadcrumbs__actual">
+
+//             </span>
+//         </li>
+//     </ul>
+// </div>
+
+.breadcrumbs {
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 27px 43px;
+    }
+
+    &__item {
+        margin-right: 3px;
+    }
+
+    &__link {
+        @include font(14px, 17px, "Montserrat-Regular");
+
+        color: $gray_11;
+        transition: color 0.2s;
+
+        &::after {
+            content: "/";
+        }
+
+        &:hover {
+            color: $black_0;
+        }
+    }
+
+    &__actual {
+        @include font(14px, 17px, "Montserrat-Regular");
+
+        color: $black_0;
+    }
+}

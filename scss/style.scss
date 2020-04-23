@@ -7,6 +7,10 @@
 // GENERAL
 // TILE
 @import "general/tile/tile";
+// SIMILAR
+@import "general/similar_product/similar";
+// BREADCRUMBS
+@import "general/breadcrumbs/breadcrumbs";
 // MENU
 @import "general/menu/menu";
 // SEARCH
@@ -23,3 +27,5 @@
 
 // Home
 @import "home/home";
+// Product
+@import "product/product";
