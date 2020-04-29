@@ -1,13 +1,14 @@
-// <div class="tile tile--discontinued tile--availability tile--sale tile--new tile--top">
+// Classes for different tiles (tile--discontinued, tile--unavailable, tile--sale, tile--new, tile--top)
+// <div class="tile tile--discontinued tile--unavailable tile--sale tile--new tile--top">
 //     <div class="tile__inner">
 //         <a href="#" class="tile__link">
 //             <div class="tile__photo">
 //                 <img src="" alt="image" class="tile__img">
-//                 <div class="tile__availability">
-//                     <p class="tile__availability_title">
+//                 <div class="tile__unavailable">
+//                     <p class="tile__unavailable_title">
 //                         Немає в наявності
 //                     </p>
-//                     <p class="tile__availability_expected">
+//                     <p class="tile__unavailable_expected">
 //                         Очікується 10.03.2020
 //                     </p>
 //                 </div>
@@ -45,7 +46,7 @@
 //                 </i>
 //                 В корзину
 //             </a>
-//             <a href="#" class="tile__availability_link">
+//             <a href="#" class="tile__unavailable_link">
 //                 Повідомити про наявність
 //             </a>
 //             <a href="#" class="tile__discontinued_link">
@@ -85,9 +86,9 @@
         }
     }
 
-    &--availability {
+    &--unavailable {
 
-        .tile__availability {
+        .tile__unavailable {
             display: flex;
         }
 
@@ -95,7 +96,7 @@
             display: none;
         }
 
-        .tile__availability_link {
+        .tile__unavailable_link {
             display: flex;
         }
     }
@@ -264,7 +265,7 @@
         }
     }
 
-    &__availability {
+    &__unavailable {
         display: none;
         position: absolute;
         top: 0;

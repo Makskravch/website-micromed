@@ -1,20 +1,103 @@
 .similar {
+    width: 100%;
+
+    .tile {
+
+        &__cost {
+            margin-bottom: 0;
+        }
+
+        &__card_link {
+            display: none;
+        }
+
+        &__unavailable_link {
+            display: none;
+        }
+
+        &__discontinued_link {
+            display: none;
+        }
+    }
 
     &__body {
+        width: 100%;
+        border-bottom: 1px solid $gray_1;
 
         &_list {
-            display: flex;
+
+            .slick-prev {
+                left: 0;
+                width: 30px;
+                height: 60px;
+                overflow: hidden;
+                z-index: 1;
+
+                &::before {
+                    @include font(20px, 60px, "Montserrat-Medium");
+
+                    content: '<';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 75%;
+                    color: $gray_9;
+                    z-index: 1;
+                }
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    width: 200%;
+                    height: 100%;
+                    transform: translate(-50%, -50%);
+                    background-color: $gray_1;
+                    border-radius: 50%;
+                }
+            }
+
+            .slick-next {
+                right: 0;
+                width: 30px;
+                height: 60px;
+                overflow: hidden;
+                z-index: 1;
+
+                &::before {
+                    @include font(20px, 60px, "Montserrat-Medium");
+
+                    content: '>';
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 75%;
+                    color: $gray_9;
+                    z-index: 1;
+                }
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    width: 200%;
+                    height: 100%;
+                    transform: translate(50%, -50%);
+                    background-color: $gray_1;
+                    border-radius: 50%;
+                }
+            }
         }
 
         &_item {
-            width: 33.33%;
             border-right: 1px solid $gray_1;
 
             &:last-child {
                 border-right: 0;
             }
         }
-
     }
 
     &__head {

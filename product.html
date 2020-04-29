@@ -99,7 +99,7 @@
 							<a href="#" class="card__order_title">
 								Микроскоп биологический XS-3320 MICROmed
 							</a>
-							<div class="card__order_count">
+							<div class="card__order_count number">
 								<button type="button" class="card__order_button card__order_button--subtract">
 									<i class="card__order_button_icon">
 										<svg class="card__order_button_svg" width="10" height="2" viewBox="0 0 10 2" xmlns="http://www.w3.org/2000/svg">
@@ -134,7 +134,7 @@
 							<a href="#" class="card__order_title">
 								Баня водяная ВБ-4 MICROmed
 							</a>
-							<div class="card__order_count">
+							<div class="card__order_count number">
 								<button type="button" class="card__order_button card__order_button--subtract">
 									<i class="card__order_button_icon">
 										<svg class="card__order_button_svg" width="10" height="2" viewBox="0 0 10 2" xmlns="http://www.w3.org/2000/svg">
@@ -169,7 +169,7 @@
 							<a href="#" class="card__order_title">
 								Термостат суховоздушный TC-80 MICROMED
 							</a>
-							<div class="card__order_count">
+							<div class="card__order_count number">
 								<button type="button" class="card__order_button card__order_button--subtract">
 									<i class="card__order_button_icon">
 										<svg class="card__order_button_svg" width="10" height="2" viewBox="0 0 10 2" xmlns="http://www.w3.org/2000/svg">
@@ -204,7 +204,7 @@
 							<a href="#" class="card__order_title">
 								Стереомікроскоп учбовий My First Lab SMD-04
 							</a>
-							<div class="card__order_count">
+							<div class="card__order_count number">
 								<button type="button" class="card__order_button card__order_button--subtract">
 									<i class="card__order_button_icon">
 										<svg class="card__order_button_svg" width="10" height="2" viewBox="0 0 10 2" xmlns="http://www.w3.org/2000/svg">
@@ -239,7 +239,7 @@
 							<a href="#" class="card__order_title">
 								Баня водяная ВБ-4 MICROMED
 							</a>
-							<div class="card__order_count">
+							<div class="card__order_count number">
 								<button type="button" class="card__order_button card__order_button--subtract">
 									<i class="card__order_button_icon">
 										<svg class="card__order_button_svg" width="10" height="2" viewBox="0 0 10 2" xmlns="http://www.w3.org/2000/svg">
@@ -274,7 +274,7 @@
 							<a href="#" class="card__order_title">
 								Термостат суховоздушный TC-80 MICROmed
 							</a>
-							<div class="card__order_count">
+							<div class="card__order_count number">
 								<button type="button" class="card__order_button card__order_button--subtract">
 									<i class="card__order_button_icon">
 										<svg class="card__order_button_svg" width="10" height="2" viewBox="0 0 10 2" xmlns="http://www.w3.org/2000/svg">
@@ -309,7 +309,7 @@
 							<a href="#" class="card__order_title">
 								Стереомікроскоп учбовий My First Lab SMD-04
 							</a>
-							<div class="card__order_count">
+							<div class="card__order_count number">
 								<button type="button" class="card__order_button card__order_button--subtract">
 									<i class="card__order_button_icon">
 										<svg class="card__order_button_svg" width="10" height="2" viewBox="0 0 10 2" xmlns="http://www.w3.org/2000/svg">
@@ -950,7 +950,7 @@
 	</div>
 	<!-- MAIN -->
 	<main class="main" id="main">
-		<div class="product" id="product">
+		<div class="product" id="product"> <!-- Add a "product--unavailable" class name to unavailable products -->
 			<!-- Preview -->
 			<div class="product__preview" id="product__preview">
 				<!-- Preview head -->
@@ -960,7 +960,7 @@
 							<p class="product__preview_head_id">
 								40041
 							</p>
-							<p class="product__preview_head_availability">
+							<p class="product__preview_head_unavailable">
 								На складе
 							</p>
 						</div>
@@ -972,8 +972,8 @@
 						Стереомікроскоп учбовий My First Lab SMD-04
 					</p>
 				</div>
-				<!-- Preview main -->
-				<div class="product__preview_main">
+				<!-- Preview body -->
+				<div class="product__preview_body">
 					<ul class="product__preview_list">
 						<li class="product__preview_item">
 							<div class="product__preview_photo">
@@ -1001,303 +1001,785 @@
 							</div>
 						</li>
 					</ul>
+					<!-- Big photo -->
 					<div class="product__photo">
 						<div class="product__photo_inner">
 							<img src="img/product/microscope/1.png" alt="image" class="product__photo_img">
+						</div>
+						<!-- Unavailable -->
+						<div class="product__preview_unavailable">
+							<p class="product__preview_unavailable_title">
+								Знятий з виробництва
+							</p>
 						</div>
 					</div>
 				</div>
 			</div>
 			<!-- Description -->
 			<div class="product__description" id="product__description">
-				<!-- Description tabs -->
-				<div class="product__description_tab">
-					<ul class="product__description_tab_list">
-						<li class="product__description_tab_item product__description_tab_item--active">
-							<p class="product__description_tab_text">
-								Характеристики
-							</p>
-						</li>
-						<li class="product__description_tab_item">
-							<p class="product__description_tab_text">
-								Опис
-							</p>
-						</li>
-						<li class="product__description_tab_item">
-							<p class="product__description_tab_text">
-								Комплектація
-							</p>
-						</li>
-						<li class="product__description_tab_item">
-							<p class="product__description_tab_text">
-								Відгуки
-							</p>
-						</li>
-					</ul>
-				</div>
-				<!-- Description panes -->
-				<div class="product__description_pane">
-					<ul class="product__description_pane_list">
-						<li class="product__description_pane_item product__description_pane_item--active">
-							<div class="product__description_detail">
-								<div class="product__description_detail_head">
-									<p class="product__description_detail_title">
-										Стереомікроскоп учбовий My First Lab SMD-04
-									</p>
-									<div class="product__description_detail_logo">
-										<img src="img/product/logo/1.png" alt="image" class="product__description_detail_img">
-									</div>
-								</div>
-								<div class="product__description_detail_body">
-									<div class="product__description_detail_body_inner product__description_detail_characteristic">
-										<ul class="product__description_detail_characteristic_list">
-											<li class="product__description_detail_characteristic_item">
-												<p class="product__description_detail_characteristic_title">
-													Тип мікроскопу
+				<!-- New models (module) -->
+				<div class="new">
+					<p class="new__title">
+						Нові моделі
+					</p>
+					<div class="new__list">
+						<div class="new__item">
+							<div class="tile tile--top">
+								<div class="tile__inner">
+									<a href="#" class="tile__link">
+										<div class="tile__photo">
+											<img src="img/product/new/1.png" alt="image" class="tile__img">
+											<div class="tile__unavailable">
+												<p class="tile__unavailable_title">
+													Немає в наявності
 												</p>
-												<p class="product__description_detail_characteristic_description">
-													Стереоскопічний
+												<p class="tile__unavailable_expected">
+													Очікується 10.03.2020
 												</p>
-											</li>
-											<li class="product__description_detail_characteristic_item">
-												<p class="product__description_detail_characteristic_title">
-													Тип насадки
+											</div>
+											<div class="tile__discontinued">
+												<p class="tile__discontinued_title">
+													Знятий з виробництва
 												</p>
-												<p class="product__description_detail_characteristic_description">
-													Бінокулярна, з нахилом 45°С
-												</p>
-											</li>
-											<li class="product__description_detail_characteristic_item">
-												<p class="product__description_detail_characteristic_title">
-													Збільшення, крат
-												</p>
-												<p class="product__description_detail_characteristic_description">
-													20
-												</p>
-											</li>
-											<li class="product__description_detail_characteristic_item">
-												<p class="product__description_detail_characteristic_title">
-													Окуляри
-												</p>
-												<p class="product__description_detail_characteristic_description">
-													10х
-												</p>
-											</li>
-											<li class="product__description_detail_characteristic_item">
-												<p class="product__description_detail_characteristic_title">
-													Робоча відстань, мм
-												</p>
-												<p class="product__description_detail_characteristic_description">
-													62
-												</p>
-											</li>
-											<li class="product__description_detail_characteristic_item">
-												<p class="product__description_detail_characteristic_title">
-													Міжзінична відстань, мм
-												</p>
-												<p class="product__description_detail_characteristic_description">
-													78-72
-												</p>
-											</li>
-											<li class="product__description_detail_characteristic_item">
-												<p class="product__description_detail_characteristic_title">
-													Підсвітка
-												</p>
-												<p class="product__description_detail_characteristic_description">
-													Світлодіодна
-												</p>
-											</li>
-											<li class="product__description_detail_characteristic_item">
-												<p class="product__description_detail_characteristic_title">
-													Живлення від батарейок
-												</p>
-												<p class="product__description_detail_characteristic_description">
-													2 батарейки типу АА
-												</p>
-											</li>
-											<li class="product__description_detail_characteristic_item">
-												<p class="product__description_detail_characteristic_title">
-													Вага, кг
-												</p>
-												<p class="product__description_detail_characteristic_description">
-													1,4
-												</p>
-											</li>
-											<li class="product__description_detail_characteristic_item">
-												<p class="product__description_detail_characteristic_title">
-													Габаритні розміри, мм
-												</p>
-												<p class="product__description_detail_characteristic_description">
-													117х140х275
-												</p>
-											</li>
-											<li class="product__description_detail_characteristic_item">
-												<p class="product__description_detail_characteristic_title">
-													Розташування освітлювача
-												</p>
-												<p class="product__description_detail_characteristic_description">
-													Верхнє
-												</p>
-											</li>
-											<li class="product__description_detail_characteristic_item">
-												<p class="product__description_detail_characteristic_title">
-													Метод дослідження
-												</p>
-												<p class="product__description_detail_characteristic_description">
-													Світле поле
-												</p>
-											</li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</li>
-						<li class="product__description_pane_item">
-							<div class="product__description_detail">
-								<div class="product__description_detail_head">
-									<p class="product__description_detail_title">
-										Стереомікроскоп учбовий My First Lab SMD-04
-									</p>
-									<div class="product__description_detail_logo">
-										<img src="img/product/logo/1.png" alt="image" class="product__description_detail_img">
-									</div>
-								</div>
-								<div class="product__description_detail_body">
-									<div class="product__description_detail_body_inner product__description_detail_definition">
-										<p class="product__description_detail_definition_paragraph">
-											<span class="product__description_detail_definition_span">
-												Шкільный мікроскоп
-											</span>
-											для досліджень начального рівня в області мінералогії, ботаніки, біології. Верхній світлодіодний освітлювач учбового стереомікроскопу MFL SMD-04 працює від 2х елементів живлення типу АА.
-										</p>
-										<p class="product__description_detail_definition_paragraph">
-											Студентський мікроскоп MFL SMD-04 призначений для забезпечення учбового процесу у середніх та спеціалізованих учбових закладах. Оптична схема з верхнім освітлювачем дозволить спостерігати будь-які предмети реального світу в режимі 3D.
-										</p>
-										<p class="product__description_detail_definition_paragraph">
-											Зручність використання цього шкільного  мікроскопу ще і в тому, що він має бінокулярну насадку: в цьому випадку, значно знижується навантаження на зір при проведенні спостережень.  Тубус має нахил в 45 градусів, міжзрачкова відстань регулюється, тому абсолютно нескладно налаштувати цей прилад «під себе».
-										</p>
-										<p class="product__description_detail_definition_paragraph">
-											Вся оптика навчального мікроскопу My First Lab SMD-04  виготовлена ​​зі спеціального оптичного скла, тому не потрібно турбуватися про якість одержуваного зображення.  Освітлювач світлодіодний, розташований зверху, живиться від 2-х батарейок типу АА (у комплект не входять).  Наведення на різкість здійснюється за допомогою мікровинта (переміщення 35 мм).  Для того, щоб комфортно було спостерігати і темні, і світлі об’єкти, вставка предметного столика має дві різнокольорові сторони: чорну і білу.
-										</p>
-										<p class="product__description_detail_definition_paragraph">
-											Мікроскоп для підлітка My First Lab SMD-04 виготовлений компанією С&A Scientific, США та постачаються  в США та Канаду багато років.
-										</p>
-										<p class="product__description_detail_definition_paragraph">
-											Перш за все, ми рекомендуємо цей учбовий мікроскоп дітям та школярам, адже з ним дуже просто управлятися: потрібно всього лише покласти досліджуваний об’єкт на предметний столик і навести на різкість, а після зануритися у вивчення мікросвіту.
-										</p>
-										<p class="product__description_detail_definition_paragraph">
-											Що можна спостерігати в цей шкільний мікроскоп?  Все що завгодно.  Комах, монети, марки, хутро, камені, рослини і все, що зможе поміститися на предметний столик на робочу область.  Спостереження не вимагають спеціальних знань або підготовки.
-										</p>
-										<p class="product__description_detail_definition_paragraph">
-											Мікроскоп учбовий My First Lab SMD-04 відповідає Концепції Нової української школи у загальноосвітніх навчальних закладах I ступеня згідно Наказу Міністерства освіти і науки України від 13.07.2017р. №1021 та роспорядження Кабінету Міністрів України від 14 грудня 2016р. №988-р «Про схвалення Концепції реалізації державної політики у сфері реформування загальної середньої освіти «Нова українська школа на період до 2029р.»
-										</p>
-									</div>
-								</div>
-							</div>
-						</li>
-						<li class="product__description_pane_item">
-							<div class="product__description_detail">
-								<div class="product__description_detail_head">
-									<p class="product__description_detail_title">
-										Стереомікроскоп учбовий My First Lab SMD-04
-									</p>
-									<div class="product__description_detail_logo">
-										<img src="img/product/logo/1.png" alt="image" class="product__description_detail_img">
-									</div>
-								</div>
-								<div class="product__description_detail_body">
-									<div class="product__description_detail_body_inner product__description_detail_options">
-										<ul class="product__description_detail_options_list">
-											<li class="product__description_detail_options_item">
-												Стереомикроскоп;
-											</li>
-											<li class="product__description_detail_options_item">
-												Барвиста пакувальна коробка;
-											</li>
-											<li class="product__description_detail_options_item">
-												Інструкція українською мовою.
-											</li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</li>
-						<li class="product__description_pane_item">
-							<div class="product__description_detail">
-								<div class="product__description_detail_head">
-									<p class="product__description_detail_title">
-										Стереомікроскоп учбовий My First Lab SMD-04
-									</p>
-									<div class="product__description_detail_logo">
-										<img src="img/product/logo/1.png" alt="image" class="product__description_detail_img">
-									</div>
-								</div>
-								<!-- Respond -->
-								<div class="product__description_detail_body">
-									<div class="product__description_detail_body_inner product__description_detail_respond">
-										<div class="product__description_detail_respond_head">
-											<p class="product__description_detail_respond_title">
-												Відгуки
+											</div>
+										</div>
+										<div class="tile__description">
+											<p class="tile__title">
+												Микроскоп биологический XS-3320 MICROmed
+											</p>
+											<p class="tile__category">
+												
 											</p>
 										</div>
-										<div class="product__description_detail_respond_body">
-											<ul class="product__description_detail_respond_body_list">
-												<li class="product__description_detail_respond_body_item">
-													<p class="product__description_detail_respond_body_date">
-														10.10.2020
-													</p>
-													<p class="product__description_detail_respond_body_name">
-														Андрій Іванов
-													</p>
-													<p class="product__description_detail_respond_body_rating">
-														<img src="img/product/raiting/star_5.png" alt="image" class="product__description_detail_respond_body_img">
-													</p>
-													<p class="product__description_detail_respond_body_description">
-														Дуже радію, що потрапив саме на цей магазин.  Мікроскопом задоволений, буду купувати ще сам та порекомендую друзям!
-													</p>
-												</li>
-												<li class="product__description_detail_respond_body_item">
-													<p class="product__description_detail_respond_body_date">
-														10.10.2020
-													</p>
-													<p class="product__description_detail_respond_body_name">
-														Василь Тертичний
-													</p>
-													<p class="product__description_detail_respond_body_rating">
-														<img src="img/product/raiting/star_5.png" alt="image" class="product__description_detail_respond_body_img">
-													</p>
-													<p class="product__description_detail_respond_body_description">
-														Мікроскоп дуже якісний та сучасний. Дуже сподобалась ціна, найнижча з усіх інтернет-магазинів. Доставка швидка. Товар цілий та повністю працює.
-													</p>
-												</li>
-												<li class="product__description_detail_respond_body_item">
-													<p class="product__description_detail_respond_body_date">
-														10.10.2020
-													</p>
-													<p class="product__description_detail_respond_body_name">
-														Павло Івасюк
-													</p>
-													<p class="product__description_detail_respond_body_rating">
-														<img src="img/product/raiting/star_3.png" alt="image" class="product__description_detail_respond_body_img">
-													</p>
-													<p class="product__description_detail_respond_body_description">
-														Дуже радію, що потрапив саме на цей магазин.  Мікроскопом задоволений, буду купувати ще сам та порекомендую друзям!
-													</p>
-												</li>
-											</ul>
-										</div>
+									</a>
+									<div class="tile__footer">
+										<p class="tile__cost">
+											<span class="tile__cost_sale">
+							
+											</span>
+											<span class="tile__cost_price">
+												10 560 ГРН
+											</span>
+										</p>
+										<a href="#" class="tile__card_link">
+											<i class="tile__card_icon">
+												<svg class="tile__card_svg" width="30" height="26" viewBox="0 0 30 26" xmlns="http://www.w3.org/2000/svg">
+													<path d="M21.4381 20.1879C19.8063 20.1879 18.4832 21.4887 18.4832 23.0937C18.4832 24.699 19.8059 26 21.4377 26C23.07 26 24.3926 24.699 24.3926 23.0941C24.3911 21.4896 23.0691 20.1895 21.4381 20.1879ZM21.4381 24.6988C20.5366 24.6988 19.8063 23.9803 19.8063 23.0941C19.8063 22.2076 20.5366 21.4891 21.4377 21.4891C22.3392 21.4887 23.0695 22.2076 23.0695 23.0937C23.0685 23.9797 22.3388 24.6973 21.4381 24.6988Z" />
+													<path d="M29.3381 4.09892H5.86423L5.45136 2.44698C5.09478 1.00592 3.77939 -0.00607874 2.27173 2.7483e-05H0.661423C0.296151 2.7483e-05 0 0.291293 0 0.650745C0 1.00999 0.296151 1.30126 0.661423 1.30126H2.27173C3.16887 1.29413 3.95343 1.89498 4.16659 2.75229L7.37851 15.6529C7.73696 17.0911 9.05339 18.0986 10.5588 18.0872H24.298C25.8245 18.0992 27.1529 17.0634 27.4894 15.5993L29.9832 4.87908C30.0283 4.68857 29.9814 4.48829 29.8557 4.33624C29.7293 4.18338 29.5387 4.09586 29.3381 4.09892ZM26.1999 15.3134C25.9983 16.1839 25.2059 16.7976 24.298 16.786H10.5588C9.66287 16.7955 8.87789 16.1973 8.6639 15.3416L6.18791 5.40015H28.5081L26.1999 15.3134Z" />
+													<path d="M12.4901 20.1879C10.8582 20.1879 9.53519 21.4887 9.53519 23.0937C9.53519 24.699 10.858 26 12.4899 26C14.1219 26 15.4447 24.699 15.4447 23.0941C15.4433 21.4896 14.1213 20.1895 12.4901 20.1879ZM12.4901 24.6988C11.5888 24.6988 10.8582 23.9803 10.8582 23.0941C10.8582 22.2076 11.5888 21.4891 12.4899 21.4891C13.3911 21.4887 14.1217 22.2076 14.1217 23.0937C14.1207 23.9797 13.3907 24.6973 12.4901 24.6988Z" />
+												</svg>
+											</i>
+											В корзину
+										</a>
+										<a href="#" class="tile__unavailable_link">
+											Повідомити про наявність
+										</a>
+										<a href="#" class="tile__discontinued_link">
+											Переглянути аналоги
+										</a>
 									</div>
 								</div>
-								<!-- Form -->
-								<div class="product__description_detail_footer">
-									<form action="#" method="POST" class="product__description_detail_form" name="product_respond" id="product_respond">
-
-									</form>
+							</div>
+						</div>
+						<div class="new__item">
+							<div class="tile tile--new">
+								<div class="tile__inner">
+									<a href="#" class="tile__link">
+										<div class="tile__photo">
+											<img src="img/product/new/2.png" alt="image" class="tile__img">
+											<div class="tile__unavailable">
+												<p class="tile__unavailable_title">
+													Немає в наявності
+												</p>
+												<p class="tile__unavailable_expected">
+													Очікується 10.03.2020
+												</p>
+											</div>
+											<div class="tile__discontinued">
+												<p class="tile__discontinued_title">
+													Знятий з виробництва
+												</p>
+											</div>
+										</div>
+										<div class="tile__description">
+											<p class="tile__title">
+												Микроскоп MICROmed Fusion FS-7510
+											</p>
+											<p class="tile__category">
+							
+											</p>
+										</div>
+									</a>
+									<div class="tile__footer">
+										<p class="tile__cost">
+											<span class="tile__cost_sale">
+							
+											</span>
+											<span class="tile__cost_price">
+												9 300 ГРН
+											</span>
+										</p>
+										<a href="#" class="tile__card_link">
+											<i class="tile__card_icon">
+												<svg class="tile__card_svg" width="30" height="26" viewBox="0 0 30 26" xmlns="http://www.w3.org/2000/svg">
+													<path d="M21.4381 20.1879C19.8063 20.1879 18.4832 21.4887 18.4832 23.0937C18.4832 24.699 19.8059 26 21.4377 26C23.07 26 24.3926 24.699 24.3926 23.0941C24.3911 21.4896 23.0691 20.1895 21.4381 20.1879ZM21.4381 24.6988C20.5366 24.6988 19.8063 23.9803 19.8063 23.0941C19.8063 22.2076 20.5366 21.4891 21.4377 21.4891C22.3392 21.4887 23.0695 22.2076 23.0695 23.0937C23.0685 23.9797 22.3388 24.6973 21.4381 24.6988Z" />
+													<path d="M29.3381 4.09892H5.86423L5.45136 2.44698C5.09478 1.00592 3.77939 -0.00607874 2.27173 2.7483e-05H0.661423C0.296151 2.7483e-05 0 0.291293 0 0.650745C0 1.00999 0.296151 1.30126 0.661423 1.30126H2.27173C3.16887 1.29413 3.95343 1.89498 4.16659 2.75229L7.37851 15.6529C7.73696 17.0911 9.05339 18.0986 10.5588 18.0872H24.298C25.8245 18.0992 27.1529 17.0634 27.4894 15.5993L29.9832 4.87908C30.0283 4.68857 29.9814 4.48829 29.8557 4.33624C29.7293 4.18338 29.5387 4.09586 29.3381 4.09892ZM26.1999 15.3134C25.9983 16.1839 25.2059 16.7976 24.298 16.786H10.5588C9.66287 16.7955 8.87789 16.1973 8.6639 15.3416L6.18791 5.40015H28.5081L26.1999 15.3134Z" />
+													<path d="M12.4901 20.1879C10.8582 20.1879 9.53519 21.4887 9.53519 23.0937C9.53519 24.699 10.858 26 12.4899 26C14.1219 26 15.4447 24.699 15.4447 23.0941C15.4433 21.4896 14.1213 20.1895 12.4901 20.1879ZM12.4901 24.6988C11.5888 24.6988 10.8582 23.9803 10.8582 23.0941C10.8582 22.2076 11.5888 21.4891 12.4899 21.4891C13.3911 21.4887 14.1217 22.2076 14.1217 23.0937C14.1207 23.9797 13.3907 24.6973 12.4901 24.6988Z" />
+												</svg>
+											</i>
+											В корзину
+										</a>
+										<a href="#" class="tile__unavailable_link">
+											Повідомити про наявність
+										</a>
+										<a href="#" class="tile__discontinued_link">
+											Переглянути аналоги
+										</a>
+									</div>
 								</div>
 							</div>
-						</li>
-					</ul>
+						</div>
+						<div class="new__item">
+							<div class="tile">
+								<div class="tile__inner">
+									<a href="#" class="tile__link">
+										<div class="tile__photo">
+											<img src="img/product/new/3.png" alt="image" class="tile__img">
+											<div class="tile__unavailable">
+												<p class="tile__unavailable_title">
+													Немає в наявності
+												</p>
+												<p class="tile__unavailable_expected">
+													Очікується 10.03.2020
+												</p>
+											</div>
+											<div class="tile__discontinued">
+												<p class="tile__discontinued_title">
+													Знятий з виробництва
+												</p>
+											</div>
+										</div>
+										<div class="tile__description">
+											<p class="tile__title">
+												MICROmed Evolution ES-4140, встроенная 5 Мп камера
+											</p>
+											<p class="tile__category">
+							
+											</p>
+										</div>
+									</a>
+									<div class="tile__footer">
+										<p class="tile__cost">
+											<span class="tile__cost_sale">
+							
+											</span>
+											<span class="tile__cost_price">
+												33 000 ГРН
+											</span>
+										</p>
+										<a href="#" class="tile__card_link">
+											<i class="tile__card_icon">
+												<svg class="tile__card_svg" width="30" height="26" viewBox="0 0 30 26" xmlns="http://www.w3.org/2000/svg">
+													<path d="M21.4381 20.1879C19.8063 20.1879 18.4832 21.4887 18.4832 23.0937C18.4832 24.699 19.8059 26 21.4377 26C23.07 26 24.3926 24.699 24.3926 23.0941C24.3911 21.4896 23.0691 20.1895 21.4381 20.1879ZM21.4381 24.6988C20.5366 24.6988 19.8063 23.9803 19.8063 23.0941C19.8063 22.2076 20.5366 21.4891 21.4377 21.4891C22.3392 21.4887 23.0695 22.2076 23.0695 23.0937C23.0685 23.9797 22.3388 24.6973 21.4381 24.6988Z" />
+													<path d="M29.3381 4.09892H5.86423L5.45136 2.44698C5.09478 1.00592 3.77939 -0.00607874 2.27173 2.7483e-05H0.661423C0.296151 2.7483e-05 0 0.291293 0 0.650745C0 1.00999 0.296151 1.30126 0.661423 1.30126H2.27173C3.16887 1.29413 3.95343 1.89498 4.16659 2.75229L7.37851 15.6529C7.73696 17.0911 9.05339 18.0986 10.5588 18.0872H24.298C25.8245 18.0992 27.1529 17.0634 27.4894 15.5993L29.9832 4.87908C30.0283 4.68857 29.9814 4.48829 29.8557 4.33624C29.7293 4.18338 29.5387 4.09586 29.3381 4.09892ZM26.1999 15.3134C25.9983 16.1839 25.2059 16.7976 24.298 16.786H10.5588C9.66287 16.7955 8.87789 16.1973 8.6639 15.3416L6.18791 5.40015H28.5081L26.1999 15.3134Z" />
+													<path d="M12.4901 20.1879C10.8582 20.1879 9.53519 21.4887 9.53519 23.0937C9.53519 24.699 10.858 26 12.4899 26C14.1219 26 15.4447 24.699 15.4447 23.0941C15.4433 21.4896 14.1213 20.1895 12.4901 20.1879ZM12.4901 24.6988C11.5888 24.6988 10.8582 23.9803 10.8582 23.0941C10.8582 22.2076 11.5888 21.4891 12.4899 21.4891C13.3911 21.4887 14.1217 22.2076 14.1217 23.0937C14.1207 23.9797 13.3907 24.6973 12.4901 24.6988Z" />
+												</svg>
+											</i>
+											В корзину
+										</a>
+										<a href="#" class="tile__unavailable_link">
+											Повідомити про наявність
+										</a>
+										<a href="#" class="tile__discontinued_link">
+											Переглянути аналоги
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="new__item">
+							<div class="tile">
+								<div class="tile__inner">
+									<a href="#" class="tile__link">
+										<div class="tile__photo">
+											<img src="img/product/new/4.png" alt="image" class="tile__img">
+											<div class="tile__unavailable">
+												<p class="tile__unavailable_title">
+													Немає в наявності
+												</p>
+												<p class="tile__unavailable_expected">
+													Очікується 10.03.2020
+												</p>
+											</div>
+											<div class="tile__discontinued">
+												<p class="tile__discontinued_title">
+													Знятий з виробництва
+												</p>
+											</div>
+										</div>
+										<div class="tile__description">
+											<p class="tile__title">
+												Микроскоп Фазово-контрастный XS-3320 MICROmed
+											</p>
+											<p class="tile__category">
+												
+											</p>
+										</div>
+									</a>
+									<div class="tile__footer">
+										<p class="tile__cost">
+											<span class="tile__cost_sale">
+							
+											</span>
+											<span class="tile__cost_price">
+												26 940 ГРН
+											</span>
+										</p>
+										<a href="#" class="tile__card_link">
+											<i class="tile__card_icon">
+												<svg class="tile__card_svg" width="30" height="26" viewBox="0 0 30 26" xmlns="http://www.w3.org/2000/svg">
+													<path d="M21.4381 20.1879C19.8063 20.1879 18.4832 21.4887 18.4832 23.0937C18.4832 24.699 19.8059 26 21.4377 26C23.07 26 24.3926 24.699 24.3926 23.0941C24.3911 21.4896 23.0691 20.1895 21.4381 20.1879ZM21.4381 24.6988C20.5366 24.6988 19.8063 23.9803 19.8063 23.0941C19.8063 22.2076 20.5366 21.4891 21.4377 21.4891C22.3392 21.4887 23.0695 22.2076 23.0695 23.0937C23.0685 23.9797 22.3388 24.6973 21.4381 24.6988Z" />
+													<path d="M29.3381 4.09892H5.86423L5.45136 2.44698C5.09478 1.00592 3.77939 -0.00607874 2.27173 2.7483e-05H0.661423C0.296151 2.7483e-05 0 0.291293 0 0.650745C0 1.00999 0.296151 1.30126 0.661423 1.30126H2.27173C3.16887 1.29413 3.95343 1.89498 4.16659 2.75229L7.37851 15.6529C7.73696 17.0911 9.05339 18.0986 10.5588 18.0872H24.298C25.8245 18.0992 27.1529 17.0634 27.4894 15.5993L29.9832 4.87908C30.0283 4.68857 29.9814 4.48829 29.8557 4.33624C29.7293 4.18338 29.5387 4.09586 29.3381 4.09892ZM26.1999 15.3134C25.9983 16.1839 25.2059 16.7976 24.298 16.786H10.5588C9.66287 16.7955 8.87789 16.1973 8.6639 15.3416L6.18791 5.40015H28.5081L26.1999 15.3134Z" />
+													<path d="M12.4901 20.1879C10.8582 20.1879 9.53519 21.4887 9.53519 23.0937C9.53519 24.699 10.858 26 12.4899 26C14.1219 26 15.4447 24.699 15.4447 23.0941C15.4433 21.4896 14.1213 20.1895 12.4901 20.1879ZM12.4901 24.6988C11.5888 24.6988 10.8582 23.9803 10.8582 23.0941C10.8582 22.2076 11.5888 21.4891 12.4899 21.4891C13.3911 21.4887 14.1217 22.2076 14.1217 23.0937C14.1207 23.9797 13.3907 24.6973 12.4901 24.6988Z" />
+												</svg>
+											</i>
+											В корзину
+										</a>
+										<a href="#" class="tile__unavailable_link">
+											Повідомити про наявність
+										</a>
+										<a href="#" class="tile__discontinued_link">
+											Переглянути аналоги
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="new__item">
+							<div class="tile tile--top">
+								<div class="tile__inner">
+									<a href="#" class="tile__link">
+										<div class="tile__photo">
+											<img src="img/product/new/1.png" alt="image" class="tile__img">
+											<div class="tile__unavailable">
+												<p class="tile__unavailable_title">
+													Немає в наявності
+												</p>
+												<p class="tile__unavailable_expected">
+													Очікується 10.03.2020
+												</p>
+											</div>
+											<div class="tile__discontinued">
+												<p class="tile__discontinued_title">
+													Знятий з виробництва
+												</p>
+											</div>
+										</div>
+										<div class="tile__description">
+											<p class="tile__title">
+												Микроскоп биологический XS-3320 MICROmed
+											</p>
+											<p class="tile__category">
+												
+											</p>
+										</div>
+									</a>
+									<div class="tile__footer">
+										<p class="tile__cost">
+											<span class="tile__cost_sale">
+							
+											</span>
+											<span class="tile__cost_price">
+												10 560 ГРН
+											</span>
+										</p>
+										<a href="#" class="tile__card_link">
+											<i class="tile__card_icon">
+												<svg class="tile__card_svg" width="30" height="26" viewBox="0 0 30 26" xmlns="http://www.w3.org/2000/svg">
+													<path d="M21.4381 20.1879C19.8063 20.1879 18.4832 21.4887 18.4832 23.0937C18.4832 24.699 19.8059 26 21.4377 26C23.07 26 24.3926 24.699 24.3926 23.0941C24.3911 21.4896 23.0691 20.1895 21.4381 20.1879ZM21.4381 24.6988C20.5366 24.6988 19.8063 23.9803 19.8063 23.0941C19.8063 22.2076 20.5366 21.4891 21.4377 21.4891C22.3392 21.4887 23.0695 22.2076 23.0695 23.0937C23.0685 23.9797 22.3388 24.6973 21.4381 24.6988Z" />
+													<path d="M29.3381 4.09892H5.86423L5.45136 2.44698C5.09478 1.00592 3.77939 -0.00607874 2.27173 2.7483e-05H0.661423C0.296151 2.7483e-05 0 0.291293 0 0.650745C0 1.00999 0.296151 1.30126 0.661423 1.30126H2.27173C3.16887 1.29413 3.95343 1.89498 4.16659 2.75229L7.37851 15.6529C7.73696 17.0911 9.05339 18.0986 10.5588 18.0872H24.298C25.8245 18.0992 27.1529 17.0634 27.4894 15.5993L29.9832 4.87908C30.0283 4.68857 29.9814 4.48829 29.8557 4.33624C29.7293 4.18338 29.5387 4.09586 29.3381 4.09892ZM26.1999 15.3134C25.9983 16.1839 25.2059 16.7976 24.298 16.786H10.5588C9.66287 16.7955 8.87789 16.1973 8.6639 15.3416L6.18791 5.40015H28.5081L26.1999 15.3134Z" />
+													<path d="M12.4901 20.1879C10.8582 20.1879 9.53519 21.4887 9.53519 23.0937C9.53519 24.699 10.858 26 12.4899 26C14.1219 26 15.4447 24.699 15.4447 23.0941C15.4433 21.4896 14.1213 20.1895 12.4901 20.1879ZM12.4901 24.6988C11.5888 24.6988 10.8582 23.9803 10.8582 23.0941C10.8582 22.2076 11.5888 21.4891 12.4899 21.4891C13.3911 21.4887 14.1217 22.2076 14.1217 23.0937C14.1207 23.9797 13.3907 24.6973 12.4901 24.6988Z" />
+												</svg>
+											</i>
+											В корзину
+										</a>
+										<a href="#" class="tile__unavailable_link">
+											Повідомити про наявність
+										</a>
+										<a href="#" class="tile__discontinued_link">
+											Переглянути аналоги
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="new__item">
+							<div class="tile tile--new">
+								<div class="tile__inner">
+									<a href="#" class="tile__link">
+										<div class="tile__photo">
+											<img src="img/product/new/2.png" alt="image" class="tile__img">
+											<div class="tile__unavailable">
+												<p class="tile__unavailable_title">
+													Немає в наявності
+												</p>
+												<p class="tile__unavailable_expected">
+													Очікується 10.03.2020
+												</p>
+											</div>
+											<div class="tile__discontinued">
+												<p class="tile__discontinued_title">
+													Знятий з виробництва
+												</p>
+											</div>
+										</div>
+										<div class="tile__description">
+											<p class="tile__title">
+												Микроскоп MICROmed Fusion FS-7510
+											</p>
+											<p class="tile__category">
+							
+											</p>
+										</div>
+									</a>
+									<div class="tile__footer">
+										<p class="tile__cost">
+											<span class="tile__cost_sale">
+							
+											</span>
+											<span class="tile__cost_price">
+												9 300 ГРН
+											</span>
+										</p>
+										<a href="#" class="tile__card_link">
+											<i class="tile__card_icon">
+												<svg class="tile__card_svg" width="30" height="26" viewBox="0 0 30 26" xmlns="http://www.w3.org/2000/svg">
+													<path d="M21.4381 20.1879C19.8063 20.1879 18.4832 21.4887 18.4832 23.0937C18.4832 24.699 19.8059 26 21.4377 26C23.07 26 24.3926 24.699 24.3926 23.0941C24.3911 21.4896 23.0691 20.1895 21.4381 20.1879ZM21.4381 24.6988C20.5366 24.6988 19.8063 23.9803 19.8063 23.0941C19.8063 22.2076 20.5366 21.4891 21.4377 21.4891C22.3392 21.4887 23.0695 22.2076 23.0695 23.0937C23.0685 23.9797 22.3388 24.6973 21.4381 24.6988Z" />
+													<path d="M29.3381 4.09892H5.86423L5.45136 2.44698C5.09478 1.00592 3.77939 -0.00607874 2.27173 2.7483e-05H0.661423C0.296151 2.7483e-05 0 0.291293 0 0.650745C0 1.00999 0.296151 1.30126 0.661423 1.30126H2.27173C3.16887 1.29413 3.95343 1.89498 4.16659 2.75229L7.37851 15.6529C7.73696 17.0911 9.05339 18.0986 10.5588 18.0872H24.298C25.8245 18.0992 27.1529 17.0634 27.4894 15.5993L29.9832 4.87908C30.0283 4.68857 29.9814 4.48829 29.8557 4.33624C29.7293 4.18338 29.5387 4.09586 29.3381 4.09892ZM26.1999 15.3134C25.9983 16.1839 25.2059 16.7976 24.298 16.786H10.5588C9.66287 16.7955 8.87789 16.1973 8.6639 15.3416L6.18791 5.40015H28.5081L26.1999 15.3134Z" />
+													<path d="M12.4901 20.1879C10.8582 20.1879 9.53519 21.4887 9.53519 23.0937C9.53519 24.699 10.858 26 12.4899 26C14.1219 26 15.4447 24.699 15.4447 23.0941C15.4433 21.4896 14.1213 20.1895 12.4901 20.1879ZM12.4901 24.6988C11.5888 24.6988 10.8582 23.9803 10.8582 23.0941C10.8582 22.2076 11.5888 21.4891 12.4899 21.4891C13.3911 21.4887 14.1217 22.2076 14.1217 23.0937C14.1207 23.9797 13.3907 24.6973 12.4901 24.6988Z" />
+												</svg>
+											</i>
+											В корзину
+										</a>
+										<a href="#" class="tile__unavailable_link">
+											Повідомити про наявність
+										</a>
+										<a href="#" class="tile__discontinued_link">
+											Переглянути аналоги
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="new__item">
+							<div class="tile">
+								<div class="tile__inner">
+									<a href="#" class="tile__link">
+										<div class="tile__photo">
+											<img src="img/product/new/3.png" alt="image" class="tile__img">
+											<div class="tile__unavailable">
+												<p class="tile__unavailable_title">
+													Немає в наявності
+												</p>
+												<p class="tile__unavailable_expected">
+													Очікується 10.03.2020
+												</p>
+											</div>
+											<div class="tile__discontinued">
+												<p class="tile__discontinued_title">
+													Знятий з виробництва
+												</p>
+											</div>
+										</div>
+										<div class="tile__description">
+											<p class="tile__title">
+												MICROmed Evolution ES-4140, встроенная 5 Мп камера
+											</p>
+											<p class="tile__category">
+							
+											</p>
+										</div>
+									</a>
+									<div class="tile__footer">
+										<p class="tile__cost">
+											<span class="tile__cost_sale">
+							
+											</span>
+											<span class="tile__cost_price">
+												33 000 ГРН
+											</span>
+										</p>
+										<a href="#" class="tile__card_link">
+											<i class="tile__card_icon">
+												<svg class="tile__card_svg" width="30" height="26" viewBox="0 0 30 26" xmlns="http://www.w3.org/2000/svg">
+													<path d="M21.4381 20.1879C19.8063 20.1879 18.4832 21.4887 18.4832 23.0937C18.4832 24.699 19.8059 26 21.4377 26C23.07 26 24.3926 24.699 24.3926 23.0941C24.3911 21.4896 23.0691 20.1895 21.4381 20.1879ZM21.4381 24.6988C20.5366 24.6988 19.8063 23.9803 19.8063 23.0941C19.8063 22.2076 20.5366 21.4891 21.4377 21.4891C22.3392 21.4887 23.0695 22.2076 23.0695 23.0937C23.0685 23.9797 22.3388 24.6973 21.4381 24.6988Z" />
+													<path d="M29.3381 4.09892H5.86423L5.45136 2.44698C5.09478 1.00592 3.77939 -0.00607874 2.27173 2.7483e-05H0.661423C0.296151 2.7483e-05 0 0.291293 0 0.650745C0 1.00999 0.296151 1.30126 0.661423 1.30126H2.27173C3.16887 1.29413 3.95343 1.89498 4.16659 2.75229L7.37851 15.6529C7.73696 17.0911 9.05339 18.0986 10.5588 18.0872H24.298C25.8245 18.0992 27.1529 17.0634 27.4894 15.5993L29.9832 4.87908C30.0283 4.68857 29.9814 4.48829 29.8557 4.33624C29.7293 4.18338 29.5387 4.09586 29.3381 4.09892ZM26.1999 15.3134C25.9983 16.1839 25.2059 16.7976 24.298 16.786H10.5588C9.66287 16.7955 8.87789 16.1973 8.6639 15.3416L6.18791 5.40015H28.5081L26.1999 15.3134Z" />
+													<path d="M12.4901 20.1879C10.8582 20.1879 9.53519 21.4887 9.53519 23.0937C9.53519 24.699 10.858 26 12.4899 26C14.1219 26 15.4447 24.699 15.4447 23.0941C15.4433 21.4896 14.1213 20.1895 12.4901 20.1879ZM12.4901 24.6988C11.5888 24.6988 10.8582 23.9803 10.8582 23.0941C10.8582 22.2076 11.5888 21.4891 12.4899 21.4891C13.3911 21.4887 14.1217 22.2076 14.1217 23.0937C14.1207 23.9797 13.3907 24.6973 12.4901 24.6988Z" />
+												</svg>
+											</i>
+											В корзину
+										</a>
+										<a href="#" class="tile__unavailable_link">
+											Повідомити про наявність
+										</a>
+										<a href="#" class="tile__discontinued_link">
+											Переглянути аналоги
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="new__item">
+							<div class="tile">
+								<div class="tile__inner">
+									<a href="#" class="tile__link">
+										<div class="tile__photo">
+											<img src="img/product/new/4.png" alt="image" class="tile__img">
+											<div class="tile__unavailable">
+												<p class="tile__unavailable_title">
+													Немає в наявності
+												</p>
+												<p class="tile__unavailable_expected">
+													Очікується 10.03.2020
+												</p>
+											</div>
+											<div class="tile__discontinued">
+												<p class="tile__discontinued_title">
+													Знятий з виробництва
+												</p>
+											</div>
+										</div>
+										<div class="tile__description">
+											<p class="tile__title">
+												Микроскоп Фазово-контрастный XS-3320 MICROmed
+											</p>
+											<p class="tile__category">
+												
+											</p>
+										</div>
+									</a>
+									<div class="tile__footer">
+										<p class="tile__cost">
+											<span class="tile__cost_sale">
+							
+											</span>
+											<span class="tile__cost_price">
+												26 940 ГРН
+											</span>
+										</p>
+										<a href="#" class="tile__card_link">
+											<i class="tile__card_icon">
+												<svg class="tile__card_svg" width="30" height="26" viewBox="0 0 30 26" xmlns="http://www.w3.org/2000/svg">
+													<path d="M21.4381 20.1879C19.8063 20.1879 18.4832 21.4887 18.4832 23.0937C18.4832 24.699 19.8059 26 21.4377 26C23.07 26 24.3926 24.699 24.3926 23.0941C24.3911 21.4896 23.0691 20.1895 21.4381 20.1879ZM21.4381 24.6988C20.5366 24.6988 19.8063 23.9803 19.8063 23.0941C19.8063 22.2076 20.5366 21.4891 21.4377 21.4891C22.3392 21.4887 23.0695 22.2076 23.0695 23.0937C23.0685 23.9797 22.3388 24.6973 21.4381 24.6988Z" />
+													<path d="M29.3381 4.09892H5.86423L5.45136 2.44698C5.09478 1.00592 3.77939 -0.00607874 2.27173 2.7483e-05H0.661423C0.296151 2.7483e-05 0 0.291293 0 0.650745C0 1.00999 0.296151 1.30126 0.661423 1.30126H2.27173C3.16887 1.29413 3.95343 1.89498 4.16659 2.75229L7.37851 15.6529C7.73696 17.0911 9.05339 18.0986 10.5588 18.0872H24.298C25.8245 18.0992 27.1529 17.0634 27.4894 15.5993L29.9832 4.87908C30.0283 4.68857 29.9814 4.48829 29.8557 4.33624C29.7293 4.18338 29.5387 4.09586 29.3381 4.09892ZM26.1999 15.3134C25.9983 16.1839 25.2059 16.7976 24.298 16.786H10.5588C9.66287 16.7955 8.87789 16.1973 8.6639 15.3416L6.18791 5.40015H28.5081L26.1999 15.3134Z" />
+													<path d="M12.4901 20.1879C10.8582 20.1879 9.53519 21.4887 9.53519 23.0937C9.53519 24.699 10.858 26 12.4899 26C14.1219 26 15.4447 24.699 15.4447 23.0941C15.4433 21.4896 14.1213 20.1895 12.4901 20.1879ZM12.4901 24.6988C11.5888 24.6988 10.8582 23.9803 10.8582 23.0941C10.8582 22.2076 11.5888 21.4891 12.4899 21.4891C13.3911 21.4887 14.1217 22.2076 14.1217 23.0937C14.1207 23.9797 13.3907 24.6973 12.4901 24.6988Z" />
+												</svg>
+											</i>
+											В корзину
+										</a>
+										<a href="#" class="tile__unavailable_link">
+											Повідомити про наявність
+										</a>
+										<a href="#" class="tile__discontinued_link">
+											Переглянути аналоги
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
+				<!-- Tabs with description -->
+				<ul class="product__description_list">
+					<li class="product__description_item product__description_item--active">
+						<!-- Description Tab -->
+						<div class="product__description_tab">
+							Характеристики
+						</div>
+						<!-- Description Pane -->
+						<div class="product__description_pane">
+							<div class="product__description_pane_head">
+								<p class="product__description_pane_title">
+									Стереомікроскоп учбовий My First Lab SMD-04
+								</p>
+								<div class="product__description_pane_logo">
+									<img src="img/product/logo/1.png" alt="image" class="product__description_pane_img">
+								</div>
+							</div>
+							<div class="product__description_pane_body">
+								<div class="product__description_pane_body_inner product__description_pane_characteristic">
+									<ul class="product__description_pane_characteristic_list">
+										<li class="product__description_pane_characteristic_item">
+											<p class="product__description_pane_characteristic_title">
+												Тип мікроскопу
+											</p>
+											<p class="product__description_pane_characteristic_description">
+												Стереоскопічний
+											</p>
+										</li>
+										<li class="product__description_pane_characteristic_item">
+											<p class="product__description_pane_characteristic_title">
+												Тип насадки
+											</p>
+											<p class="product__description_pane_characteristic_description">
+												Бінокулярна, з нахилом 45°С
+											</p>
+										</li>
+										<li class="product__description_pane_characteristic_item">
+											<p class="product__description_pane_characteristic_title">
+												Збільшення, крат
+											</p>
+											<p class="product__description_pane_characteristic_description">
+												20
+											</p>
+										</li>
+										<li class="product__description_pane_characteristic_item">
+											<p class="product__description_pane_characteristic_title">
+												Окуляри
+											</p>
+											<p class="product__description_pane_characteristic_description">
+												10х
+											</p>
+										</li>
+										<li class="product__description_pane_characteristic_item">
+											<p class="product__description_pane_characteristic_title">
+												Робоча відстань, мм
+											</p>
+											<p class="product__description_pane_characteristic_description">
+												62
+											</p>
+										</li>
+										<li class="product__description_pane_characteristic_item">
+											<p class="product__description_pane_characteristic_title">
+												Міжзінична відстань, мм
+											</p>
+											<p class="product__description_pane_characteristic_description">
+												78-72
+											</p>
+										</li>
+										<li class="product__description_pane_characteristic_item">
+											<p class="product__description_pane_characteristic_title">
+												Підсвітка
+											</p>
+											<p class="product__description_pane_characteristic_description">
+												Світлодіодна
+											</p>
+										</li>
+										<li class="product__description_pane_characteristic_item">
+											<p class="product__description_pane_characteristic_title">
+												Живлення від батарейок
+											</p>
+											<p class="product__description_pane_characteristic_description">
+												2 батарейки типу АА
+											</p>
+										</li>
+										<li class="product__description_pane_characteristic_item">
+											<p class="product__description_pane_characteristic_title">
+												Вага, кг
+											</p>
+											<p class="product__description_pane_characteristic_description">
+												1,4
+											</p>
+										</li>
+										<li class="product__description_pane_characteristic_item">
+											<p class="product__description_pane_characteristic_title">
+												Габаритні розміри, мм
+											</p>
+											<p class="product__description_pane_characteristic_description">
+												117х140х275
+											</p>
+										</li>
+										<li class="product__description_pane_characteristic_item">
+											<p class="product__description_pane_characteristic_title">
+												Розташування освітлювача
+											</p>
+											<p class="product__description_pane_characteristic_description">
+												Верхнє
+											</p>
+										</li>
+										<li class="product__description_pane_characteristic_item">
+											<p class="product__description_pane_characteristic_title">
+												Метод дослідження
+											</p>
+											<p class="product__description_pane_characteristic_description">
+												Світле поле
+											</p>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="product__description_item">
+						<!-- Description Tab -->
+						<div class="product__description_tab">
+							Опис
+						</div>
+						<!-- Description Pane -->
+						<div class="product__description_pane">
+							<div class="product__description_pane_head">
+								<p class="product__description_pane_title">
+									Стереомікроскоп учбовий My First Lab SMD-04
+								</p>
+								<div class="product__description_pane_logo">
+									<img src="img/product/logo/1.png" alt="image" class="product__description_pane_img">
+								</div>
+							</div>
+							<div class="product__description_pane_body">
+								<div class="product__description_pane_body_inner product__description_pane_definition">
+									<p class="product__description_pane_definition_paragraph">
+										<span class="product__description_pane_definition_span">
+											Шкільный мікроскоп
+										</span>
+										для досліджень начального рівня в області мінералогії, ботаніки, біології. Верхній світлодіодний освітлювач учбового стереомікроскопу MFL SMD-04 працює від 2х елементів живлення типу АА.
+									</p>
+									<p class="product__description_pane_definition_paragraph">
+										Студентський мікроскоп MFL SMD-04 призначений для забезпечення учбового процесу у середніх та спеціалізованих учбових закладах. Оптична схема з верхнім освітлювачем дозволить спостерігати будь-які предмети реального світу в режимі 3D.
+									</p>
+									<p class="product__description_pane_definition_paragraph">
+										Зручність використання цього шкільного  мікроскопу ще і в тому, що він має бінокулярну насадку: в цьому випадку, значно знижується навантаження на зір при проведенні спостережень.  Тубус має нахил в 45 градусів, міжзрачкова відстань регулюється, тому абсолютно нескладно налаштувати цей прилад «під себе».
+									</p>
+									<p class="product__description_pane_definition_paragraph">
+										Вся оптика навчального мікроскопу My First Lab SMD-04  виготовлена ​​зі спеціального оптичного скла, тому не потрібно турбуватися про якість одержуваного зображення.  Освітлювач світлодіодний, розташований зверху, живиться від 2-х батарейок типу АА (у комплект не входять).  Наведення на різкість здійснюється за допомогою мікровинта (переміщення 35 мм).  Для того, щоб комфортно було спостерігати і темні, і світлі об’єкти, вставка предметного столика має дві різнокольорові сторони: чорну і білу.
+									</p>
+									<p class="product__description_pane_definition_paragraph">
+										Мікроскоп для підлітка My First Lab SMD-04 виготовлений компанією С&A Scientific, США та постачаються  в США та Канаду багато років.
+									</p>
+									<p class="product__description_pane_definition_paragraph">
+										Перш за все, ми рекомендуємо цей учбовий мікроскоп дітям та школярам, адже з ним дуже просто управлятися: потрібно всього лише покласти досліджуваний об’єкт на предметний столик і навести на різкість, а після зануритися у вивчення мікросвіту.
+									</p>
+									<p class="product__description_pane_definition_paragraph">
+										Що можна спостерігати в цей шкільний мікроскоп?  Все що завгодно.  Комах, монети, марки, хутро, камені, рослини і все, що зможе поміститися на предметний столик на робочу область.  Спостереження не вимагають спеціальних знань або підготовки.
+									</p>
+									<p class="product__description_pane_definition_paragraph">
+										Мікроскоп учбовий My First Lab SMD-04 відповідає Концепції Нової української школи у загальноосвітніх навчальних закладах I ступеня згідно Наказу Міністерства освіти і науки України від 13.07.2017р. №1021 та роспорядження Кабінету Міністрів України від 14 грудня 2016р. №988-р «Про схвалення Концепції реалізації державної політики у сфері реформування загальної середньої освіти «Нова українська школа на період до 2029р.»
+									</p>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="product__description_item">
+						<!-- Description Tab -->
+						<div class="product__description_tab">
+							Комплектація
+						</div>
+						<!-- Description Pane -->
+						<div class="product__description_pane">
+							<div class="product__description_pane_head">
+								<p class="product__description_pane_title">
+									Стереомікроскоп учбовий My First Lab SMD-04
+								</p>
+								<div class="product__description_pane_logo">
+									<img src="img/product/logo/1.png" alt="image" class="product__description_pane_img">
+								</div>
+							</div>
+							<div class="product__description_pane_body">
+								<div class="product__description_pane_body_inner product__description_pane_options">
+									<ul class="product__description_pane_options_list">
+										<li class="product__description_pane_options_item">
+											Стереомикроскоп;
+										</li>
+										<li class="product__description_pane_options_item">
+											Барвиста пакувальна коробка;
+										</li>
+										<li class="product__description_pane_options_item">
+											Інструкція українською мовою.
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="product__description_item">
+						<!-- Description Tab -->
+						<div class="product__description_tab">
+							Відгуки
+						</div>
+						<!-- Description Pane -->
+						<div class="product__description_pane">
+							<div class="product__description_pane_head">
+								<p class="product__description_pane_title">
+									Стереомікроскоп учбовий My First Lab SMD-04
+								</p>
+								<div class="product__description_pane_logo">
+									<img src="img/product/logo/1.png" alt="image" class="product__description_pane_img">
+								</div>
+							</div>
+							<!-- Respond -->
+							<div class="product__description_pane_body">
+								<div class="product__description_pane_body_inner product__description_pane_respond">
+									<div class="product__description_pane_respond_head">
+										<p class="product__description_pane_respond_title">
+											Відгуки
+										</p>
+									</div>
+									<div class="product__description_pane_respond_body">
+										<ul class="product__description_pane_respond_body_list">
+											<li class="product__description_pane_respond_body_item">
+												<p class="product__description_pane_respond_body_date">
+													10.10.2020
+												</p>
+												<p class="product__description_pane_respond_body_name">
+													Андрій Іванов
+												</p>
+												<p class="product__description_pane_respond_body_rating">
+													<img src="img/product/raiting/star_5.png" alt="image" class="product__description_pane_respond_body_img">
+												</p>
+												<p class="product__description_pane_respond_body_description">
+													Дуже радію, що потрапив саме на цей магазин.  Мікроскопом задоволений, буду купувати ще сам та порекомендую друзям!
+												</p>
+											</li>
+											<li class="product__description_pane_respond_body_item">
+												<p class="product__description_pane_respond_body_date">
+													10.10.2020
+												</p>
+												<p class="product__description_pane_respond_body_name">
+													Василь Тертичний
+												</p>
+												<p class="product__description_pane_respond_body_rating">
+													<img src="img/product/raiting/star_5.png" alt="image" class="product__description_pane_respond_body_img">
+												</p>
+												<p class="product__description_pane_respond_body_description">
+													Мікроскоп дуже якісний та сучасний. Дуже сподобалась ціна, найнижча з усіх інтернет-магазинів. Доставка швидка. Товар цілий та повністю працює.
+												</p>
+											</li>
+											<li class="product__description_pane_respond_body_item">
+												<p class="product__description_pane_respond_body_date">
+													10.10.2020
+												</p>
+												<p class="product__description_pane_respond_body_name">
+													Павло Івасюк
+												</p>
+												<p class="product__description_pane_respond_body_rating">
+													<img src="img/product/raiting/star_3.png" alt="image" class="product__description_pane_respond_body_img">
+												</p>
+												<p class="product__description_pane_respond_body_description">
+													Дуже радію, що потрапив саме на цей магазин.  Мікроскопом задоволений, буду купувати ще сам та порекомендую друзям!
+												</p>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<!-- Form -->
+							<div class="product__description_pane_footer">
+								<form action="#" method="POST" class="product__description_pane_form" name="product_respond" id="product_respond" autocomplete="off">
+									<p class="product__description_pane_form_title">
+										Залиште свій відгук
+									</p>
+									<div class="product__description_pane_input_wrap">
+										<input name="name" type="text" class="product__description_pane_input" placeholder="Ім'я">
+										<input name="email" type="text" class="product__description_pane_input" placeholder="Email*" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+									</div>
+									<textarea name="message" class="product__description_pane_textarea" placeholder="Текст відгука"></textarea>
+									<button type="submit" class="product__description_pane_submit">
+										Надіслати
+									</button>
+								</form>
+							</div>
+						</div>
+					</li>
+				</ul>
 				<!-- Similar product (module) -->
 				<div class="similar">
 					<div class="similar__head">
@@ -1306,9 +1788,9 @@
 						</p>
 					</div>
 					<div class="similar__body">
-						<ul class="similar__body_list">
-							<li class="similar__body_item">
-								<div class="tile tile--availability">
+						<div class="similar__body_list">
+							<div class="similar__body_item">
+								<div class="tile">
 									<div class="tile__inner">
 										<a href="#" class="tile__link">
 											<div class="tile__photo">
@@ -1318,11 +1800,11 @@
 														Знятий з виробництва
 													</p>
 												</div>
-												<div class="tile__availability">
-													<p class="tile__availability_title">
+												<div class="tile__unavailable">
+													<p class="tile__unavailable_title">
 														Немає в наявності
 													</p>
-													<p class="tile__availability_expected">
+													<p class="tile__unavailable_expected">
 														Очікується 10.03.2020
 													</p>
 												</div>
@@ -1355,7 +1837,7 @@
 												</i>
 												В корзину
 											</a>
-											<a href="#" class="tile__availability_link">
+											<a href="#" class="tile__unavailable_link">
 												Повідомити про наявність
 											</a>
 											<a href="#" class="tile__discontinued_link">
@@ -1364,9 +1846,9 @@
 										</div>
 									</div>
 								</div>
-							</li>
-							<li class="similar__body_item">
-								<div class="tile tile--discontinued">
+							</div>
+							<div class="similar__body_item">
+								<div class="tile">
 									<div class="tile__inner">
 										<a href="#" class="tile__link">
 											<div class="tile__photo">
@@ -1376,11 +1858,11 @@
 														Знятий з виробництва
 													</p>
 												</div>
-												<div class="tile__availability">
-													<p class="tile__availability_title">
+												<div class="tile__unavailable">
+													<p class="tile__unavailable_title">
 														Немає в наявності
 													</p>
-													<p class="tile__availability_expected">
+													<p class="tile__unavailable_expected">
 														Очікується 10.03.2020
 													</p>
 												</div>
@@ -1411,7 +1893,7 @@
 												</i>
 												В корзину
 											</a>
-											<a href="#" class="tile__availability_link">
+											<a href="#" class="tile__unavailable_link">
 												Повідомити про наявність
 											</a>
 											<a href="#" class="tile__discontinued_link">
@@ -1420,8 +1902,8 @@
 										</div>
 									</div>
 								</div>
-							</li>
-							<li class="similar__body_item">
+							</div>
+							<div class="similar__body_item">
 								<div class="tile tile--sale">
 									<div class="tile__inner">
 										<a href="#" class="tile__link">
@@ -1432,11 +1914,11 @@
 														Знятий з виробництва
 													</p>
 												</div>
-												<div class="tile__availability">
-													<p class="tile__availability_title">
+												<div class="tile__unavailable">
+													<p class="tile__unavailable_title">
 														Немає в наявності
 													</p>
-													<p class="tile__availability_expected">
+													<p class="tile__unavailable_expected">
 														Очікується 10.03.2020
 													</p>
 												</div>
@@ -1467,7 +1949,7 @@
 												</i>
 												В корзину
 											</a>
-											<a href="#" class="tile__availability_link">
+											<a href="#" class="tile__unavailable_link">
 												Повідомити про наявність
 											</a>
 											<a href="#" class="tile__discontinued_link">
@@ -1476,14 +1958,296 @@
 										</div>
 									</div>
 								</div>
-							</li>
-						</ul>
+							</div>
+							<div class="similar__body_item">
+								<div class="tile">
+									<div class="tile__inner">
+										<a href="#" class="tile__link">
+											<div class="tile__photo">
+												<img src="img/product/similar/1.png" alt="image" class="tile__img">
+												<div class="tile__discontinued">
+													<p class="tile__discontinued_title">
+														Знятий з виробництва
+													</p>
+												</div>
+												<div class="tile__unavailable">
+													<p class="tile__unavailable_title">
+														Немає в наявності
+													</p>
+													<p class="tile__unavailable_expected">
+														Очікується 10.03.2020
+													</p>
+												</div>
+											</div>
+											<div class="tile__description">
+												<p class="tile__title">
+													Бидистиллятор DE-10С MICROmed
+												</p>
+												<p class="tile__category">
+													Бидистилляторы
+												</p>
+											</div>
+										</a>
+										<div class="tile__footer">
+											<p class="tile__cost">
+												<span class="tile__cost_sale">
+													40 440 ГРН
+												</span>
+												<span class="tile__cost_price">
+													40 440 ГРН
+												</span>
+											</p>
+											<a href="#" class="tile__card_link">
+												<i class="tile__card_icon">
+													<svg class="tile__card_svg" width="30" height="26" viewBox="0 0 30 26" xmlns="http://www.w3.org/2000/svg">
+														<path d="M21.4381 20.1879C19.8063 20.1879 18.4832 21.4887 18.4832 23.0937C18.4832 24.699 19.8059 26 21.4377 26C23.07 26 24.3926 24.699 24.3926 23.0941C24.3911 21.4896 23.0691 20.1895 21.4381 20.1879ZM21.4381 24.6988C20.5366 24.6988 19.8063 23.9803 19.8063 23.0941C19.8063 22.2076 20.5366 21.4891 21.4377 21.4891C22.3392 21.4887 23.0695 22.2076 23.0695 23.0937C23.0685 23.9797 22.3388 24.6973 21.4381 24.6988Z" />
+														<path d="M29.3381 4.09892H5.86423L5.45136 2.44698C5.09478 1.00592 3.77939 -0.00607874 2.27173 2.7483e-05H0.661423C0.296151 2.7483e-05 0 0.291293 0 0.650745C0 1.00999 0.296151 1.30126 0.661423 1.30126H2.27173C3.16887 1.29413 3.95343 1.89498 4.16659 2.75229L7.37851 15.6529C7.73696 17.0911 9.05339 18.0986 10.5588 18.0872H24.298C25.8245 18.0992 27.1529 17.0634 27.4894 15.5993L29.9832 4.87908C30.0283 4.68857 29.9814 4.48829 29.8557 4.33624C29.7293 4.18338 29.5387 4.09586 29.3381 4.09892ZM26.1999 15.3134C25.9983 16.1839 25.2059 16.7976 24.298 16.786H10.5588C9.66287 16.7955 8.87789 16.1973 8.6639 15.3416L6.18791 5.40015H28.5081L26.1999 15.3134Z" />
+														<path d="M12.4901 20.1879C10.8582 20.1879 9.53519 21.4887 9.53519 23.0937C9.53519 24.699 10.858 26 12.4899 26C14.1219 26 15.4447 24.699 15.4447 23.0941C15.4433 21.4896 14.1213 20.1895 12.4901 20.1879ZM12.4901 24.6988C11.5888 24.6988 10.8582 23.9803 10.8582 23.0941C10.8582 22.2076 11.5888 21.4891 12.4899 21.4891C13.3911 21.4887 14.1217 22.2076 14.1217 23.0937C14.1207 23.9797 13.3907 24.6973 12.4901 24.6988Z" />
+													</svg>
+												</i>
+												В корзину
+											</a>
+											<a href="#" class="tile__unavailable_link">
+												Повідомити про наявність
+											</a>
+											<a href="#" class="tile__discontinued_link">
+												Переглянути аналоги
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="similar__body_item">
+								<div class="tile">
+									<div class="tile__inner">
+										<a href="#" class="tile__link">
+											<div class="tile__photo">
+												<img src="img/product/similar/2.png" alt="image" class="tile__img">
+												<div class="tile__discontinued">
+													<p class="tile__discontinued_title">
+														Знятий з виробництва
+													</p>
+												</div>
+												<div class="tile__unavailable">
+													<p class="tile__unavailable_title">
+														Немає в наявності
+													</p>
+													<p class="tile__unavailable_expected">
+														Очікується 10.03.2020
+													</p>
+												</div>
+											</div>
+											<p class="tile__title">
+												Баня водяная ВБ-4 MICROmed
+											</p>
+											<p class="tile__category">
+												Водяная баня
+											</p>
+										</a>
+										<div class="tile__footer">
+											<p class="tile__cost">
+												<span class="tile__cost_sale">
+													4 050 ГРН
+												</span>
+												<span class="tile__cost_price">
+													4 050 ГРН
+												</span>
+											</p>
+											<a href="#" class="tile__card_link">
+												<i class="tile__card_icon">
+													<svg class="tile__card_svg" width="30" height="26" viewBox="0 0 30 26" xmlns="http://www.w3.org/2000/svg">
+														<path d="M21.4381 20.1879C19.8063 20.1879 18.4832 21.4887 18.4832 23.0937C18.4832 24.699 19.8059 26 21.4377 26C23.07 26 24.3926 24.699 24.3926 23.0941C24.3911 21.4896 23.0691 20.1895 21.4381 20.1879ZM21.4381 24.6988C20.5366 24.6988 19.8063 23.9803 19.8063 23.0941C19.8063 22.2076 20.5366 21.4891 21.4377 21.4891C22.3392 21.4887 23.0695 22.2076 23.0695 23.0937C23.0685 23.9797 22.3388 24.6973 21.4381 24.6988Z" />
+														<path d="M29.3381 4.09892H5.86423L5.45136 2.44698C5.09478 1.00592 3.77939 -0.00607874 2.27173 2.7483e-05H0.661423C0.296151 2.7483e-05 0 0.291293 0 0.650745C0 1.00999 0.296151 1.30126 0.661423 1.30126H2.27173C3.16887 1.29413 3.95343 1.89498 4.16659 2.75229L7.37851 15.6529C7.73696 17.0911 9.05339 18.0986 10.5588 18.0872H24.298C25.8245 18.0992 27.1529 17.0634 27.4894 15.5993L29.9832 4.87908C30.0283 4.68857 29.9814 4.48829 29.8557 4.33624C29.7293 4.18338 29.5387 4.09586 29.3381 4.09892ZM26.1999 15.3134C25.9983 16.1839 25.2059 16.7976 24.298 16.786H10.5588C9.66287 16.7955 8.87789 16.1973 8.6639 15.3416L6.18791 5.40015H28.5081L26.1999 15.3134Z" />
+														<path d="M12.4901 20.1879C10.8582 20.1879 9.53519 21.4887 9.53519 23.0937C9.53519 24.699 10.858 26 12.4899 26C14.1219 26 15.4447 24.699 15.4447 23.0941C15.4433 21.4896 14.1213 20.1895 12.4901 20.1879ZM12.4901 24.6988C11.5888 24.6988 10.8582 23.9803 10.8582 23.0941C10.8582 22.2076 11.5888 21.4891 12.4899 21.4891C13.3911 21.4887 14.1217 22.2076 14.1217 23.0937C14.1207 23.9797 13.3907 24.6973 12.4901 24.6988Z" />
+													</svg>
+												</i>
+												В корзину
+											</a>
+											<a href="#" class="tile__unavailable_link">
+												Повідомити про наявність
+											</a>
+											<a href="#" class="tile__discontinued_link">
+												Переглянути аналоги
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="similar__body_item">
+								<div class="tile tile--sale">
+									<div class="tile__inner">
+										<a href="#" class="tile__link">
+											<div class="tile__photo">
+												<img src="img/product/similar/3.png" alt="image" class="tile__img">
+												<div class="tile__discontinued">
+													<p class="tile__discontinued_title">
+														Знятий з виробництва
+													</p>
+												</div>
+												<div class="tile__unavailable">
+													<p class="tile__unavailable_title">
+														Немає в наявності
+													</p>
+													<p class="tile__unavailable_expected">
+														Очікується 10.03.2020
+													</p>
+												</div>
+											</div>
+											<p class="tile__title">
+												Микроскоп биологический XS-3320 MICROmed
+											</p>
+											<p class="tile__category">
+												Микроскопы
+											</p>
+										</a>
+										<div class="tile__footer">
+											<p class="tile__cost">
+												<span class="tile__cost_sale">
+													10 560 ГРН
+												</span>
+												<span class="tile__cost_price">
+													11 400 ГРН
+												</span>
+											</p>
+											<a href="#" class="tile__card_link">
+												<i class="tile__card_icon">
+													<svg class="tile__card_svg" width="30" height="26" viewBox="0 0 30 26" xmlns="http://www.w3.org/2000/svg">
+														<path d="M21.4381 20.1879C19.8063 20.1879 18.4832 21.4887 18.4832 23.0937C18.4832 24.699 19.8059 26 21.4377 26C23.07 26 24.3926 24.699 24.3926 23.0941C24.3911 21.4896 23.0691 20.1895 21.4381 20.1879ZM21.4381 24.6988C20.5366 24.6988 19.8063 23.9803 19.8063 23.0941C19.8063 22.2076 20.5366 21.4891 21.4377 21.4891C22.3392 21.4887 23.0695 22.2076 23.0695 23.0937C23.0685 23.9797 22.3388 24.6973 21.4381 24.6988Z" />
+														<path d="M29.3381 4.09892H5.86423L5.45136 2.44698C5.09478 1.00592 3.77939 -0.00607874 2.27173 2.7483e-05H0.661423C0.296151 2.7483e-05 0 0.291293 0 0.650745C0 1.00999 0.296151 1.30126 0.661423 1.30126H2.27173C3.16887 1.29413 3.95343 1.89498 4.16659 2.75229L7.37851 15.6529C7.73696 17.0911 9.05339 18.0986 10.5588 18.0872H24.298C25.8245 18.0992 27.1529 17.0634 27.4894 15.5993L29.9832 4.87908C30.0283 4.68857 29.9814 4.48829 29.8557 4.33624C29.7293 4.18338 29.5387 4.09586 29.3381 4.09892ZM26.1999 15.3134C25.9983 16.1839 25.2059 16.7976 24.298 16.786H10.5588C9.66287 16.7955 8.87789 16.1973 8.6639 15.3416L6.18791 5.40015H28.5081L26.1999 15.3134Z" />
+														<path d="M12.4901 20.1879C10.8582 20.1879 9.53519 21.4887 9.53519 23.0937C9.53519 24.699 10.858 26 12.4899 26C14.1219 26 15.4447 24.699 15.4447 23.0941C15.4433 21.4896 14.1213 20.1895 12.4901 20.1879ZM12.4901 24.6988C11.5888 24.6988 10.8582 23.9803 10.8582 23.0941C10.8582 22.2076 11.5888 21.4891 12.4899 21.4891C13.3911 21.4887 14.1217 22.2076 14.1217 23.0937C14.1207 23.9797 13.3907 24.6973 12.4901 24.6988Z" />
+													</svg>
+												</i>
+												В корзину
+											</a>
+											<a href="#" class="tile__unavailable_link">
+												Повідомити про наявність
+											</a>
+											<a href="#" class="tile__discontinued_link">
+												Переглянути аналоги
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 			<!-- Buy -->
 			<div class="product__buy" id="product__buy">
-
+				<div class="product__buy_head">
+					<p class="product__buy_head_id">
+						40041
+					</p>
+					<p class="product__buy_head_title">
+						Стереомікроскоп учбовий My First Lab SMD-04
+					</p>
+					<p class="product__buy_head_available">
+						На складе
+					</p>
+				</div>
+				<div class="product__buy_body">
+					<div class="product__buy_body_description product__buy_body_description--toggled">
+						<p class="product__buy_body_description_paragraph">
+							Шкільный мікроскоп для досліджень начального рівня в області мінералогії, ботаніки, біології. Верхній світлодіодний освітлювач учбового стереомікроскопу MFL SMD-04 працює від 2х елементів живлення типу АА.
+							Студентський мікроскоп MFL SMD-04 призначений для забезпечення учбового процесу у середніх та спеціалізованих учбових закладах. Оптична схема з верхнім освітлювачем дозволить спостерігати будь-які предмети реального світу в режимі 3D.
+							Зручність використання цього шкільного мікроскопу ще і в тому, що він має бінокулярну насадку: в цьому випадку, значно знижується навантаження на зір при проведенні спостережень. Тубус має нахил в 45 градусів, міжзрачкова відстань регулюється, тому абсолютно нескладно налаштувати цей прилад «під себе».
+							Вся оптика навчального мікроскопу My First Lab SMD-04 виготовлена ​​зі спеціального оптичного скла, тому не потрібно турбуватися про якість одержуваного зображення. Освітлювач світлодіодний, розташований зверху, живиться від 2-х батарейок типу АА (у комплект не входять). Наведення на різкість здійснюється за допомогою мікровинта (переміщення 35 мм). Для того, щоб комфортно було спостерігати і темні, і світлі об’єкти, вставка предметного столика має дві різнокольорові сторони: чорну і білу.
+							Мікроскоп для підлітка My First Lab SMD-04 виготовлений компанією С&A Scientific, США та постачаються в США та Канаду багато років.
+							Перш за все, ми рекомендуємо цей учбовий мікроскоп дітям та школярам, адже з ним дуже просто управлятися: потрібно всього лише покласти досліджуваний об’єкт на предметний столик і навести на різкість, а після зануритися у вивчення мікросвіту.
+							Що можна спостерігати в цей шкільний мікроскоп? Все що завгодно. Комах, монети, марки, хутро, камені, рослини і все, що зможе поміститися на предметний столик на робочу область. Спостереження не вимагають спеціальних знань або підготовки.
+							Мікроскоп учбовий My First Lab SMD-04 відповідає Концепції Нової української школи у загальноосвітніх навчальних закладах I ступеня згідно Наказу Міністерства освіти і науки України від 13.07.2017р. №1021 та роспорядження Кабінету Міністрів України від 14 грудня 2016р. №988-р «Про схвалення Концепції реалізації державної політики у сфері реформування загальної середньої освіти «Нова українська школа на період до 2029р.»
+						</p>
+					</div>
+					<p class="product__buy_body_more">
+						Детальніше
+						<span class="product__buy_body_more_icon">
+							<svg class="product__buy_body_more_svg" width="6" height="8" viewBox="0 0 6 8" xmlns="http://www.w3.org/2000/svg">
+								<path d="M1 7L4 4L1 1" stroke-width="2"/>
+							</svg>
+						</span>
+					</p>
+				</div>
+				<div class="product__buy_footer">
+					<form action="#" method="POST" class="product__buy_footer_form">
+						<div class="product__buy_footer_color">
+							<ul class="product__buy_footer_color_list">
+								<li class="product__buy_footer_color_item">
+									<input id="white" class="product__buy_footer_color_radio" type="radio" name="color" data-color="white" checked>
+									<label for="white" class="product__buy_footer_color_label product__buy_footer_color_label--white"></label>
+								</li>
+								<li class="product__buy_footer_color_item">
+									<input id="red" class="product__buy_footer_color_radio" type="radio" name="color" data-color="red">
+									<label for="red" class="product__buy_footer_color_label product__buy_footer_color_label--red"></label>
+								</li>
+								<li class="product__buy_footer_color_item">
+									<input id="purple" class="product__buy_footer_color_radio" type="radio" name="color" data-color="purple">
+									<label for="purple" class="product__buy_footer_color_label product__buy_footer_color_label--purple"></label>
+								</li>
+								<li class="product__buy_footer_color_item">
+									<input id="blue" class="product__buy_footer_color_radio" type="radio" name="color" data-color="blue">
+									<label for="blue" class="product__buy_footer_color_label product__buy_footer_color_label--blue"></label>
+								</li>
+								<li class="product__buy_footer_color_item">
+									<input id="green" class="product__buy_footer_color_radio" type="radio" name="color" data-color="green">
+									<label for="green" class="product__buy_footer_color_label product__buy_footer_color_label--green"></label>
+								</li>
+								<li class="product__buy_footer_color_item">
+									<input id="yellow" class="product__buy_footer_color_radio" type="radio" name="color" data-color="yellow">
+									<label for="yellow" class="product__buy_footer_color_label product__buy_footer_color_label--yellow"></label>
+								</li>
+								<li class="product__buy_footer_color_item">
+									<input id="gray" class="product__buy_footer_color_radio" type="radio" name="color" data-color="gray">
+									<label for="gray" class="product__buy_footer_color_label product__buy_footer_color_label--gray"></label>
+								</li>
+								<li class="product__buy_footer_color_item">
+									<input id="black" class="product__buy_footer_color_radio" type="radio" name="color" data-color="black">
+									<label for="black" class="product__buy_footer_color_label product__buy_footer_color_label--black"></label>
+								</li>
+							</ul>
+						</div>
+						<div class="product__buy_footer_price">
+							<p class="product__buy_footer_price_current">
+								2 230 грн
+							</p>
+							<p class="product__buy_footer_price_sale">
+								1 790 ГРН
+							</p>
+						</div>
+						<div class="product__buy_footer_wrapper">
+							<a href="#" class="product__buy_footer_commerce">
+								<i class="product__buy_footer_commerce_icon">
+									<svg class="product__buy_footer_commerce_svg" width="12" height="13" viewBox="0 0 12 13" xmlns="http://www.w3.org/2000/svg">
+										<path d="M6 13L0 7.09091H12L6 13Z" />
+										<path d="M3.6 0H8.4V7.09091H3.6V0Z" />
+									</svg>
+								</i>
+								Комерційна пропозиція
+							</a>
+							<div class="product__buy_footer_number number">
+								<button type="button" class="product__buy_footer_button product__buy_footer_button--subtract">
+									<i class="product__buy_footer_button_icon">
+										<svg class="product__buy_footer_button_svg" width="15" height="3" viewBox="0 0 15 3" xmlns="http://www.w3.org/2000/svg">
+											<rect width="15" height="3" />
+										</svg>
+									</i>
+								</button>
+								<input class="product__buy_footer_input" type="number" min="1" value="1" name="number">
+								<button type="button" class="product__buy_footer_button product__buy_footer_button--add">
+									<i class="product__buy_footer_button_icon">
+										<svg class="product__buy_footer_button_svg" width="15" height="15" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg">
+											<path d="M0 6H15V9H0V6Z" />
+											<path d="M9 1.31134e-07L9 15H6L6 0L9 1.31134e-07Z" />
+										</svg>
+									</i>
+								</button>
+							</div>
+						</div>
+						<a href="#" class="product__buy_footer_link">
+							Купити
+						</a>
+					</form>
+				</div>
 			</div>
 		</div>
 	</main>
