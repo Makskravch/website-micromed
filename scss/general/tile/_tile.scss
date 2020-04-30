@@ -25,6 +25,9 @@
 //                 <p class="tile__category">
 
 //                 </p>
+//                 <p class="tile__description_short">
+
+//                 </p>
 //             </div>
 //         </a>
 //         <div class="tile__footer">
@@ -321,6 +324,13 @@
 
     &__description {
         text-align: center;
+
+        &_short {
+            @include font(14px, 24px, "Montserrat-Regular");
+
+            display: none;
+            color: $gray_7;
+        }
     }
 
     &__title {
