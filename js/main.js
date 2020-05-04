@@ -1,19 +1,30 @@
 $(document).ready(function() {
 
     const body = $('body');
+    const popupCallback = $('#popup_callback');
     
     // MENU
     if ($('#menu').length) {
 
-        const menu    = $('#menu');
-        const menuBtn = $('.menu__btn');
+        const menu = $('#menu');
 
         $(document).click(function(e) {
 
             if ($(e.target).closest('.menu__btn').length || $(e.target).hasClass('menu')) {
                 body.toggleClass('overflow')
-                menuBtn.toggleClass('menu__btn--open')
                 menu.toggleClass('menu--open')
+            }
+        })
+    }
+
+    // POPUP CALLBACK
+    if (popupCallback.length) {
+
+        $(document).click(function(e) {
+
+            if ($(e.target).closest('.callback__btn').length || $(e.target).hasClass('popup_callback')) {
+                body.toggleClass('overflow')
+                popupCallback.toggleClass('popup_callback--active')
             }
         })
     }
@@ -244,6 +255,37 @@ $(document).ready(function() {
             } else {
                 description.addClass('product__buy_body_description--toggled')
                 description.animate({"height": "60px"})
+            }
+        })
+    }
+
+    // CATALOG page
+    // Dropdown elements for filter block
+    if ($('.filter').length) {
+        $('.filter__dropdown').on('click', function(e) {
+            if ($(e.target).hasClass('filter__dropdown_title')) {
+                $(this).toggleClass('filter__dropdown--open')
+                $(this).find('.filter__dropdown_description').slideToggle()
+            }
+        })
+    }
+
+    // The 'catalog__product' grid display togglers
+    if ($('#toggle').length) {
+        const toggle = $('#toggle')
+        const catalog = $('.catalog__product')
+
+        toggle.on('click', function(e) {
+            if ($(e.target).closest('.settings__grid_icon').length) {
+                $(this).find('.settings__grid_icon').removeClass('settings__grid_icon--active')
+            }
+            if (!$(e.target).hasClass('settings__grid_icon--active') && $(e.target).closest('.settings__grid_icon').is('#toggle_grid')) {
+                $(e.target).closest('.settings__grid_icon').addClass('settings__grid_icon--active')
+                catalog.removeClass('catalog__product--line')
+            }
+            if (!$(e.target).hasClass('settings__grid_icon--active') && $(e.target).closest('.settings__grid_icon').is('#toggle_line')) {
+                $(e.target).closest('.settings__grid_icon').addClass('settings__grid_icon--active')
+                catalog.addClass('catalog__product--line')
             }
         })
     }

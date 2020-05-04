@@ -1,0 +1,47 @@
+.pagination {
+    border-left: 1px solid $gray_1;
+
+    &__list {
+        display: flex;
+    }
+
+    &__item {
+        border-right: 1px solid $gray_1;
+        border-bottom: 1px solid $gray_1;
+    }
+
+    &__link {
+        @include font(16px, 20px, "Montserrat-Bold");
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 70px;
+        height: 70px;
+        color: $gray_8;
+        transition: color 0.2s;
+
+        &:hover {
+            color: $blue_0;
+
+            .pagination__link_svg {
+                stroke: $blue_0;
+            }
+        }
+
+        &--active {
+            color: $blue_0;
+        }
+        
+        &_icon {
+            display: block;
+            width: 8px;
+        }
+
+        &_svg {
+            fill: transparent;
+            stroke: $gray_8;
+            transition: stroke 0.2s;
+        }
+    }
+}

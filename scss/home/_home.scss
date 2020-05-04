@@ -227,6 +227,7 @@
 
         &_link {
             position: relative;
+            overflow: hidden;
 
             &:first-child {
                 background: linear-gradient(233.2deg, #39ACFF 15.73%, #13B5AB 91.04%);
@@ -244,6 +245,13 @@
             &:last-child {
                 background: linear-gradient(64.79deg, #B77233 0%, #FFD542 76.92%);
             }
+
+            &:hover {
+
+                .home__nav_photo {
+                    transform: scale(1.05);
+                }
+            }
         }
 
         &_photo {
@@ -251,6 +259,7 @@
             width: 50%;
             padding-bottom: 59.38%;
             margin-left: auto;
+            transition: transform 0.2s linear;
         }
 
         &_img {
@@ -296,6 +305,10 @@
             column-gap: 42px;
             color: $gray_10;
         }
+    }
+
+    .slick-arrow {
+        top: 55%;
     }
 }
 

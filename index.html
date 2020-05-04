@@ -13,6 +13,43 @@
 </head>
   
 <body>
+	<!-- Callback popup -->
+	<div class="popup_callback" id="popup_callback">
+		<div class="popup_callback__inner">
+			<!-- Close button -->
+			<div class="popup_callback__close callback__btn">
+				<i class="popup_callback__close_icon">
+					<svg class="popup_callback__close_svg" width="20" height="21" viewBox="0 0 20 21" xmlns="http://www.w3.org/2000/svg">
+						<path d="M6.71743 3.78249L16.6169 13.682L13.0814 17.2175L3.1819 7.31802L6.71743 3.78249Z" />
+						<path d="M16.6169 7.31802L6.71743 17.2175L3.1819 13.682L13.0814 3.78249L16.6169 7.31802Z" />
+					</svg>
+				</i>
+			</div>
+			<!-- Form -->
+			<form action="#" method="post" class="popup_callback__form" name="callback" id="callback" autocomplete="off">
+				<p class="popup_callback__title">
+					Замов зворотній дзвінок
+				</p>
+				<input type="text" name="name" id="name" class="popup_callback__input popup_callback__input--name" placeholder="Ім'я">
+				<input type="tel" name="tel" id="tel" class="popup_callback__input popup_callback__input--tel" placeholder="Телефон*" required pattern="^\+?3?8?(0\d{9})$">
+				<input type="text" name="message" id="message" class="popup_callback__input popup_callback__input--message" placeholder="Повідомлення">
+				<button type="submit" class="popup_callback__submit">
+					Замовити
+				</button>
+			</form>
+		</div>
+	</div>
+	<!-- Thanks popup -->
+	<div class="popup_thanks" id="popup_thanks">
+		<div class="popup_thanks__inner">
+			<p class="popup_thanks__title">
+				Дякуємо за заявку!
+			</p>
+			<p class="popup_thanks__description">
+				Наш менеджер зателефонує Вам найближчим часом!
+			</p>
+		</div>
+	</div>
 	<!-- SEARCH -->
 	<div class="search" id="search">
 		<div class="search__inner">
@@ -354,64 +391,89 @@
 	<!-- MENU -->
 	<div class="menu" id="menu">
 		<div class="menu__inner">
-			<ul class="menu__list">
-				<li class="menu__item">
-					<a href="#" class="menu__link">
-						Повний каталог
-					</a>
-				</li>
-				<li class="menu__item">
-					<a href="#" class="menu__link">
-						Продукція для лабораторій
-					</a>
-				</li>
-				<li class="menu__item">
-					<a href="#" class="menu__link">
-						Медичне обладнання
-					</a>
-				</li>
-				<li class="menu__item">
-					<a href="#" class="menu__link">
-						Медичний інструмент
-					</a>
-				</li>
-				<li class="menu__item">
-					<a href="#" class="menu__link">
-						Новини
-					</a>
-				</li>
-				<li class="menu__item">
-					<a href="#" class="menu__link">
-						Про компанію
-					</a>
-				</li>
-				<li class="menu__item">
-					<a href="#" class="menu__link">
-						Оплата і доставка
-					</a>
-				</li>
-				<li class="menu__item">
-					<a href="#" class="menu__link">
-						Сервісне обслуговування
-					</a>
-				</li>
-				<li class="menu__item">
-					<a href="#" class="menu__link">
-						Завантажити ціни
-						<i class="menu__link_icon">
-							<svg class="menu__link_svg" width="14" height="12" viewBox="0 0 14 12" xmlns="http://www.w3.org/2000/svg">
-								<path d="M7 12L0 6.54545H14L7 12Z" />
-								<path d="M4.2 0H9.8V6.54545H4.2V0Z" />
-							</svg>
-						</i>
-					</a>
-				</li>
-				<li class="menu__item">
-					<a href="#" class="menu__link">
-						Контакти
-					</a>
-				</li>
-			</ul>
+			<!-- Head -->
+			<div class="menu__head">
+				<i class="menu__btn">
+					<svg class="menu__btn_svg menu__btn_svg--close" width="20" height="21" viewBox="0 0 20 21" xmlns="http://www.w3.org/2000/svg">
+						<path d="M6.71743 3.78249L16.6169 13.682L13.0814 17.2175L3.1819 7.31802L6.71743 3.78249Z" />
+						<path d="M16.6169 7.31802L6.71743 17.2175L3.1819 13.682L13.0814 3.78249L16.6169 7.31802Z" />
+					</svg>
+				</i>
+				<div class="menu__callback callback__btn">
+					<p class="menu__callback_title">
+						Замовити дзвінок
+					</p>
+				</div>
+				<div class="menu__language language">
+					<div class="menu__language_inner">
+						<p class="menu__language_title">
+							ук
+						</p>
+					</div>
+				</div>
+			</div>
+			<!-- Body -->
+			<div class="menu__body">
+				<ul class="menu__list">
+					<li class="menu__item">
+						<a href="#" class="menu__link">
+							Повний каталог
+						</a>
+					</li>
+					<li class="menu__item">
+						<a href="#" class="menu__link">
+							Продукція для лабораторій
+						</a>
+					</li>
+					<li class="menu__item">
+						<a href="#" class="menu__link">
+							Медичне обладнання
+						</a>
+					</li>
+					<li class="menu__item">
+						<a href="#" class="menu__link">
+							Медичний інструмент
+						</a>
+					</li>
+					<li class="menu__item">
+						<a href="#" class="menu__link">
+							Новини
+						</a>
+					</li>
+					<li class="menu__item">
+						<a href="#" class="menu__link">
+							Про компанію
+						</a>
+					</li>
+					<li class="menu__item">
+						<a href="#" class="menu__link">
+							Оплата і доставка
+						</a>
+					</li>
+					<li class="menu__item">
+						<a href="#" class="menu__link">
+							Сервісне обслуговування
+						</a>
+					</li>
+					<li class="menu__item">
+						<a href="#" class="menu__link">
+							Завантажити ціни
+							<i class="menu__link_icon">
+								<svg class="menu__link_svg" width="14" height="12" viewBox="0 0 14 12" xmlns="http://www.w3.org/2000/svg">
+									<path d="M7 12L0 6.54545H14L7 12Z" />
+									<path d="M4.2 0H9.8V6.54545H4.2V0Z" />
+								</svg>
+							</i>
+						</a>
+					</li>
+					<li class="menu__item">
+						<a href="#" class="menu__link">
+							Контакти
+						</a>
+					</li>
+				</ul>
+			</div>
+			<!-- Footer -->
 			<div class="menu__footer">
 				<div class="menu__contacts">
 					<ul class="menu__contacts_list">
@@ -448,17 +510,13 @@
 	<!-- HEADER -->
 	<header class="header" id="header">
 		<div class="header__inner">
-			<!-- Menu open/close button -->
+			<!-- Menu button -->
 			<i class="header__menu menu__btn">
-				<svg class="menu__btn_svg menu__btn_svg--open" width="14" height="13" viewBox="0 0 14 13" xmlns="http://www.w3.org/2000/svg">
+				<svg class="menu__btn_svg" width="14" height="13" viewBox="0 0 14 13" xmlns="http://www.w3.org/2000/svg">
 					<path d="M0 0H5.33333V4.8H0V0Z" />
 					<path d="M0 8.2H5.33333V13H0V8.2Z" />
 					<path d="M8.66667 0H14V4.8H8.66667V0Z" />
 					<path d="M8.66667 8.2H14V13H8.66667V8.2Z" />
-				</svg>
-				<svg class="menu__btn_svg menu__btn_svg--close" width="20" height="21" viewBox="0 0 20 21" xmlns="http://www.w3.org/2000/svg">
-					<path d="M6.71743 3.78249L16.6169 13.682L13.0814 17.2175L3.1819 7.31802L6.71743 3.78249Z" />
-					<path d="M16.6169 7.31802L6.71743 17.2175L3.1819 13.682L13.0814 3.78249L16.6169 7.31802Z" />
 				</svg>
 			</i>
 			<!-- Logo -->
@@ -474,8 +532,10 @@
 				<ul class="nav__list">
 					<li class="nav__item">
 						<a href="#" class="nav__link">
-							<span class="nav__link_line">Продукція для </span>
-							<span class="nav__link_line">лабораторій</span>
+							<p class="nav__link_text">
+								<span class="nav__link_line">Продукція для </span>
+								<span class="nav__link_line">лабораторій</span>
+							</p>
 						</a>
 						<div class="subnav">
 							<ul class="subnav__list">
@@ -604,8 +664,10 @@
 					</li>
 					<li class="nav__item">
 						<a href="#" class="nav__link">
-							<span class="nav__link_line">Медичне</span>
-							<span class="nav__link_line">обладнання</span>
+							<p class="nav__link_text">
+								<span class="nav__link_line">Медичне</span>
+								<span class="nav__link_line">обладнання</span>
+							</p>
 						</a>
 						<div class="subnav">
 							<ul class="subnav__list">
@@ -734,8 +796,10 @@
 					</li>
 					<li class="nav__item">
 						<a href="#" class="nav__link">
-							<span class="nav__link_line">Медичний</span>
-							<span class="nav__link_line">інструмент</span>
+							<p class="nav__link_text">
+								<span class="nav__link_line">Медичний</span>
+								<span class="nav__link_line">інструмент</span>
+							</p>
 						</a>
 						<div class="subnav">
 							<ul class="subnav__list">
@@ -881,9 +945,9 @@
 						</a>
 					</li>
 					<li class="header__contacts_item">
-						<span class="header__contacts_item_span callback">
+						<p class="header__contacts_item_span callback__btn">
 							Замовити дзвінок
-						</span>
+						</p>
 					</li>
 				</ul>
 			</div>
@@ -901,10 +965,12 @@
 				</div>
 			</div>
 			<!-- Language -->
-			<div class="header__language">
-				<p class="header__language_item">
-					ук
-				</p>
+			<div class="header__language language">
+				<div class="header__language_inner">
+					<p class="header__language_item">
+						ук
+					</p>
+				</div>
 			</div>
 			<!-- Card -->
 			<div class="header__card card__btn">
@@ -2323,12 +2389,12 @@
 										<p class="tile__title">
 											Мешалка магнитная ММ-5 с подогревом
 										</p>
-									<p class="tile__category">
+										<p class="tile__category">
+											Магнитная мешалка
+										</p>
+										<p class="tile__description_short">
 											Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus sed dolorem temporibus voluptates iste totam.Магнитная мешалка
-									</p>
-						    	            <p class="tile__description_short">
-
-							                </p>
+										</p>
 									</div>
 								</a>
 								<div class="tile__footer">

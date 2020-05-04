@@ -41,6 +41,10 @@
             color: $blue_0;
         }
 
+        &_text {
+            width: min-content;
+        }
+
         &_line {
             white-space: nowrap;
         }

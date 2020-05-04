@@ -72,6 +72,10 @@
             display: flex;
         }
 
+        .tile__img {
+            filter: grayscale(1);
+        }
+
         .tile__card_link {
             display: none;
         }
@@ -93,6 +97,10 @@
 
         .tile__unavailable {
             display: flex;
+        }
+
+        .tile__img {
+            filter: grayscale(1);
         }
 
         .tile__card_link {
@@ -202,19 +210,22 @@
     }
 
     &__inner {
-        padding: 50px 15px;
+        padding: 95px 15px 50px;
     }
 
     &__link {
         display: block;
+        width: 100%;
         margin-bottom: 30px;
     }
 
     &__photo {
         position: relative;
-        margin: 0 auto 28px;
+        width: 100%;
+        height: 0;
         max-width: 230px;
-        padding-bottom: 65.16%;
+        padding-bottom: 60%;
+        margin: 0 auto 28px;
     }
 
     &__img {
@@ -323,6 +334,7 @@
     }
 
     &__description {
+        width: 100%;
         text-align: center;
 
         &_short {

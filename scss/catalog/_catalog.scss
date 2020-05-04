@@ -1,0 +1,180 @@
+.catalog {
+
+    &__head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 27px 43px;
+        border-bottom: 1px solid $gray_1;
+    }
+
+    &__title {
+        @include font(22px, 27px, "Montserrat-Bold");
+
+        padding: 39px 27px 39px 43px;
+        background-color: $gray_12;
+        color: $black_0;
+    }
+
+    &__body {
+        display: flex;
+    }
+
+    &__main {
+        width: 80%;
+    }
+
+    &__nav {
+        border-left: 1px solid $gray_1;
+
+        &_list {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+        }
+
+        &_item {
+            padding: 20px;
+            border-right: 1px solid $gray_1;
+            border-bottom: 1px solid $gray_1;
+            
+            &:nth-child(6n) {
+                border-right: 0;
+            }
+        }
+
+        &_link {
+            display: block;
+            width: 100%;
+            height: 100%;
+
+            &:hover {
+
+                .catalog__nav_img {
+                    transform: scale(1.05);
+                }
+            }
+        }
+
+        &_photo {
+            position: relative;
+            width: 63.23%;
+            padding-bottom: 63.23%;
+            margin: 0 auto 18px;
+            overflow: hidden;
+        }
+
+        &_img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.2s;
+        }
+
+        &_title {
+            @include font(14px, 17px, "Montserrat-Bold");
+
+            color: $black_0;
+            text-align: center;
+        }
+    }
+
+    &__product {
+        border-bottom: 1px solid $gray_1;
+        border-left: 1px solid $gray_1;
+
+        &--line {
+
+            .catalog__product_list {
+                grid-template-columns: 1fr;
+            }
+
+            .tile {
+                max-width: none;
+
+                &__inner {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 80px 100px 80px 50px;
+                }
+
+                &__link {
+                    display: flex;
+                    max-width: 775px;
+                    margin-bottom: 0;
+                }
+
+                &__photo {
+                    max-width: 195px;
+                    padding-bottom: 22%;
+                    margin-bottom: 0;
+                    margin-right: 12.26%;
+                }
+
+                &__title {
+                    order: 1;
+                    height: auto;
+                    width: 100%;
+                    max-width: none;
+                    margin-bottom: 30px;
+                    text-align: left;
+                }
+
+                &__category {
+                    order: 0;
+                    margin-top: 0;
+                    margin-bottom: 10px;
+                    text-align: left;
+                }
+
+                &__description {
+                    display: flex;
+                    flex-direction: column;
+
+                    &_short {
+                        order: 1;
+                        display: block;
+                        text-align: left;
+                    }
+                }
+            }
+        }
+
+        &_list {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        &_item {
+            border-right: 1px solid $gray_1;
+            border-top: 1px solid $gray_1;
+            
+            &:nth-child(4n) {
+                border-right: 0;
+            }
+        }
+    }
+
+    &__description {
+
+        &_inner {
+            padding: 6.51% 6.51% 6.51% 0;
+        }
+
+        &_title {
+            @include font(14px, 24px, "Montserrat-Bold");
+
+            margin-bottom: 24px;
+            color: $black_0;
+        }
+
+        &_paragraph {
+            @include font(14px, 24px, "Montserrat-Regular");
+
+            color: $black_0;
+        }
+    }
+}

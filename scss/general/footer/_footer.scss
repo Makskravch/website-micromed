@@ -110,7 +110,7 @@
             &_description {
                 display: grid;
                 grid-template-columns: repeat(2, auto);
-                grid-column-gap: 30px;
+                grid-column-gap: 20px;
 
                 &_block {
                     @include font(12px, 23px, "Montserrat-Regular");
