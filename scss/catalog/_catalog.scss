@@ -94,6 +94,25 @@
             .tile {
                 max-width: none;
 
+                &--sale {
+
+                    .tile {
+
+                        &__cost {
+
+                            &_sale {
+                                font-size: 2.4rem;
+                                line-height: 2.9rem;
+                            }
+
+                            &_price {
+                                font-size: 1.4rem;
+                                line-height: 1.7rem;
+                            }
+                        }
+                    }
+                }
+
                 &__inner {
                     display: flex;
                     justify-content: space-between;
@@ -138,6 +157,26 @@
                         order: 1;
                         display: block;
                         text-align: left;
+                    }
+                }
+
+                &__footer {
+                    margin-left: 20px;
+                }
+
+                &__logo {
+                    display: block;
+                }
+
+                &__cost {
+                    display: flex;
+                    flex-direction: column-reverse;
+                    align-items: flex-end;
+                    margin-bottom: 20px;
+
+                    &_price {
+                        font-size: 2.4rem;
+                        line-height: 2.9rem;
                     }
                 }
             }

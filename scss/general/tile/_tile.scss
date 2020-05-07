@@ -31,6 +31,9 @@
 //             </div>
 //         </a>
 //         <div class="tile__footer">
+//             <div class="tile__logo">
+//                 <img src="" alt="image" class="tile__logo_img">
+//             </div>
 //             <p class="tile__cost">
 //                 <span class="tile__cost_sale">
 
@@ -80,7 +83,7 @@
             display: none;
         }
 
-        .tile__title {
+        .tile__description {
             opacity: 0.5;
         }
 
@@ -363,6 +366,20 @@
         margin-top: 8px;
         color: $gray_8;
         text-align: center;
+    }
+
+    &__logo {
+        display: none;
+        width: 124px;
+        height: 25px;
+        margin-left: auto;
+        margin-bottom: 25px;
+
+        &_img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
     }
 
     &__cost {
