@@ -2,14 +2,16 @@ $(document).ready(function() {
 
     const body = $('body');
     const popupCallback = $('#popup_callback');
+    const card = $('#card');
+    const menu = $('#menu');
+    const search = $('#search');
+    const tile = $('.tile');
+    const counter = $('.counter')
     
     // MENU
-    if ($('#menu').length) {
-
-        const menu = $('#menu');
+    if (menu.length) {
 
         $(document).click(function(e) {
-
             if ($(e.target).closest('.menu__btn').length || $(e.target).hasClass('menu')) {
                 body.toggleClass('overflow')
                 menu.toggleClass('menu--open')
@@ -21,7 +23,6 @@ $(document).ready(function() {
     if (popupCallback.length) {
 
         $(document).click(function(e) {
-
             if ($(e.target).closest('.callback__btn').length || $(e.target).hasClass('popup_callback')) {
                 body.toggleClass('overflow')
                 popupCallback.toggleClass('popup_callback--active')
@@ -30,12 +31,9 @@ $(document).ready(function() {
     }
 
     // SEARCH
-    if ($('#search').length) {
-
-        const search = $('#search');
+    if (search.length) {
 
         $(document).click(function(e) {
-
             if ($(e.target).closest('.search__btn').length || $(e.target).hasClass('search')) {
                 body.toggleClass('overflow')
                 search.toggleClass('search--open')
@@ -44,20 +42,55 @@ $(document).ready(function() {
     }
 
     // CARD
-    if ($('#card').length) {
-
-        const card = $('#card');
+    if (card.length) {
 
         $(document).click(function(e) {
-
             if ($(e.target).closest('.card__btn').length || $(e.target).hasClass('card')) {
                 body.toggleClass('overflow')
                 card.toggleClass('card--open')
             }
+            if ($(e.target).closest('.remove_item').length) {
+                $(e.target).closest('.card__order_item').slideToggle(500)
+                setTimeout(function() {
+                    $(e.target).closest('.card__order_item').remove()
+                }, 1000);
+            }
         })
     }
 
+    // TILE - CARD (handler adding the product to the cart)
+    if (tile.length) {
+        tile.find('.tile__card_link').click(function(e) {
+            e.preventDefault()
+        })
+        $(document).on('click', '.tile__card_link', function(e) {
+            const cardItem = $('<li class="card__order_item"></li>')
+            const copyTile = $(this).closest('.tile').clone()
+            const removeBtn = $('<div class="remove_item"></div>')
+            cardItem.append(copyTile)
+            cardItem.append(removeBtn)
+            card.find('.card__order_list').append(cardItem)
+        })
+    }
+
+    // COUNTER
+    if (counter.length) {
+
+        $(document).on('click', function(e) {
+
+            if ($(e.target).closest('.counter')) {
+                const input = $(e.target).closest('.counter').find('input')[0]
     
+                if ($(e.target).closest('.counter_subtract').length && input.value > 1) {
+                    input.value = --input.value
+                }
+                if ($(e.target).closest('.counter_add').length) {
+                    input.value = ++input.value
+                }
+            }
+        })
+    }
+
     // HOME main slider
     if ($('.home__slider_list').length) {
         $('.home__slider_list').slick({
@@ -184,9 +217,7 @@ $(document).ready(function() {
     // Preview tabs (description)
     if ($("#product__description").length) {
 
-        let items = $('.product__description_item')
-        let tabs = $('.product__description_tab')
-        let panes = $('.product__description_pane')
+        const items = $('.product__description_item')
 
         $("#product__description").click(function(e) {
 

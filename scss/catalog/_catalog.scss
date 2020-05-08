@@ -118,6 +118,10 @@
                     justify-content: space-between;
                     align-items: center;
                     padding: 80px 100px 80px 50px;
+
+                    .counter {
+                        display: block;
+                    }
                 }
 
                 &__link {

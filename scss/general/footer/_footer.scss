@@ -44,7 +44,8 @@
         &_button {
             @include font(14px, 17px, "Montserrat-Bold");
 
-            padding: 19px 26px;
+            width: 155px;
+            height: 55px;
             background-color: $blue_0;
             border: 1px solid $blue_0;
             border-radius: 100px;
