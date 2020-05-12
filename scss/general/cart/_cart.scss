@@ -1,4 +1,4 @@
-.card {
+.cart {
     position: fixed;
     top: 0;
     left: 0;
@@ -16,7 +16,7 @@
         z-index: 10;
         pointer-events: all;
 
-        .card__inner {
+        .cart__inner {
             transform: translateX(0);
         }
     }
@@ -207,7 +207,7 @@
                     text-align: right;
                 }
 
-                &__card {
+                &__cart {
 
                     &_link {
                         display: none;

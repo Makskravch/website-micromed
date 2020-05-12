@@ -35,7 +35,7 @@
         background-color: $white_0;
         will-change: color;
         transition: color 0.2s;
-        z-index: 2;
+        z-index: 3;
 
         &:hover {
             color: $blue_0;
@@ -59,10 +59,10 @@
     width: calc(100vw - 345px);
     border-top: 1px solid $gray_1;
     background-color: $white_0;
-    transform: translateY(-100%);
+    transform: translateY(-200%);
     will-change: transform;
     transition: transform 0.2s;
-    z-index: 1;
+    z-index: 2;
 
     &__list {
         display: grid;

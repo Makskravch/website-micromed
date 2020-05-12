@@ -46,6 +46,7 @@
         cursor: pointer;
 
         &_icon {
+            flex-shrink: 0;
             display: inline-block;
         }
 

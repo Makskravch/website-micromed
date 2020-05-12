@@ -2,7 +2,7 @@ $(document).ready(function() {
 
     const body = $('body');
     const popupCallback = $('#popup_callback');
-    const card = $('#card');
+    const cart = $('#cart');
     const menu = $('#menu');
     const search = $('#search');
     const tile = $('.tile');
@@ -41,35 +41,35 @@ $(document).ready(function() {
         })
     }
 
-    // CARD
-    if (card.length) {
+    // CART
+    if (cart.length) {
 
         $(document).click(function(e) {
-            if ($(e.target).closest('.card__btn').length || $(e.target).hasClass('card')) {
+            if ($(e.target).closest('.cart__btn').length || $(e.target).hasClass('cart')) {
                 body.toggleClass('overflow')
-                card.toggleClass('card--open')
+                cart.toggleClass('cart--open')
             }
             if ($(e.target).closest('.remove_item').length) {
-                $(e.target).closest('.card__order_item').slideToggle(500)
+                $(e.target).closest('.cart__order_item').slideToggle(500)
                 setTimeout(function() {
-                    $(e.target).closest('.card__order_item').remove()
+                    $(e.target).closest('.cart__order_item').remove()
                 }, 1000);
             }
         })
     }
 
-    // TILE - CARD (handler adding the product to the cart)
+    //  Handler adding the product to the cart (TILE - CART)
     if (tile.length) {
-        tile.find('.tile__card_link').click(function(e) {
+        tile.find('.tile__cart_link').click(function(e) {
             e.preventDefault()
         })
-        $(document).on('click', '.tile__card_link', function(e) {
-            const cardItem = $('<li class="card__order_item"></li>')
+        $(document).on('click', '.tile__cart_link', function(e) {
+            const cartItem = $('<li class="cart__order_item"></li>')
             const copyTile = $(this).closest('.tile').clone()
             const removeBtn = $('<div class="remove_item"></div>')
-            cardItem.append(copyTile)
-            cardItem.append(removeBtn)
-            card.find('.card__order_list').append(cardItem)
+            cartItem.append(copyTile)
+            cartItem.append(removeBtn)
+            cart.find('.cart__order_list').append(cartItem)
         })
     }
 
@@ -270,7 +270,7 @@ $(document).ready(function() {
         });
     }
 
-    // Product buy (description)
+    // Product buy (show/hide the description of the "buy" block)
     if ($('.product__buy_body_description').length) {
         let btn = $('.product__buy_body_more')
         let description = $('.product__buy_body_description')
@@ -301,10 +301,10 @@ $(document).ready(function() {
         })
     }
 
-    // The 'catalog__product' grid display togglers
+    // Product display mode switch
     if ($('#toggle').length) {
         const toggle = $('#toggle')
-        const catalog = $('.catalog__product')
+        const catalog = $('.product')
 
         toggle.on('click', function(e) {
             if ($(e.target).closest('.settings__grid_icon').length) {
@@ -312,11 +312,11 @@ $(document).ready(function() {
             }
             if (!$(e.target).hasClass('settings__grid_icon--active') && $(e.target).closest('.settings__grid_icon').is('#toggle_grid')) {
                 $(e.target).closest('.settings__grid_icon').addClass('settings__grid_icon--active')
-                catalog.removeClass('catalog__product--line')
+                catalog.removeClass('product--line')
             }
             if (!$(e.target).hasClass('settings__grid_icon--active') && $(e.target).closest('.settings__grid_icon').is('#toggle_line')) {
                 $(e.target).closest('.settings__grid_icon').addClass('settings__grid_icon--active')
-                catalog.addClass('catalog__product--line')
+                catalog.addClass('product--line')
             }
         })
     }
