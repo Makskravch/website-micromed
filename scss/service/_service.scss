@@ -1,0 +1,118 @@
+.service {
+
+    &__head {
+        padding: 27px 43px;
+        border-bottom: 1px solid $gray_1;
+    }
+
+    &__title {
+        @include font(40px, 49px, "Montserrat-Bold");
+
+        margin-bottom: 4.48%;
+        color: $black_0;
+    }
+
+    &__body {
+        padding: 40px 44px 80px;
+    }
+
+    &__article {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: 4.37%;
+    }
+
+    &__paragraph {
+
+        &:first-child {
+            width: 73.9%;
+
+            .service__paragraph_text {
+
+                &:first-child {
+                    width: 73.63%;
+                }
+
+                &:nth-child(2) {
+                    width: 20.38%;
+                }
+            }
+        }
+
+        &:nth-child(2) {
+            width: 21.34%;
+        }
+
+        &_title {
+            @include font(14px, 24px, "Montserrat-Bold");
+
+            margin-bottom: 24px;
+            color: $gray_10;
+        }
+
+        &_description {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        &_text {
+            @include font(14px, 24px, "Montserrat-Regular");
+
+            color: $gray_10;
+
+            &--color {
+                color: $blue_0;
+            }
+        }
+
+        &_link {
+            font-family: "Montserrat-Medium";
+            color: $blue_0;
+        }
+    }
+
+    &__more {
+        display: flex;
+        align-items: center;
+
+        &_link {
+            @include font(14px, 24px, "Montserrat-Bold");
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 230px;
+            padding: 20px 24px;
+            border-radius: 100px;
+            margin-right: 60px;
+            background-color: $blue_0;
+            color: $white_0;
+        }
+
+        &_icon {
+            display: inline-block;
+            margin-right: 8px;
+        }
+
+        &_svg {
+            fill: $white_0;
+        }
+
+        &_contacts {
+            @include font(14px, 24px, "Montserrat-Bold");
+
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            color: $gray_10;
+
+            &_link {
+                @include font(14px, 24px, "Montserrat-Regular");
+
+                color: $gray_10;
+            }
+        }
+    }
+}
