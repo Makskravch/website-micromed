@@ -1,0 +1,112 @@
+.payment {
+
+    &__head {
+        padding: 27px 43px;
+        border-bottom: 1px solid $gray_1;
+    }
+
+    &__body {
+        padding: 39px 44px 64px;
+    }
+
+    &__title {
+        @include font(40px, 49px, "Montserrat-Bold");
+
+        margin-bottom: 3.5%;
+        color: $black_0;
+    }
+
+    &__order {
+        padding-bottom: 3.5%;
+        border-bottom: 1px solid $gray_1;
+        margin-bottom: 3.5%;
+
+        &_list {
+            display: flex;
+        }
+
+        &_item {
+            margin-right: 4.37%;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        &_title {
+            @include font(14px, 24px, "Montserrat-Bold");
+
+            margin-bottom: 24px;
+            color: $gray_10;
+        }
+
+        &_paragraph {
+            @include font(14px, 24px, "Montserrat-Regular");
+
+            color: $gray_10;
+        }
+    }
+
+    &__delivery {
+        padding-bottom: 3.5%;
+        border-bottom: 1px solid $gray_1;
+        margin-bottom: 3.5%;
+
+        &_title {
+            @include font(14px, 24px, "Montserrat-Bold");
+
+            margin-bottom: 24px;
+            color: $gray_10;
+        }
+
+        &_description {
+            display: flex;
+        }
+
+        &_paragraph {
+            @include font(14px, 24px, "Montserrat-Regular");
+
+            margin-right: 3.82%;
+            color: $gray_10;
+
+            &:last-child {
+                min-width: 180px;
+                margin-right: 0;
+            }
+
+            &--color {
+                color: $blue_0;
+            }
+        }
+    }
+
+    &__conditions {
+
+        &_title {
+            @include font(14px, 24px, "Montserrat-Bold");
+
+            margin-bottom: 24px;
+            color: $gray_10;
+        }
+
+        &_description {
+            display: flex;
+        }
+
+        &_paragraph {
+            @include font(14px, 24px, "Montserrat-Regular");
+
+            margin-right: 3.82%;
+            color: $gray_10;
+
+            &:last-child {
+                min-width: 180px;
+                margin-right: 0;
+            }
+
+            &--color {
+                color: $blue_0;
+            }
+        }
+    }
+}
