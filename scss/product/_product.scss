@@ -52,13 +52,10 @@
         &_body {
             position: relative;
             display: flex;
-            padding-bottom: 125%;
+            height: calc(100vh - 171px);
         }
 
         &_list {
-            position: absolute;
-            top: 0;
-            left: 0;
             display: grid;
             grid-template-columns: 1fr;
             grid-template-rows: repeat(auto-fit, minmax(50px, 1fr));
@@ -113,9 +110,6 @@
     }
 
     &__photo {
-        position: absolute;
-        top: 0;
-        right: 0;
         width: 79.87%;
         height: 100%;
         border-bottom: 1px solid $gray_1;
@@ -132,60 +126,52 @@
         }
     }
 
+    &__tab {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+
+        &_list {
+            display: flex;
+        }
+
+        &_item {
+            @include font(14px, 24px, "Montserrat-Regular");
+
+            display: flex;
+            justify-content: center;
+            width: 25%;
+            padding: 20px;
+            border-right: 1px solid $gray_1;
+            border-bottom: 1px solid $gray_1;
+            background-color: $white_0;
+            color: $gray_7;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            text-align: center;
+            cursor: pointer;
+
+            &:last-child {
+                border-right: 0;
+            }
+
+            &--active {
+                font-family: "Montserrat-Bold";
+                color: $blue_0;
+                cursor: default;
+            }
+        }
+    }
+
     &__description {
         align-self: stretch;
         width: 53.96%;
         border-left: 1px solid $gray_1;
         border-right: 1px solid $gray_1;
 
-        &_list {
-            position: relative;
-        }
-
         &_item {
 
-            &:last-child {
-
-                .product__description_tab {
-                    border-right: 0;
-                }
-            }
-
-            .product__description_tab {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 25%;
-            }
-
-            &:nth-child(2) {
-
-                .product__description_tab {
-                    left: 25%;
-                }
-            }
-
-            &:nth-child(3) {
-
-                .product__description_tab {
-                    left: 50%;
-                }
-            }
-
-            &:nth-child(4) {
-
-                .product__description_tab {
-                    left: 75%;
-                }
-            }
-
-            &--active {
-
-                .product__description_tab {
-                    font-family: "Montserrat-Bold";
-                    color: $blue_0;
-                    cursor: default;
-                }
+            &:first-child {
 
                 .product__description_pane {
                     display: block;
@@ -194,24 +180,11 @@
         }
 
         &_tab {
-            @include font(14px, 24px, "Montserrat-Regular");
-
-            display: flex;
-            justify-content: center;
-            padding: 20px;
-            border-right: 1px solid $gray_1;
-            border-bottom: 1px solid $gray_1;
-            color: $gray_7;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            text-align: center;
-            transition: all 0.2s;
-            cursor: pointer;
+            display: none;
         }
 
         &_pane {
             display: none;
-            padding-top: 65px;
 
             &_head {
                 display: flex;
@@ -465,13 +438,17 @@
         position: sticky;
         top: 0;
         left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: calc(100vh - 171px);
         width: 14.48%;
         min-width: 278px;
         background-color: $gray_12;
 
         &_head {
             padding: 25px 30px 0;
-            margin-bottom: 35px;
+            margin-bottom: 15px;
 
             &_id {
                 @include font(12px, 15px, "Montserrat-Regular");
@@ -496,7 +473,7 @@
 
         &_body {
             padding: 0 30px;
-            margin-bottom: 30px;
+            margin-bottom: 15px;
 
             &_description {
                 margin-bottom: 10px;

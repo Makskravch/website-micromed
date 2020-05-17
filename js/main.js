@@ -214,9 +214,10 @@ $(document).ready(function() {
         })
     }
 
-    // Preview tabs (description)
+    // Preview tabs and panes (description)
     if ($("#product__description").length) {
 
+        const tabs = $('.product__tab_item')
         const items = $('.product__description_item')
 
         $("#product__description").click(function(e) {
@@ -224,6 +225,17 @@ $(document).ready(function() {
             if ($(e.target).closest('.product__description_tab').length) {
                 items.removeClass('product__description_item--active');
                 $(e.target).closest('.product__description_item').addClass('product__description_item--active')
+            }
+            if ($(e.target).closest('.product__tab_item').length) {
+                tabs.removeClass('product__tab_item--active');
+                $(e.target).closest('.product__tab_item').addClass('product__tab_item--active')
+
+                for (let i = 0; i < 4; i++) {
+                    if ($(e.target).closest('.product__tab_item')[0] == tabs[i]) {
+                        items.find('.product__description_pane').css('display', 'none')
+                        items[i].querySelector('.product__description_pane').style.display = 'block'
+                    }
+                }
             }
         })
     }
@@ -301,7 +313,7 @@ $(document).ready(function() {
         })
     }
 
-    // Product display mode switch
+    // Product display mode switch (grid or lines)
     if ($('#toggle').length) {
         const toggle = $('#toggle')
         const catalog = $('.product')
