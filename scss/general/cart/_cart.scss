@@ -56,7 +56,8 @@
         }
 
         &_text {
-            @include font(14px, 17px, "Montserrat-Bold");
+            @include adaptiv-font(14, 17, 12, 14, "Montserrat-Bold");
+            // @include font(14px, 17px, "Montserrat-Bold");
 
             margin-left: 24px;
             color: $gray_6;
@@ -64,13 +65,12 @@
     }
 
     &__title {
-        @include font(26px, 32px, "Montserrat-Bold");
+        @include adaptiv-font(26, 32, 12, 14, "Montserrat-Bold");
+        // @include font(26px, 32px, "Montserrat-Bold");
 
         color: $black_0;
 
         &::after {
-            @include font(23px, 28px, "Montserrat-Bold");
-
             content: "("attr(data-count)")";
             color: $blue_0;
         }
@@ -91,7 +91,6 @@
         &_item {
             display: grid;
             grid-template-columns: 1fr auto;
-            // grid-template-columns: 100px 1fr 60px 130px 20px;
             grid-template-rows: minmax(90px, auto);
             grid-gap: 30px;
             justify-content: space-between;
@@ -209,7 +208,7 @@
 
                 &__cart {
 
-                    &_link {
+                    &_btn {
                         display: none;
                     }
                 }
@@ -246,58 +245,6 @@
                 }
             }
         }
-
-        // &_title {
-        //     @include font(14px, 20px, "Montserrat-Medium");
-
-        //     color: $gray_7;
-
-        //     &:hover {
-        //         text-decoration: underline;
-        //     }
-        // }
-
-        // &_count {
-        //     display: flex;
-
-        //     &_input {
-        //         width: 30px;
-        //         padding: 0;
-        //         border: 0;
-        //         margin: 0 5px;
-        //         text-align: center;
-        //     }
-        // }
-
-        // &_button {
-        //     padding: 0;
-        //     border: 0;
-        //     background-color: transparent;
-        //     cursor: pointer;
-        // }
-
-        // &_cost {
-        //     @include font(16px, 20px, "Montserrat-Bold");
-
-        //     color: $black_0;
-        //     text-align: right;
-        //     white-space: nowrap;
-
-        //     &::after {
-        //         content: "грн";
-        //         text-transform: uppercase;
-        //     }
-        // }
-
-        // &_remove {
-
-        //     &_icon {
-        //         display: block;
-        //         width: 20px;
-        //         fill: $red_0;
-        //         cursor: pointer;
-        //     }
-        // }
     }
 
     &__footer {
@@ -308,7 +255,8 @@
     }
 
     &__submit {
-        @include font(14px, 17px, "Montserrat-Bold");
+        @include adaptiv-font(14, 17, 10, 12, "Montserrat-Bold");
+        // @include font(14px, 17px, "Montserrat-Bold");
 
         min-height: 80px;
         padding: 0 30px;
@@ -320,13 +268,10 @@
     }
 
     &__total {
-        @include font(26px, 32px, "Montserrat-Bold");
+        @include adaptiv-font(26, 32, 12, 14, "Montserrat-Bold");
+        // @include font(26px, 32px, "Montserrat-Bold");
 
         color: $black_0;
-
-        &::after {
-            content: "грн";
-            text-transform: uppercase;
-        }
+        text-transform: uppercase;
     }
 }

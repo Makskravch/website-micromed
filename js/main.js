@@ -2,6 +2,7 @@ $(document).ready(function() {
 
     const body = $('body')
     const popupCallback = $('#popup_callback')
+    const popupThanks = $('#popup_thanks')
     const cart = $('#cart')
     const menu = $('#menu')
     const search = $('#search')
@@ -16,7 +17,7 @@ $(document).ready(function() {
     // MENU
     if (menu.length) {
 
-        $(document).click(function(e) {
+        $(document).on('click', function(e) {
             if ($(e.target).closest('.menu__btn').length || $(e.target).hasClass('menu')) {
                 body.toggleClass('overflow')
                 menu.toggleClass('menu--open')
@@ -29,17 +30,38 @@ $(document).ready(function() {
     if ($('.subnav').length) {
         const headerMenuBtn = $('.header__menu')[0].clientWidth
         const headerLogo = $('.header__logo')[0].clientWidth
-        const subnavWidth = documentWidth - headerMenuBtn - headerLogo
-        $('.subnav').css('width', subnavWidth)
+        const subnavWidth = 100 - ((headerMenuBtn + headerLogo))*100/documentWidth
+        $('.subnav').css('width', `${subnavWidth}vw`)
     }
 
-    // POPUP CALLBACK
+    // POPUP CALLBACK and THANKS
     if (popupCallback.length) {
 
-        $(document).click(function(e) {
+        popupCallback.on('submit', function() {
+            popupThanks.css({
+                "opacity": 1,
+                "pointer-events": "default"
+            })
+            setTimeout(function() {
+                popupThanks.css({
+                    "opacity": 0,
+                    "pointer-events": "none"
+                })
+            }, 3000)
+        })
+        
+        $(document).on('click',function(e) {
             if ($(e.target).closest('.callback__btn').length || $(e.target).hasClass('popup_callback')) {
                 body.toggleClass('overflow')
                 popupCallback.toggleClass('popup_callback--active')
+            }
+
+            // POPUP THANKS
+            if ($(e.target).hasClass('popup_thanks')) {
+                popupThanks.css({
+                    "opacity": 0,
+                    "pointer-events": "none"
+                })
             }
         })
     }
@@ -47,7 +69,7 @@ $(document).ready(function() {
     // SEARCH
     if (search.length) {
 
-        $(document).click(function(e) {
+        $(document).on('click', function(e) {
             if ($(e.target).closest('.search__btn').length || $(e.target).hasClass('search')) {
                 body.toggleClass('overflow')
                 search.toggleClass('search--open')
@@ -58,7 +80,7 @@ $(document).ready(function() {
     // CART
     if (cart.length) {
 
-        $(document).click(function(e) {
+        $(document).on('click', function(e) {
             if ($(e.target).closest('.cart__btn').length || $(e.target).hasClass('cart')) {
                 body.toggleClass('overflow')
                 cart.toggleClass('cart--open')
@@ -74,10 +96,7 @@ $(document).ready(function() {
 
     //  Handler adding the product to the cart (TILE - CART)
     if (tile.length) {
-        tile.find('.tile__cart_link').click(function(e) {
-            e.preventDefault()
-        })
-        $(document).on('click', '.tile__cart_link', function(e) {
+        $(document).on('click', '.tile__cart_btn', function(e) {
             const cartItem = $('<li class="cart__order_item"></li>')
             const copyTile = $(this).closest('.tile').clone()
             const removeBtn = $('<div class="remove_item"></div>')

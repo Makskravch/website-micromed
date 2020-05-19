@@ -19,8 +19,8 @@
     }
 
     &__link {
-        @include adaptiv-font(14, 22, 16, 20, "Montserrat-Regular");
-        @include font(14px, 22px, "Montserrat-Regular");
+        @include adaptiv-font(14, 22, 12, 16, "Montserrat-Regular");
+        // @include font(14px, 22px, "Montserrat-Regular");
 
         position: relative;
         display: flex;

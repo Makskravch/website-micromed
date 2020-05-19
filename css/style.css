@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @font-face {
   font-family: 'Montserrat-Black';
   src: url("../fonts/Montserrat-Black/Montserrat-Black.eot");
@@ -1856,14 +1855,21 @@ input[type=number] {
       fill: transparent;
       stroke: #777777; }
     .cart__btn_text {
-      font: 1.4rem/1.7rem "Montserrat-Bold";
+      font-size: -webkit-calc(12px + 2 * ((100vw - 320px) / 1600));
+      font-size: calc(12px + 2 * ((100vw - 320px) / 1600));
+      line-height: -webkit-calc(14px + 3 * ((100vw - 320px) / 1600));
+      line-height: calc(14px + 3 * ((100vw - 320px) / 1600));
+      font-family: "Montserrat-Bold";
       margin-left: 24px;
       color: #777777; }
   .cart__title {
-    font: 2.6rem/3.2rem "Montserrat-Bold";
+    font-size: -webkit-calc(12px + 14 * ((100vw - 320px) / 1600));
+    font-size: calc(12px + 14 * ((100vw - 320px) / 1600));
+    line-height: -webkit-calc(14px + 18 * ((100vw - 320px) / 1600));
+    line-height: calc(14px + 18 * ((100vw - 320px) / 1600));
+    font-family: "Montserrat-Bold";
     color: #000; }
     .cart__title::after {
-      font: 2.3rem/2.8rem "Montserrat-Bold";
       content: "(" attr(data-count) ")";
       color: #215CCE; }
   .cart__form {
@@ -1989,7 +1995,7 @@ input[type=number] {
           height: auto;
           margin-bottom: 0;
           text-align: right; }
-        .cart__order_item .tile__cart_link {
+        .cart__order_item .tile__cart_btn {
           display: none; }
       .cart__order_item .remove_item {
         position: relative;
@@ -2034,7 +2040,11 @@ input[type=number] {
             align-items: center;
     padding: 60px 0; }
   .cart__submit {
-    font: 1.4rem/1.7rem "Montserrat-Bold";
+    font-size: -webkit-calc(10px + 4 * ((100vw - 320px) / 1600));
+    font-size: calc(10px + 4 * ((100vw - 320px) / 1600));
+    line-height: -webkit-calc(12px + 5 * ((100vw - 320px) / 1600));
+    line-height: calc(12px + 5 * ((100vw - 320px) / 1600));
+    font-family: "Montserrat-Bold";
     min-height: 80px;
     padding: 0 30px;
     border: 0;
@@ -2043,11 +2053,13 @@ input[type=number] {
     color: #fff;
     cursor: pointer; }
   .cart__total {
-    font: 2.6rem/3.2rem "Montserrat-Bold";
-    color: #000; }
-    .cart__total::after {
-      content: "грн";
-      text-transform: uppercase; }
+    font-size: -webkit-calc(12px + 14 * ((100vw - 320px) / 1600));
+    font-size: calc(12px + 14 * ((100vw - 320px) / 1600));
+    line-height: -webkit-calc(14px + 18 * ((100vw - 320px) / 1600));
+    line-height: calc(14px + 18 * ((100vw - 320px) / 1600));
+    font-family: "Montserrat-Bold";
+    color: #000;
+    text-transform: uppercase; }
 
 .nav {
   position: relative; }
@@ -2068,12 +2080,11 @@ input[type=number] {
           -ms-transform: translateY(0);
               transform: translateY(0); }
   .nav__link {
-    font-size: -webkit-calc(16px + -2 * ((100vw - 320px) / 1600));
-    font-size: calc(16px + -2 * ((100vw - 320px) / 1600));
-    line-height: -webkit-calc(20px + 2 * ((100vw - 320px) / 1600));
-    line-height: calc(20px + 2 * ((100vw - 320px) / 1600));
+    font-size: -webkit-calc(12px + 2 * ((100vw - 320px) / 1600));
+    font-size: calc(12px + 2 * ((100vw - 320px) / 1600));
+    line-height: -webkit-calc(16px + 6 * ((100vw - 320px) / 1600));
+    line-height: calc(16px + 6 * ((100vw - 320px) / 1600));
     font-family: "Montserrat-Regular";
-    font: 1.4rem/2.2rem "Montserrat-Regular";
     position: relative;
     display: -webkit-box;
     display: -webkit-flex;
@@ -2216,7 +2227,11 @@ input[type=number] {
     .header__contacts_item {
       height: 100px; }
       .header__contacts_item_span {
-        font: 1.4rem/1.7rem "Montserrat-Bold";
+        font-size: -webkit-calc(10px + 4 * ((100vw - 320px) / 1600));
+        font-size: calc(10px + 4 * ((100vw - 320px) / 1600));
+        line-height: -webkit-calc(12px + 5 * ((100vw - 320px) / 1600));
+        line-height: calc(12px + 5 * ((100vw - 320px) / 1600));
+        font-family: "Montserrat-Bold";
         display: -webkit-box;
         display: -webkit-flex;
         display: -ms-flexbox;
@@ -2237,7 +2252,11 @@ input[type=number] {
         color: #000;
         cursor: pointer; }
     .header__contacts_link {
-      font: 1.4rem/1.7rem "Montserrat-Bold";
+      font-size: -webkit-calc(10px + 4 * ((100vw - 320px) / 1600));
+      font-size: calc(10px + 4 * ((100vw - 320px) / 1600));
+      line-height: -webkit-calc(12px + 5 * ((100vw - 320px) / 1600));
+      line-height: calc(12px + 5 * ((100vw - 320px) / 1600));
+      font-family: "Montserrat-Bold";
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
