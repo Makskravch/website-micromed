@@ -25,10 +25,12 @@
             align-items: center;
             flex-wrap: wrap;
             width: 62.79%;
+            min-width: 650px;
         }
 
         &_input {
-            flex-basis: 37.04%;
+            width: 37.04%;
+            min-width: 220px;
             padding: 19px 26px;
             border: 1px solid $gray_8;
             border-radius: 100px;

@@ -1,5 +1,12 @@
 // Classes for different tiles (tile--discontinued, tile--unavailable, tile--sale, tile--new, tile--top)
 // <div class="tile tile--discontinued tile--unavailable tile--sale tile--new tile--top">
+//     <div class="tile__label">
+//         <ul class="tile__label_list">
+//             <li class="tile__label_item label__new"></li>
+//             <li class="tile__label_item label__top"></li>
+//             <li class="tile__label_item label__sale"></li>
+//         </ul>
+//     </div>
 //     <div class="tile__inner">
 //         <a href="#" class="tile__link">
 //             <div class="tile__photo">
@@ -63,7 +70,7 @@
 
 //                 </span>
 //             </p>
-//             <a href="#" class="tile__cart_link">
+//             <button type="button" class="tile__cart_btn">
 //                 <i class="tile__cart_icon">
 //                     <svg class="tile__cart_svg" width="30" height="26" viewBox="0 0 30 26" xmlns="http://www.w3.org/2000/svg">
 //                         <path d="M21.4381 20.1879C19.8063 20.1879 18.4832 21.4887 18.4832 23.0937C18.4832 24.699 19.8059 26 21.4377 26C23.07 26 24.3926 24.699 24.3926 23.0941C24.3911 21.4896 23.0691 20.1895 21.4381 20.1879ZM21.4381 24.6988C20.5366 24.6988 19.8063 23.9803 19.8063 23.0941C19.8063 22.2076 20.5366 21.4891 21.4377 21.4891C22.3392 21.4887 23.0695 22.2076 23.0695 23.0937C23.0685 23.9797 22.3388 24.6973 21.4381 24.6988Z" />
@@ -72,13 +79,13 @@
 //                     </svg>
 //                 </i>
 //                 В корзину
-//             </a>
-//             <a href="#" class="tile__unavailable_link">
+//             </button>
+//             <button type="button" class="tile__unavailable_btn">
 //                 Повідомити про наявність
-//             </a>
-//             <a href="#" class="tile__discontinued_link">
+//             </button>
+//             <button type="button" class="tile__discontinued_btn">
 //                 Переглянути аналоги
-//             </a>
+//             </button>
 //         </div>
 //     </div>
 // </div>
@@ -100,7 +107,7 @@
             filter: grayscale(1);
         }
 
-        .tile__cart_link {
+        .tile__cart_btn {
             display: none;
         }
 
@@ -112,7 +119,7 @@
             opacity: 0.5;
         }
 
-        .tile__discontinued_link {
+        .tile__discontinued_btn {
             display: flex;
         }
     }
@@ -127,105 +134,126 @@
             filter: grayscale(1);
         }
 
-        .tile__cart_link {
+        .tile__cart_btn {
             display: none;
         }
 
-        .tile__unavailable_link {
+        .tile__unavailable_btn {
             display: flex;
         }
     }
 
     &--top {
 
-        &::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 0;
-            height: 0;
-            border: 32px solid $blue_0;
-            border-bottom-color: transparent;
-            border-right-color: transparent;
-            z-index: 1;
-        }
+        .label {
 
-        
-        &::after {
-            @include font(12px, 15px, "Montserrat-Bold");
+            &__top {
+                display: block;
 
-            content: 'top';
-            position: absolute;
-            top: 32px;
-            left: 32px;
-            transform: rotate(-45deg) translate(-50%, calc(-100% - 6px));
-            transform-origin: 0% 0%;
-            color: $white_0;
-            text-transform: uppercase;
-            z-index: 1;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 0;
+                    height: 0;
+                    border: 32px solid $blue_0;
+                    border-bottom-color: transparent;
+                    border-right-color: transparent;
+                    z-index: 1;
+                }
+
+                &::after {
+                    @include adaptiv-font(12, 15, 8, 10, "Montserrat-Bold");
+                    // @include font(12px, 15px, "Montserrat-Bold");
+
+                    content: 'top';
+                    position: absolute;
+                    top: 32px;
+                    left: 32px;
+                    transform: rotate(-45deg) translate(-50%, calc(-100% - 6px));
+                    transform-origin: 0% 0%;
+                    color: $white_0;
+                    text-transform: uppercase;
+                    z-index: 1;
+                }
+            }
         }
     }
 
     &--new {
 
-        &::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 0;
-            height: 0;
-            border: 32px solid $green_0;
-            border-bottom-color: transparent;
-            border-right-color: transparent;
-            z-index: 1;
-        }
+        .label {
 
-        
-        &::after {
-            @include font(12px, 15px, "Montserrat-Bold");
+            &__new {
+                display: block;
 
-            content: 'new';
-            position: absolute;
-            top: 32px;
-            left: 32px;
-            transform: rotate(-45deg) translate(-50%, calc(-100% - 6px));
-            transform-origin: 0% 0%;
-            color: $white_0;
-            text-transform: uppercase;
-            z-index: 1;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 0;
+                    height: 0;
+                    border: 32px solid $green_0;
+                    border-bottom-color: transparent;
+                    border-right-color: transparent;
+                    z-index: 1;
+                }
+
+                &::after {
+                    @include adaptiv-font(12, 15, 8, 10, "Montserrat-Bold");
+                    // @include font(12px, 15px, "Montserrat-Bold");
+
+                    content: 'new';
+                    position: absolute;
+                    top: 32px;
+                    left: 32px;
+                    transform: rotate(-45deg) translate(-50%, calc(-100% - 6px));
+                    transform-origin: 0% 0%;
+                    color: $white_0;
+                    text-transform: uppercase;
+                    z-index: 1;
+                }
+            }
         }
     }
 
     &--sale {
 
-        &::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 0;
-            height: 0;
-            border: 32px solid $red_1;
-            border-bottom-color: transparent;
-            border-right-color: transparent;
-            z-index: 1;
-        }
+        .label {
 
-        
-        &::after {
-            @include font(12px, 15px, "Montserrat-Bold");
+            &__sale {
+                display: block;
 
-            content: 'sale';
-            position: absolute;
-            top: 32px;
-            left: 32px;
-            transform: rotate(-45deg) translate(-50%, calc(-100% - 6px));
-            transform-origin: 0% 0%;
-            color: $white_0;
-            text-transform: uppercase;
-            z-index: 1;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 0;
+                    height: 0;
+                    border: 32px solid $red_1;
+                    border-bottom-color: transparent;
+                    border-right-color: transparent;
+                    z-index: 1;
+                }
+
+                &::after {
+                    @include adaptiv-font(12, 15, 8, 10, "Montserrat-Bold");
+                    // @include font(12px, 15px, "Montserrat-Bold");
+
+                    content: 'sale';
+                    position: absolute;
+                    top: 32px;
+                    left: 32px;
+                    transform: rotate(-45deg) translate(-50%, calc(-100% - 6px));
+                    transform-origin: 0% 0%;
+                    color: $white_0;
+                    text-transform: uppercase;
+                    z-index: 1;
+                }
+            }
         }
 
         .tile__cost_sale {
@@ -236,6 +264,24 @@
             font-family: "Montserrat-Regular";
             color: $gray_8;
             text-decoration: line-through;
+        }
+    }
+
+    &__label {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        &_list {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &_item {
+            display: none;
+            position: relative;
+            width: 64px;
+            height: 64px;
         }
     }
 
@@ -284,13 +330,15 @@
         z-index: 1;
 
         &_title {
-            @include font(18px, 22px, "Montserrat-Bold");
+            @include adaptiv-font(18, 22, 12, 14, "Montserrat-Bold");
+            // @include font(18px, 22px, "Montserrat-Bold");
 
             color: $black_0;
         }
 
-        &_link {
-            @include font(14px, 17px, "Montserrat-Bold");
+        &_btn {
+            @include adaptiv-font(14, 17, 10, 12, "Montserrat-Bold");
+            // @include font(14px, 17px, "Montserrat-Bold");
 
             display: none;
             justify-content: center;
@@ -301,10 +349,12 @@
             padding: 10px 25px;
             border: 1px solid $blue_0;
             border-radius: 100px;
+            background-color: transparent;
             color: $blue_0;
             text-align: center;
             will-change: background-color, color;
             transition: background-color 0.2s, color 0.2s;
+            cursor: pointer;
 
             &:hover {
                 background-color: $blue_0;
@@ -329,22 +379,25 @@
         z-index: 1;
 
         &_title {
-            @include font(18px, 22px, "Montserrat-Bold");
+            @include adaptiv-font(18, 22, 12, 14, "Montserrat-Bold");
+            // @include font(18px, 22px, "Montserrat-Bold");
 
             margin-bottom: 8px;
             color: $black_0;
         }
 
         &_expected {
-            @include font(14px, 17px, "Montserrat-Medium");
+            @include adaptiv-font(14, 17, 8, 10, "Montserrat-Medium");
+            // @include font(14px, 17px, "Montserrat-Medium");
 
             padding: 16px 18px;
             background-color: $blue_0;
             color: $white_0;
         }
 
-        &_link {
-            @include font(14px, 17px, "Montserrat-Bold");
+        &_btn {
+            @include adaptiv-font(14, 17, 10, 12, "Montserrat-Bold");
+            // @include font(14px, 17px, "Montserrat-Bold");
 
             display: none;
             justify-content: center;
@@ -355,10 +408,12 @@
             padding: 10px 25px;
             border: 1px solid $blue_0;
             border-radius: 100px;
+            background-color: transparent;
             color: $blue_0;
             text-align: center;
             will-change: background-color, color;
             transition: background-color 0.2s, color 0.2s;
+            cursor: pointer;
 
             &:hover {
                 background-color: $blue_0;
@@ -380,7 +435,8 @@
     }
 
     &__title {
-        @include font(14px, 20px, "Montserrat-Medium");
+        @include adaptiv-font(14, 20, 10, 13, "Montserrat-Medium");
+        // @include font(14px, 20px, "Montserrat-Medium");
 
         height: 40px;
         max-width: 270px;
@@ -391,7 +447,8 @@
     }
 
     &__category {
-        @include font(12px, 15px, "Montserrat-Bold");
+        @include adaptiv-font(12, 15, 10, 12, "Montserrat-Bold");
+        // @include font(12px, 15px, "Montserrat-Bold");
 
         display: block;
         margin-top: 8px;
@@ -414,7 +471,8 @@
     }
 
     &__cost {
-        @include font(18px, 22px, "Montserrat-Bold");
+        @include adaptiv-font(18, 22, 10, 12, "Montserrat-Bold");
+        // @include font(18px, 22px, "Montserrat-Bold");
 
         height: 44px;
         margin-bottom: 30px;
@@ -441,8 +499,9 @@
 
     &__cart {
 
-        &_link {
-            @include font(14px, 17px, "Montserrat-Bold");
+        &_btn {
+            @include adaptiv-font(14, 17, 10, 12, "Montserrat-Bold");
+            // @include font(14px, 17px, "Montserrat-Bold");
 
             display: flex;
             justify-content: center;
@@ -453,11 +512,13 @@
             padding: 10px 25px;
             border: 1px solid $blue_0;
             border-radius: 100px;
+            background-color: transparent;
             color: $blue_0;
             fill: $blue_0;
             text-align: center;
             will-change: background-color, color, fill;
             transition: background-color 0.2s, color 0.2s, fill 0.2s;
+            cursor: pointer;
 
             &:hover {
                 background-color: $blue_0;

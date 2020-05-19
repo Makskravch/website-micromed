@@ -2,8 +2,13 @@
 	font: #{$font_size/$base_font_size}rem/#{$line_height/$base_font_size}rem $font_family;
 }
 
-@mixin font-fluid($font_size, $line_height, $font_family: sans-serif) {
-	font: #{$font_size*100/$site_width}vw/#{$line_height*100/$site_width}vw $font_family;
+@mixin adaptiv-font($pc_font, $pc_line, $mob_font, $mob_line, $font_family: sans-serif) {
+	$delta_size: $pc_font - $mob_font;
+	$delta_height: $pc_line - $mob_line;
+	$width: $site_width - 320;
+	font-size: calc(#{$mob_font + px} + #{$delta_size} * ((100vw - 320px) / #{$width}));
+	line-height: calc(#{$mob_line + px} + #{$delta_height} * ((100vw - 320px) / #{$width}));
+	font-family: $font_family;
 }
 
 @mixin background($url, $top: top, $left: left, $size: cover, $color: transparent, $repeat: no-repeat) {
@@ -72,15 +77,15 @@
 			@content;
 		}
 	}
-	// 0 - 1330
+	// 0 - 1280
 	@if $media == desktop {
-		@media only screen and (max-width: $tablet-landscape) {
+		@media only screen and (max-width: $desktop) {
 			@content;
 		}
 	}
 	// 0 - 1600
-	@if $media == desktop_extra {
-		@media only screen and (max-width: $tablet-landscape) {
+	@if $media == desktop-extra {
+		@media only screen and (max-width: $desktop-extra) {
 			@content;
 		}
 	}

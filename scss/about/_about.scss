@@ -10,7 +10,8 @@
     }
 
     &__title {
-        @include font(40px, 49px, "Montserrat-Bold");
+        @include adaptiv-font(40, 49, 14, 17, "Montserrat-Bold");
+        // @include font(40px, 49px, "Montserrat-Bold");
 
         margin-bottom: 3.5%;
         color: $black_0;
@@ -21,7 +22,8 @@
     }
 
     &__paragraph {
-        @include font(22px, 40px, "Montserrat-Regular");
+        // @include font(22px, 40px, "Montserrat-Regular");
+        @include adaptiv-font(22, 40, 12, 22, "Montserrat-Regular");
 
         margin-bottom: 3.5%;
         color: $gray_10;
@@ -32,7 +34,8 @@
         }
 
         &_item {
-            @include font(14px, 24px, "Montserrat-Regular");
+            @include adaptiv-font(14, 24, 10, 18, "Montserrat-Regular");
+            // @include font(14px, 24px, "Montserrat-Regular");
 
             margin-right: 3.7%;
             color: $gray_10;
@@ -60,7 +63,8 @@
         border-top: 1px solid $gray_1;
 
         &_paragraph {
-            @include font(14px, 24px, "Montserrat-Regular");
+            @include adaptiv-font(14, 24, 10, 18, "Montserrat-Regular");
+            // @include font(14px, 24px, "Montserrat-Regular");
 
             width: 48.8%;
             color: $gray_10;

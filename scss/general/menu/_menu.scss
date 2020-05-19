@@ -50,7 +50,7 @@
         min-height: 100%;
         width: 100%;
         max-width: 650px;
-        padding-bottom: 70px;
+        padding-bottom: 3.65%;
         transform: translateX(-100%);
         background-color: $blue_0;
         will-change: transform;
@@ -65,7 +65,7 @@
         display: flex;
         justify-content: flex-start;
         align-self: flex-start;
-        margin-bottom: 50px;
+        margin-bottom: 7.69%;
     }
 
     &__callback {
@@ -105,7 +105,7 @@
 
     &__body {
         padding: 0 100px;
-        margin-bottom: 50px;
+        margin-bottom: 7.69%;
     }
 
     &__list {
@@ -120,7 +120,8 @@
     }
 
     &__link {
-        @include font(22px, 27px, "Montserrat-Bold");
+        @include adaptiv-font(22, 27, 16, 20, "Montserrat-Bold");
+        // @include font(22px, 27px, "Montserrat-Bold");
 
         display: flex;
         align-items: center;
@@ -143,7 +144,8 @@
     &__contacts {
 
         &_link {
-            @include font(16px, 34px, "Montserrat-Medium");
+            @include adaptiv-font(16, 34, 10, 18, "Montserrat-Medium");
+            // @include font(16px, 34px, "Montserrat-Medium");
 
             color: $blue_2;
         }
@@ -152,7 +154,8 @@
     &__weekdays {
 
         &_item {
-            @include font(16px, 34px, "Montserrat-Medium");
+            @include adaptiv-font(16, 34, 10, 18, "Montserrat-Medium");
+            // @include font(16px, 34px, "Montserrat-Medium");
 
             color: $blue_2;
         }

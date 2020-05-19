@@ -3,12 +3,13 @@
 
     &__inner {
         display: flex;
+        justify-content: space-between;
         min-height: 100px;
     }
 
     &__logo {
-        width: 245px;
-        flex-shrink: 0;
+        width: 12.85%;
+        min-width: 165px;
         background-color: $blue_0;
 
         &_link {
@@ -19,10 +20,19 @@
             padding: 0 15px;
         }
 
+        &_icon {
+            display: block;
+            width: 100%;
+            max-width: 136px;
+        }
+
         &_svg {
-            width: 136px;
             fill: $white_0;
         }
+    }
+
+    &__nav {
+        flex-grow: 1;
     }
 
     &__contacts {
@@ -101,7 +111,7 @@
     &__search {
         width: 17%;
         background-color: $white_0;
-        z-index: 1;
+        z-index: 3;
 
         &_inner {
             display: flex;
@@ -114,7 +124,6 @@
 
         &_icon {
             width: 12px;
-            height: 12px;
             margin-right: 13px;
             fill: $gray_2;
         }
@@ -136,7 +145,7 @@
         border-left: 1px solid $gray_1;
         border-bottom: 1px solid $gray_1;
         background-color: $white_0;
-        z-index: 1;
+        z-index: 3;
 
         &_select {
             @include font(14px, 17px, "Montserrat-Bold");
@@ -159,7 +168,7 @@
         border-bottom: 1px solid $gray_1;
         background-color: $gray_1;
         color: $white_0;
-        z-index: 1;
+        z-index: 3;
 
         &_icon {
             position: relative;
@@ -180,6 +189,42 @@
                 background-color: $blue_0;
                 text-align: center;
             }
+        }
+    }
+}
+
+// 0 - 1280
+@include respond-to(desktop) {
+
+    .header {
+
+        &__contacts {
+            display: none;
+        }
+
+        &__search {
+            width: auto;
+            border-left: 1px solid $gray_1;
+
+            &_inner {
+                justify-content: center;
+                padding: 0 20px;
+            }
+        }
+    }
+}
+
+// 0 - 1024
+@include respond-to(tablet) {
+
+    .header {
+
+        &__nav {
+            display: none;
+        }
+
+        &__search {
+            flex-grow: 1;
         }
     }
 }

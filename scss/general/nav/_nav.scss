@@ -1,6 +1,5 @@
 .nav {
     position: relative;
-    width: 42%;
 
     &__list {
         display: flex;
@@ -20,6 +19,7 @@
     }
 
     &__link {
+        @include adaptiv-font(14, 22, 16, 20, "Montserrat-Regular");
         @include font(14px, 22px, "Montserrat-Regular");
 
         position: relative;
@@ -41,12 +41,8 @@
             color: $blue_0;
         }
 
-        &_text {
-            width: min-content;
-        }
-
         &_line {
-            white-space: nowrap;
+            display: block;
         }
     }
 }
@@ -55,8 +51,7 @@
     position: absolute;
     top: calc(100% - 1px);
     left: 0;
-    width: 197.13%;
-    width: calc(100vw - 345px);
+    width: calc(100vw - 12vw - 100px);
     border-top: 1px solid $gray_1;
     background-color: $white_0;
     transform: translateY(-200%);
@@ -67,12 +62,13 @@
     &__list {
         display: grid;
         grid-template-columns: repeat(5, auto);
-        grid-gap: 50px;
-        padding: 50px;
+        grid-gap: 3rem;
+        padding: 3.18%;
     }
 
     &__link {
-        @include font(14px, 24px, "Montserrat-Medium");
+        @include adaptiv-font(14, 24, 12, 16, "Montserrat-Medium");
+        // @include font(14px, 24px, "Montserrat-Medium");
 
         display: block;
         color: $gray_0;

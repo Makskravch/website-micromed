@@ -21,7 +21,9 @@
 
     &__inner {
         position: relative;
-        padding: 84px 114px;
+        width: 100%;
+        max-width: 720px;
+        padding: 4.38% 5.94%;
         background-color: $white_0;
     }
 

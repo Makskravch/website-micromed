@@ -1,12 +1,17 @@
 $(document).ready(function() {
 
-    const body = $('body');
-    const popupCallback = $('#popup_callback');
-    const cart = $('#cart');
-    const menu = $('#menu');
-    const search = $('#search');
-    const tile = $('.tile');
+    const body = $('body')
+    const popupCallback = $('#popup_callback')
+    const cart = $('#cart')
+    const menu = $('#menu')
+    const search = $('#search')
+    const tile = $('.tile')
     const counter = $('.counter')
+    const documentWidth = Math.max(
+        document.body.scrollWidth, document.documentElement.scrollWidth,
+        document.body.offsetWidth, document.documentElement.offsetWidth,
+        document.body.clientWidth, document.documentElement.clientWidth
+    )
     
     // MENU
     if (menu.length) {
@@ -17,6 +22,15 @@ $(document).ready(function() {
                 menu.toggleClass('menu--open')
             }
         })
+    }
+
+    // HEADER
+    // Set the width of the 'subnav' blocks
+    if ($('.subnav').length) {
+        const headerMenuBtn = $('.header__menu')[0].clientWidth
+        const headerLogo = $('.header__logo')[0].clientWidth
+        const subnavWidth = documentWidth - headerMenuBtn - headerLogo
+        $('.subnav').css('width', subnavWidth)
     }
 
     // POPUP CALLBACK

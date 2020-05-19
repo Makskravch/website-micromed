@@ -40,7 +40,8 @@
     }
 
     &__link {
-        @include font(14px, 17px, "Montserrat-Regular");
+        @include adaptiv-font(14, 17, 10, 12, "Montserrat-Regular");
+        // @include font(14px, 17px, "Montserrat-Regular");
 
         color: $gray_11;
         transition: color 0.2s;
@@ -55,7 +56,8 @@
     }
 
     &__actual {
-        @include font(14px, 17px, "Montserrat-Regular");
+        @include adaptiv-font(14, 17, 10, 12, "Montserrat-Regular");
+        // @include font(14px, 17px, "Montserrat-Regular");
 
         color: $black_0;
     }
