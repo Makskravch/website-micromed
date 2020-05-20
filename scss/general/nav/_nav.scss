@@ -2,13 +2,13 @@
     position: relative;
 
     &__list {
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
         width: 100%;
         height: 100%;
     }
 
     &__item {
-        flex-grow: 1;
 
         &:hover {
 
@@ -41,8 +41,9 @@
             color: $blue_0;
         }
 
-        &_line {
-            display: block;
+        &_text {
+            width: 46.15%;
+            min-width: 120px;
         }
     }
 }
