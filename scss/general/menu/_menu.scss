@@ -161,3 +161,29 @@
         }
     }
 }
+
+// 0 - 767
+@include respond-to(mobile) {
+
+    .menu {
+
+        &__btn {
+
+            &_svg {
+                width: 10px;
+                height: 10px;
+            }
+        }
+    }
+}
+
+// 0 - 480
+@include respond-to(mobile_small) {
+
+    // .menu {
+
+    //     &__btn {
+    //         min-height: 60px;
+    //     }
+    // }
+}

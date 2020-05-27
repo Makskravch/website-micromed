@@ -85,3 +85,17 @@
         }
     }
 }
+
+// 0 - 1024
+@include respond-to(tablet) {
+
+    .nav {
+
+        &__link {
+
+            &_text {
+                min-width: 100px;
+            }
+        }
+    }
+}
