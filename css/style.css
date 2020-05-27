@@ -1555,6 +1555,9 @@ input[type=number] {
     .menu__btn_svg {
       width: 10px;
       height: 10px; }
+      .menu__btn_svg--close {
+        width: 16px;
+        height: 16px; }
   .menu__callback {
     display: -webkit-box;
     display: -webkit-flex;
@@ -1644,9 +1647,9 @@ input[type=number] {
         -ms-flex-pack: justify;
             justify-content: space-between;
     min-height: 100%;
-    width: 100%;
-    max-width: 1200px;
-    padding: 6.25%;
+    width: 62.5%;
+    min-width: 700px;
+    padding: 100px;
     -webkit-transform: translateX(100%);
         -ms-transform: translateX(100%);
             transform: translateX(100%);
@@ -1659,33 +1662,54 @@ input[type=number] {
     transition: transform 0.2s linear;
     transition: transform 0.2s linear, -webkit-transform 0.2s linear; }
   .search__title {
-    font: 2.2rem/2.7rem "Montserrat-Medium";
-    margin-bottom: 19.79%;
+    font-size: -webkit-calc(14px + 8 * ((100vw - 320px) / 1600));
+    font-size: calc(14px + 8 * ((100vw - 320px) / 1600));
+    line-height: -webkit-calc(17px + 10 * ((100vw - 320px) / 1600));
+    line-height: calc(17px + 10 * ((100vw - 320px) / 1600));
+    font-family: "Montserrat-Medium";
     color: #000; }
   .search__label {
     position: relative;
     display: block; }
   .search__input {
-    font: 3.6rem/4.4rem "Montserrat-Regular";
+    font-size: -webkit-calc(16px + 20 * ((100vw - 320px) / 1600));
+    font-size: calc(16px + 20 * ((100vw - 320px) / 1600));
+    line-height: -webkit-calc(20px + 24 * ((100vw - 320px) / 1600));
+    line-height: calc(20px + 24 * ((100vw - 320px) / 1600));
+    font-family: "Montserrat-Regular";
     display: block;
     width: 100%;
     border: 0;
     padding: 0;
     color: #000; }
     .search__input::-webkit-input-placeholder {
-      font: 3.6rem/4.4rem "Montserrat-Regular";
+      font-size: -webkit-calc(16px + 20 * ((100vw - 320px) / 1600));
+      font-size: calc(16px + 20 * ((100vw - 320px) / 1600));
+      line-height: -webkit-calc(20px + 24 * ((100vw - 320px) / 1600));
+      line-height: calc(20px + 24 * ((100vw - 320px) / 1600));
+      font-family: "Montserrat-Regular";
       color: #B5B5B5; }
     .search__input::-moz-placeholder {
-      font: 3.6rem/4.4rem "Montserrat-Regular";
+      font-size: calc(16px + 20 * ((100vw - 320px) / 1600));
+      line-height: calc(20px + 24 * ((100vw - 320px) / 1600));
+      font-family: "Montserrat-Regular";
       color: #B5B5B5; }
     .search__input:-ms-input-placeholder {
-      font: 3.6rem/4.4rem "Montserrat-Regular";
+      font-size: calc(16px + 20 * ((100vw - 320px) / 1600));
+      line-height: calc(20px + 24 * ((100vw - 320px) / 1600));
+      font-family: "Montserrat-Regular";
       color: #B5B5B5; }
     .search__input::-ms-input-placeholder {
-      font: 3.6rem/4.4rem "Montserrat-Regular";
+      font-size: calc(16px + 20 * ((100vw - 320px) / 1600));
+      line-height: calc(20px + 24 * ((100vw - 320px) / 1600));
+      font-family: "Montserrat-Regular";
       color: #B5B5B5; }
     .search__input::placeholder {
-      font: 3.6rem/4.4rem "Montserrat-Regular";
+      font-size: -webkit-calc(16px + 20 * ((100vw - 320px) / 1600));
+      font-size: calc(16px + 20 * ((100vw - 320px) / 1600));
+      line-height: -webkit-calc(20px + 24 * ((100vw - 320px) / 1600));
+      line-height: calc(20px + 24 * ((100vw - 320px) / 1600));
+      font-family: "Montserrat-Regular";
       color: #B5B5B5; }
     .search__input:focus::-webkit-input-placeholder {
       color: transparent; }
@@ -1727,12 +1751,34 @@ input[type=number] {
         -ms-flex-wrap: wrap;
             flex-wrap: wrap; }
   .search__popular_item {
-    font: 1.4rem/1.7rem "Montserrat-Medium";
+    font-size: -webkit-calc(10px + 4 * ((100vw - 320px) / 1600));
+    font-size: calc(10px + 4 * ((100vw - 320px) / 1600));
+    line-height: -webkit-calc(12px + 5 * ((100vw - 320px) / 1600));
+    line-height: calc(12px + 5 * ((100vw - 320px) / 1600));
+    font-family: "Montserrat-Medium";
     margin-right: 4.69%;
     margin-bottom: 12px;
     color: #B5B5B5; }
     .search__popular_item:last-child {
       margin-right: 0; }
+
+@media only screen and (max-width: 1280px) {
+  .search__inner {
+    width: 100%;
+    min-width: unset;
+    padding: 80px; }
+  .search .search__btn {
+    width: 80px;
+    height: 80px; } }
+
+@media only screen and (max-width: 767px) {
+  .search__inner {
+    padding: 60px; }
+  .search .search__btn {
+    width: 60px;
+    height: 60px; }
+  .search__icon {
+    width: 20px; } }
 
 .sidebar {
   width: 20%;
@@ -2462,7 +2508,8 @@ input[type=number] {
     -webkit-box-flex: 1;
     -webkit-flex-grow: 1;
         -ms-flex-positive: 1;
-            flex-grow: 1; } }
+            flex-grow: 1;
+    border-left: 0; } }
 
 @media only screen and (max-width: 767px) {
   .header__inner {
