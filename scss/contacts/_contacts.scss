@@ -6,13 +6,15 @@
     }
 
     &__all {
-        padding: 40px 44px 80px;
+        padding: 40px 44px 0;
+        padding-bottom: 4.17%;
         border-bottom: 1px solid $gray_1;
-        margin-bottom: 82px;
+        margin-bottom: 4.27%;
     }
 
     &__title {
-        @include font(40px, 49px, "Montserrat-Bold");
+        @include adaptiv-font(40, 49, 14, 17, "Montserrat-Bold");
+        // @include font(40px, 49px, "Montserrat-Bold");
 
         margin-bottom: 4.48%;
         color: $black_0;
@@ -28,7 +30,8 @@
         padding: 0 44px 82px;
 
         &_title {
-            @include font(14px, 24px, "Montserrat-Bold");
+            @include adaptiv-font(14, 24, 10, 18, "Montserrat-Bold");
+            // @include font(14px, 24px, "Montserrat-Bold");
 
             margin-bottom: 24px;
             color: $gray_10;
@@ -61,7 +64,8 @@
             margin-right: 38px;
 
             p {
-                @include font(14px, 24px, "Montserrat-Regular");
+                @include adaptiv-font(14, 24, 10, 18, "Montserrat-Regular");
+                // @include font(14px, 24px, "Montserrat-Regular");
     
                 margin: 6px 0;
                 color: $gray_10;
@@ -76,7 +80,8 @@
     }
 
     &__input {
-        @include font(14px, 24px, "Montserrat-Regular");
+        @include adaptiv-font(14, 24, 10, 18, "Montserrat-Regular");
+        // @include font(14px, 24px, "Montserrat-Regular");
 
         padding: 6px 0;
         border: 0;
@@ -95,7 +100,8 @@
     }
 
     &__button {
-        @include font(14px, 18px, "Montserrat-Bold");
+        @include adaptiv-font(14, 18, 12, 15, "Montserrat-Bold");
+        // @include font(14px, 18px, "Montserrat-Bold");
 
         padding: 0;
         border: 0;
@@ -108,7 +114,8 @@
         position: relative;
 
         &_address {
-            @include font(18px, 24px, "Montserrat-Bold");
+            @include adaptiv-font(18, 24, 10, 12, "Montserrat-Bold");
+            // @include font(18px, 24px, "Montserrat-Bold");
 
             position: absolute;
             top: 0;
@@ -127,11 +134,12 @@
 }
 
 .phone {
-    width: 23.47%;
+    // width: 23.47%;
     min-width: 390px;
 
     &__title {
-        @include font(14px, 24px, "Montserrat-Bold");
+        @include adaptiv-font(14, 24, 10, 18, "Montserrat-Bold");
+        // @include font(14px, 24px, "Montserrat-Bold");
 
         margin-bottom: 24px;
         color: $gray_10;
@@ -140,29 +148,33 @@
     &__list {
         display: grid;
         grid-template-columns: repeat(2, auto);
-        justify-content: space-between;
+        grid-column-gap: 30px;
+        // justify-content: space-between;
     }
 
     &__item {
-        @include font(14px, 24px, "Montserrat-Regular");
+        @include adaptiv-font(14, 24, 10, 18, "Montserrat-Regular");
+        // @include font(14px, 24px, "Montserrat-Regular");
 
         color: $gray_10;
         white-space: nowrap;
     }
 
     &__link {
-        @include font(14px, 24px, "Montserrat-Regular");
+        @include adaptiv-font(14, 24, 10, 18, "Montserrat-Regular");
+        // @include font(14px, 24px, "Montserrat-Regular");
 
         color: $gray_10;
     }
 }
 
 .mail {
-    width: 38.81%;
+    // width: 38.81%;
     min-width: 631px;
 
     &__title {
-        @include font(14px, 24px, "Montserrat-Bold");
+        @include adaptiv-font(14, 24, 10, 18, "Montserrat-Bold");
+        // @include font(14px, 24px, "Montserrat-Bold");
 
         margin-bottom: 24px;
         color: $gray_10;
@@ -171,11 +183,13 @@
     &__list {
         display: grid;
         grid-template-columns: repeat(3, auto);
-        justify-content: space-between;
+        grid-column-gap: 30px;
+        // justify-content: space-between;
     }
 
     &__item {
-        @include font(14px, 24px, "Montserrat-Regular");
+        @include adaptiv-font(14, 24, 10, 18, "Montserrat-Regular");
+        // @include font(14px, 24px, "Montserrat-Regular");
 
         display: flex;
         flex-direction: column;
@@ -184,18 +198,20 @@
     }
 
     &__link {
-        @include font(14px, 24px, "Montserrat-Regular");
+        @include adaptiv-font(14, 24, 10, 18, "Montserrat-Regular");
+        // @include font(14px, 24px, "Montserrat-Regular");
 
         color: $gray_10;
     }
 }
 
 .work_day {
-    width: 18.34%;
+    // width: 18.34%;
     min-width: 296px;
 
     &__title {
-        @include font(14px, 24px, "Montserrat-Bold");
+        @include adaptiv-font(14, 24, 10, 18, "Montserrat-Bold");
+        // @include font(14px, 24px, "Montserrat-Bold");
 
         margin-bottom: 24px;
         color: $gray_10;
@@ -204,21 +220,17 @@
     &__list {
         display: grid;
         grid-template-columns: repeat(2, auto);
-        justify-content: space-between;
+        grid-column-gap: 30px;
+        // justify-content: space-between;
     }
 
     &__item {
-        @include font(14px, 24px, "Montserrat-Regular");
+        @include adaptiv-font(14, 24, 10, 18, "Montserrat-Regular");
+        // @include font(14px, 24px, "Montserrat-Regular");
 
         display: flex;
         flex-direction: column;
         color: $gray_10;
         white-space: nowrap;
     }
-
-    // &__link {
-    //     @include font(14px, 24px, "Montserrat-Regular");
-
-    //     color: $gray_10;
-    // }
 }
