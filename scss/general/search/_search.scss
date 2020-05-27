@@ -49,9 +49,9 @@
         flex-direction: column;
         justify-content: space-between;
         min-height: 100%;
-        width: 100%;
-        max-width: 1200px;
-        padding: 6.25%;
+        width: 62.5%;
+        min-width: 700px;
+        padding: 100px;
         transform: translateX(100%);
         background-color: $white_0;
         text-align: left;
@@ -60,9 +60,9 @@
     }
 
     &__title {
-        @include font(22px, 27px, "Montserrat-Medium");
+        @include adaptiv-font(22, 27, 14, 17, "Montserrat-Medium");
+        // @include font(22px, 27px, "Montserrat-Medium");
 
-        margin-bottom: 19.79%;
         color: $black_0;
     }
 
@@ -72,7 +72,8 @@
     }
 
     &__input {
-        @include font(36px, 44px, "Montserrat-Regular");
+        @include adaptiv-font(36, 44, 16, 20, "Montserrat-Regular");
+        // @include font(36px, 44px, "Montserrat-Regular");
 
         display: block;
         width: 100%;
@@ -81,7 +82,8 @@
         color: $black_0;
 
         &::placeholder {
-            @include font(36px, 44px, "Montserrat-Regular");
+            @include adaptiv-font(36, 44, 16, 20, "Montserrat-Regular");
+            // @include font(36px, 44px, "Montserrat-Regular");
 
             color: $gray_5;
         }
@@ -122,7 +124,8 @@
         }
 
         &_item {
-            @include font(14px, 17px, "Montserrat-Medium");
+            @include adaptiv-font(14, 17, 10, 12, "Montserrat-Medium");
+            // @include font(14px, 17px, "Montserrat-Medium");
 
             margin-right: 4.69%;
             margin-bottom: 12px;
@@ -131,6 +134,44 @@
             &:last-child {
                 margin-right: 0;
             }
+        }
+    }
+}
+
+// 0 - 1280
+@include respond-to(desktop) {
+
+    .search {
+
+        &__inner {
+            width: 100%;
+            min-width: unset;
+            padding: 80px;
+        }
+
+        .search__btn {
+            width: 80px;
+            height: 80px;
+        }
+    }
+}
+
+// 0 - 767
+@include respond-to(mobile) {
+
+    .search {
+
+        &__inner {
+            padding: 60px;
+        }
+
+        .search__btn {
+            width: 60px;
+            height: 60px;
+        }
+
+        &__icon {
+            width: 20px;
         }
     }
 }
