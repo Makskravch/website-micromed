@@ -1306,19 +1306,33 @@ input[type=number] {
         -ms-flex-align: center;
             align-items: center;
     width: 600px;
-    height: 400px;
+    min-height: 400px;
     padding: 50px;
     background-color: #215CCE; }
   .popup_thanks__title {
-    font: 3.2rem/3.9rem "Montserrat-Bold";
-    max-width: 350px;
+    font-size: -webkit-calc(23px + 9 * ((100vw - 320px) / 1600));
+    font-size: calc(23px + 9 * ((100vw - 320px) / 1600));
+    line-height: -webkit-calc(28px + 11 * ((100vw - 320px) / 1600));
+    line-height: calc(28px + 11 * ((100vw - 320px) / 1600));
+    font-family: "Montserrat-Bold";
     margin-bottom: 10px;
-    color: #fff; }
+    color: #fff;
+    text-align: center; }
   .popup_thanks__description {
-    font: 1.8rem/2.2rem "Montserrat-Regular";
+    font-size: -webkit-calc(12px + 6 * ((100vw - 320px) / 1600));
+    font-size: calc(12px + 6 * ((100vw - 320px) / 1600));
+    line-height: -webkit-calc(15px + 7 * ((100vw - 320px) / 1600));
+    line-height: calc(15px + 7 * ((100vw - 320px) / 1600));
+    font-family: "Montserrat-Regular";
     max-width: 300px;
     color: #fff;
     text-align: center; }
+
+@media only screen and (max-width: 767px) {
+  .popup_thanks__inner {
+    width: 100%;
+    min-height: 100%;
+    padding: 30px; } }
 
 .settings {
   width: 34.9%;
