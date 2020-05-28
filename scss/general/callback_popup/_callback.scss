@@ -58,14 +58,16 @@
     }
 
     &__title {
-        @include font(21px, 26px, "Montserrat-Bold");
+        @include adaptiv-font(21, 26, 17, 21, "Montserrat-Bold");
+        // @include font(21px, 26px, "Montserrat-Bold");
 
         margin-bottom: 80px;
         color: $black_0;
     }
 
     &__input {
-        @include font(14px, 17px, "Montserrat-Regular");
+        @include adaptiv-font(14, 17, 10, 12, "Montserrat-Regular");
+        // @include font(14px, 17px, "Montserrat-Regular");
 
         padding: 0;
         padding-bottom: 18px;
@@ -97,6 +99,53 @@
         &:hover {
             color: $white_0;
             background-color: $blue_0;
+        }
+    }
+}
+
+// 0 - 1024
+@include respond-to(tablet) {
+
+    .popup_callback {
+
+        &__inner {
+            padding: 40px;
+        }
+    }
+}
+
+// 0 - 767
+@include respond-to(mobile) {
+
+    .popup_callback {
+
+        &__inner {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            max-width: none;
+            min-height: 100%;
+        }
+
+        &__close {
+            width: 56px;
+            height: 56px;
+        }
+
+        &__title {
+            margin-bottom: 60px;
+        }
+
+        &__input {
+            margin-bottom: 30px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &__submit {
+            margin-top: 60px;
         }
     }
 }
