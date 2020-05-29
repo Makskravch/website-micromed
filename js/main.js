@@ -36,8 +36,9 @@ $(document).ready(function() {
 
     // POPUP CALLBACK and THANKS
     if (popupCallback.length) {
+        const callbackForm = popupCallback.find('#callback')
 
-        popupCallback.on('submit', function() {
+        callbackForm.on('submit', function() {
             popupThanks.css({
                 "opacity": 1,
                 "pointer-events": "default"
@@ -49,7 +50,7 @@ $(document).ready(function() {
                 })
             }, 3000)
         })
-        
+
         $(document).on('click',function(e) {
             if ($(e.target).closest('.callback__btn').length || $(e.target).hasClass('popup_callback')) {
                 body.toggleClass('overflow')
