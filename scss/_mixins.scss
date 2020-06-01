@@ -32,32 +32,6 @@
 	}
 }
 
-@mixin before($height: 1px, $width: 100%, $top: 0, $left: 0, $color: red) {
-	&::before {
-		content: "";
-		display: block;
-		height: $height;
-		width: $width;
-		position: absolute;
-		top: $top;
-		left: $left;
-		background-color: $color;
-	}
-}
-
-@mixin after($height: 1px, $width: 100%, $bottom: 0, $left: 0, $color: red) {
-	&::after {
-		content: "";
-		display: block;
-		height: $height;
-		width: $width;
-		position: absolute;
-		bottom: $bottom;
-		left: $left;
-		background-color: $color;
-	}
-}
-
 @mixin respond-to($media) {
 	// 0 - 480
 	@if $media == mobile_small {
@@ -83,7 +57,7 @@
 			@content;
 		}
 	}
-	// 0 - 1600
+	// 0 - 1440
 	@if $media == desktop-extra {
 		@media only screen and (max-width: $desktop-extra) {
 			@content;
