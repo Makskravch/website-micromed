@@ -8,6 +8,7 @@ const browserSync  = require('browser-sync').create();
 const iconfont     = require('gulp-iconfont');
 const iconfontCss  = require('gulp-iconfont-css');
 const fontName     = 'iconsfont';
+const media_queries = require('gulp-group-css-media-queries');
 
 
 var paths = {
@@ -38,6 +39,7 @@ function styles() {
         .pipe(sourcemaps.init())
         // .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
         .pipe(sass().on('error', sass.logError))
+		.pipe(media_queries())
         .pipe(autoprefixer())
         .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest(paths.styles.dest))
