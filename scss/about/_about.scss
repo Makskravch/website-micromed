@@ -47,10 +47,16 @@
     }
 
     &__photo {
+        position: relative;
+        height: 0;
+        padding-bottom: 16.38%;
         margin-bottom: 3.5%;
     }
 
     &__img {
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -66,11 +72,11 @@
             @include adaptiv-font(14, 24, 10, 18, "Montserrat-Regular");
             // @include font(14px, 24px, "Montserrat-Regular");
 
-            width: 48.8%;
+            margin-right: 4.53%;
             color: $gray_10;
 
-            &:nth-child(2) {
-                width: 46.4%;
+            &:last-child {
+                margin-right: 0;
             }
 
             &--color {
@@ -79,6 +85,80 @@
 
             &--bold {
                 font-family: "Montserrat-Bold";
+            }
+        }
+    }
+}
+
+// 0 - 1280
+@include respond-to(desktop) {
+
+    .about {
+
+        &__paragraph {
+
+            &_list {
+                flex-direction: column;
+            }
+
+            &_item {
+                margin-right: 0;
+                margin-bottom: 20px;
+                text-indent: 1.5em;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+// 0 - 767
+@include respond-to(mobile) {
+
+    .about {
+
+        &__head {
+            padding: 10px 20px;
+        }
+
+        &__body {
+            padding: 25px 20px;
+        }
+
+        &__paragraph {
+            margin-bottom: 45px;
+        }
+
+        &__photo {
+            padding-bottom: 160px;
+            margin-bottom: 20px;
+        }
+
+        &__article {
+            margin-bottom: 30px;
+        }
+
+        &__paragraph {
+
+            &_item {
+                text-indent: 0;
+            }
+        }
+
+        &__note {
+            flex-direction: column;
+            padding-top: 30px;
+
+            &_paragraph {
+                width: 100%;
+                margin-right: 0;
+                margin-bottom: 30px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
             }
         }
     }
