@@ -5445,7 +5445,11 @@ input[type=number] {
 }
 
 .payment__title {
-  font: 4rem/4.9rem "Montserrat-Bold";
+  font-size: -webkit-calc(14px + 26 * ((100vw - 320px) / 1600));
+  font-size: calc(14px + 26 * ((100vw - 320px) / 1600));
+  line-height: -webkit-calc(17px + 32 * ((100vw - 320px) / 1600));
+  line-height: calc(17px + 32 * ((100vw - 320px) / 1600));
+  font-family: "Montserrat-Bold";
   margin-bottom: 3.5%;
   color: #000;
 }
@@ -5472,13 +5476,21 @@ input[type=number] {
 }
 
 .payment__order_title {
-  font: 1.4rem/2.4rem "Montserrat-Bold";
+  font-size: -webkit-calc(10px + 4 * ((100vw - 320px) / 1600));
+  font-size: calc(10px + 4 * ((100vw - 320px) / 1600));
+  line-height: -webkit-calc(18px + 6 * ((100vw - 320px) / 1600));
+  line-height: calc(18px + 6 * ((100vw - 320px) / 1600));
+  font-family: "Montserrat-Bold";
   margin-bottom: 24px;
   color: #5A5A5A;
 }
 
 .payment__order_paragraph {
-  font: 1.4rem/2.4rem "Montserrat-Regular";
+  font-size: -webkit-calc(10px + 4 * ((100vw - 320px) / 1600));
+  font-size: calc(10px + 4 * ((100vw - 320px) / 1600));
+  line-height: -webkit-calc(18px + 6 * ((100vw - 320px) / 1600));
+  line-height: calc(18px + 6 * ((100vw - 320px) / 1600));
+  font-family: "Montserrat-Regular";
   color: #5A5A5A;
 }
 
@@ -5489,7 +5501,11 @@ input[type=number] {
 }
 
 .payment__delivery_title {
-  font: 1.4rem/2.4rem "Montserrat-Bold";
+  font-size: -webkit-calc(10px + 4 * ((100vw - 320px) / 1600));
+  font-size: calc(10px + 4 * ((100vw - 320px) / 1600));
+  line-height: -webkit-calc(18px + 6 * ((100vw - 320px) / 1600));
+  line-height: calc(18px + 6 * ((100vw - 320px) / 1600));
+  font-family: "Montserrat-Bold";
   margin-bottom: 24px;
   color: #5A5A5A;
 }
@@ -5502,7 +5518,11 @@ input[type=number] {
 }
 
 .payment__delivery_paragraph {
-  font: 1.4rem/2.4rem "Montserrat-Regular";
+  font-size: -webkit-calc(10px + 4 * ((100vw - 320px) / 1600));
+  font-size: calc(10px + 4 * ((100vw - 320px) / 1600));
+  line-height: -webkit-calc(18px + 6 * ((100vw - 320px) / 1600));
+  line-height: calc(18px + 6 * ((100vw - 320px) / 1600));
+  font-family: "Montserrat-Regular";
   margin-right: 3.82%;
   color: #5A5A5A;
 }
@@ -5517,7 +5537,11 @@ input[type=number] {
 }
 
 .payment__conditions_title {
-  font: 1.4rem/2.4rem "Montserrat-Bold";
+  font-size: -webkit-calc(10px + 4 * ((100vw - 320px) / 1600));
+  font-size: calc(10px + 4 * ((100vw - 320px) / 1600));
+  line-height: -webkit-calc(18px + 6 * ((100vw - 320px) / 1600));
+  line-height: calc(18px + 6 * ((100vw - 320px) / 1600));
+  font-family: "Montserrat-Bold";
   margin-bottom: 24px;
   color: #5A5A5A;
 }
@@ -5530,7 +5554,11 @@ input[type=number] {
 }
 
 .payment__conditions_paragraph {
-  font: 1.4rem/2.4rem "Montserrat-Regular";
+  font-size: -webkit-calc(10px + 4 * ((100vw - 320px) / 1600));
+  font-size: calc(10px + 4 * ((100vw - 320px) / 1600));
+  line-height: -webkit-calc(18px + 6 * ((100vw - 320px) / 1600));
+  line-height: calc(18px + 6 * ((100vw - 320px) / 1600));
+  font-family: "Montserrat-Regular";
   margin-right: 3.82%;
   color: #5A5A5A;
 }
@@ -6176,6 +6204,57 @@ input[type=number] {
   .service__paragraph:last-child {
     margin-bottom: 0;
   }
+
+  .payment__order_list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .payment__order_item {
+    margin-right: 0;
+    margin-bottom: 4.37%;
+  }
+
+  .payment__order_item:last-child {
+    margin-bottom: 0;
+  }
+
+  .payment__delivery_description {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .payment__delivery_paragraph {
+    margin-right: 0;
+    margin-bottom: 3.82%;
+  }
+
+  .payment__delivery_paragraph:last-child {
+    margin-bottom: 0;
+  }
+
+  .payment__conditions_description {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .payment__conditions_paragraph {
+    margin-right: 0;
+    margin-bottom: 3.82%;
+  }
+
+  .payment__conditions_paragraph:last-child {
+    margin-bottom: 0;
+  }
 }
 
 @media only screen and (max-width: 767px) {
@@ -6647,6 +6726,56 @@ input[type=number] {
   }
 
   .about__note_paragraph:last-child {
+    margin-bottom: 0;
+  }
+
+  .payment__head {
+    padding: 10px 20px;
+  }
+
+  .payment__body {
+    padding: 25px 20px;
+  }
+
+  .payment__order {
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+  }
+
+  .payment__order_item {
+    margin-bottom: 20px;
+  }
+
+  .payment__order_title {
+    margin-bottom: 20px;
+  }
+
+  .payment__delivery {
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+  }
+
+  .payment__delivery_title {
+    margin-bottom: 20px;
+  }
+
+  .payment__delivery_paragraph {
+    margin-bottom: 20px;
+  }
+
+  .payment__delivery_paragraph:last-child {
+    margin-bottom: 0;
+  }
+
+  .payment__conditions_title {
+    margin-bottom: 20px;
+  }
+
+  .payment__conditions_paragraph {
+    margin-bottom: 20px;
+  }
+
+  .payment__conditions_paragraph:last-child {
     margin-bottom: 0;
   }
 }
