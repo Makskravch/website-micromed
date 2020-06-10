@@ -49,6 +49,14 @@ html {
           box-sizing: border-box;
 }
 
+* {
+  -ms-overflow-style: none;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
 body,
 h1,
 h2,
@@ -919,11 +927,8 @@ input[type=number] {
 }
 
 .similar__body_item {
+  border-left: 1px solid #E5E5E5;
   border-right: 1px solid #E5E5E5;
-}
-
-.similar__body_item:last-child {
-  border-right: 0;
 }
 
 .similar__head {
@@ -2646,6 +2651,21 @@ input[type=number] {
   z-index: 1;
 }
 
+.cart__footer a {
+  font-size: -webkit-calc(10px + 4 * ((100vw - 320px) / 1600));
+  font-size: calc(10px + 4 * ((100vw - 320px) / 1600));
+  line-height: -webkit-calc(12px + 5 * ((100vw - 320px) / 1600));
+  line-height: calc(12px + 5 * ((100vw - 320px) / 1600));
+  font-family: "Montserrat-Bold";
+  min-height: 80px;
+  padding: 0 30px;
+  border: 0;
+  border-radius: 100px;
+  background-color: #215CCE;
+  color: #fff;
+  cursor: pointer;
+}
+
 .cart__submit {
   font-size: -webkit-calc(10px + 4 * ((100vw - 320px) / 1600));
   font-size: calc(10px + 4 * ((100vw - 320px) / 1600));
@@ -4103,6 +4123,10 @@ input[type=number] {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   width: 25%;
   padding: 20px;
   border-right: 1px solid #E5E5E5;
@@ -4116,14 +4140,14 @@ input[type=number] {
   cursor: pointer;
 }
 
-.product__tab_item:last-child {
-  border-right: 0;
-}
-
-.product__tab_item--active {
+.product__tab_item:first-child {
   font-family: "Montserrat-Bold";
   color: #215CCE;
   cursor: default;
+}
+
+.product__tab_item:last-child {
+  border-right: 0;
 }
 
 .product__description {
@@ -4209,6 +4233,17 @@ input[type=number] {
   width: 70.46%;
 }
 
+.product__description_pane_body p {
+  font: 1.4rem/2.4rem "Montserrat-Regular";
+  margin-bottom: 24px;
+  color: #646464;
+}
+
+.product__description_pane_body p span {
+  font: 1.4rem/2.4rem "Montserrat-Medium";
+  color: #646464;
+}
+
 .product__description_pane_characteristic_item {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -4227,24 +4262,13 @@ input[type=number] {
   color: #000;
 }
 
-.product__description_pane_definition_paragraph {
-  font: 1.4rem/2.4rem "Montserrat-Regular";
-  margin-bottom: 24px;
-  color: #646464;
-}
-
-.product__description_pane_definition_span {
-  font: 1.4rem/2.4rem "Montserrat-Medium";
-  color: #646464;
-}
-
-.product__description_pane_options_item {
+.product__description_pane_options li {
   font: 1.4rem/2.4rem "Montserrat-Medium";
   counter-increment: options-count;
   color: #646464;
 }
 
-.product__description_pane_options_item::before {
+.product__description_pane_options li::before {
   content: counter(options-count) ".";
 }
 
@@ -4645,10 +4669,20 @@ input[type=number] {
   text-align: center;
 }
 
+.product__buy_footer_form button {
+  font: 1.8rem/2.2rem "Montserrat-Bold";
+  width: 100%;
+  padding: 26px 15px;
+  border: 0;
+  background-color: #215CCE;
+  color: #fff;
+  text-align: center;
+}
+
 .product__buy_footer_link {
   font: 1.8rem/2.2rem "Montserrat-Bold";
   display: block;
-  padding: 26px 0;
+  padding: 26px 15px;
   color: #fff;
   background-color: #215CCE;
   text-align: center;
@@ -5807,6 +5841,20 @@ input[type=number] {
   margin-bottom: 5.4%;
 }
 
+.separate_news__article p {
+  font: 1.4rem/2.4rem "Montserrat-Regular";
+  margin-bottom: 24px;
+  color: #000;
+}
+
+.separate_news__article p:first-child {
+  color: #215CCE;
+}
+
+.separate_news__article p:last-child {
+  margin-bottom: 0;
+}
+
 .separate_news__paragraph {
   font: 1.4rem/2.4rem "Montserrat-Regular";
   margin-bottom: 24px;
@@ -5832,6 +5880,12 @@ input[type=number] {
           justify-content: space-between;
 }
 
+.separate_news__features p:first-child {
+  font: 1.4rem/2.4rem "Montserrat-Bold";
+  width: 13.62%;
+  color: #000;
+}
+
 .separate_news__features_title {
   font: 1.4rem/2.4rem "Montserrat-Bold";
   width: 13.62%;
@@ -5848,6 +5902,12 @@ input[type=number] {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 76.68%;
+}
+
+.separate_news__features_list li {
+  font: 1.4rem/2.4rem "Montserrat-Regular";
+  width: 30%;
+  color: #000;
 }
 
 .separate_news__features_item {

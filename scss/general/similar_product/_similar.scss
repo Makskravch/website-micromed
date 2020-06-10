@@ -92,11 +92,8 @@
         }
 
         &_item {
+            border-left: 1px solid $gray_1;
             border-right: 1px solid $gray_1;
-
-            &:last-child {
-                border-right: 0;
-            }
         }
     }
 

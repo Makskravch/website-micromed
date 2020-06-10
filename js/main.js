@@ -97,12 +97,11 @@ $(document).ready(function() {
 
     //  Handler adding the product to the cart (TILE - CART)
     if (tile.length) {
-        $(document).on('click', '.tile__cart_btn', function(e) {
+        $(document).on('click', '.tile__cart_btn', function() {
             const cartItem = $('<li class="cart__order_item"></li>')
             const copyTile = $(this).closest('.tile').clone()
             const removeBtn = $('<div class="remove_item"></div>')
-            cartItem.append(copyTile)
-            cartItem.append(removeBtn)
+            cartItem.append(copyTile).append(removeBtn)
             cart.find('.cart__order_list').append(cartItem)
         })
     }
@@ -299,7 +298,7 @@ $(document).ready(function() {
         })
     }
 
-    // Similar product slider
+    // New product slider
     if ($('.new__list').length) {
         $('.new__list').slick({
             slidesToShow: 4,
@@ -309,6 +308,12 @@ $(document).ready(function() {
             infinite: true,
             speed: 2000,
             responsive: [
+                {
+                    breakpoint: 1440,
+                    settings: {
+                        slidesToShow: 3,
+                    }
+                },
                 {
                     breakpoint: 768,
                     settings: {
@@ -322,23 +327,61 @@ $(document).ready(function() {
 
     // Similar product slider
     if ($('.similar__body_list').length) {
-        $('.similar__body_list').slick({
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            arrows: true,
-            draggable: true,
-            infinite: true,
-            speed: 2000,
-            responsive: [
-                {
-                    breakpoint: 768,
-                    settings: {
-                        slidesToShow: 2,
-                        arrows: false,
-                    }
-                },
-            ]
-        });
+        if ($('.similar__body_item').length == 1) {
+            $('.similar__body_list').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: true,
+                draggable: true,
+                infinite: true,
+                speed: 2000,
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 1,
+                            arrows: false,
+                        }
+                    },
+                ]
+            });
+        } else if ($('.similar__body_item').length == 2) {
+            $('.similar__body_list').slick({
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                arrows: true,
+                draggable: true,
+                infinite: true,
+                speed: 2000,
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 2,
+                            arrows: false,
+                        }
+                    },
+                ]
+            });
+        } else {
+            $('.similar__body_list').slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                arrows: true,
+                draggable: true,
+                infinite: true,
+                speed: 2000,
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 2,
+                            arrows: false,
+                        }
+                    },
+                ]
+            });
+        }
     }
 
     // Product buy (show/hide the description of the "buy" block)

@@ -567,7 +567,7 @@
 	<!-- MAIN -->
 	<main class="main" id="main">
 		<!-- Add a "product--unavailable" class name to unavailable products -->
-		<div class="product" id="product">
+		<div class="product product--unavailable" id="product">
 			<!-- Product head -->
 			<div class="product__head">
 				<!-- Breadcrumbs (module) -->
@@ -669,10 +669,27 @@
 				</div>
 				<!-- Description -->
 				<div class="product__description" id="product__description">
+					<!-- Product tabs -->
+					<div class="product__tab">
+						<ul class="product__tab_list">
+							<li class="product__tab_item">
+								Характеристики
+							</li>
+							<li class="product__tab_item">
+								Опис
+							</li>
+							<li class="product__tab_item">
+								Комплектація
+							</li>
+							<li class="product__tab_item">
+								Відгуки
+							</li>
+						</ul>
+					</div>
 					<!-- New models -->
 					<div class="new">
 						<p class="new__title">
-							Нові моделі
+							Рекомендована заміна
 						</p>
 						<div class="new__list">
 							<div class="new__item">
@@ -1221,26 +1238,9 @@
 							</div>
 						</div>
 					</div>
-					<!-- Product tabs -->
-					<div class="product__tab">
-						<ul class="product__tab_list">
-							<li class="product__tab_item product__tab_item--active">
-								Характеристики
-							</li>
-							<li class="product__tab_item">
-								Опис
-							</li>
-							<li class="product__tab_item">
-								Комплектація
-							</li>
-							<li class="product__tab_item">
-								Відгуки
-							</li>
-						</ul>
-					</div>
 					<!-- Tabs with description -->
 					<ul class="product__description_list">
-						<li class="product__description_item product__description_item--active">
+						<li class="product__description_item">
 							<!-- Description Tab (for mobile version) -->
 							<div class="product__description_tab">
 								Характеристики

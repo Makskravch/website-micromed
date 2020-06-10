@@ -140,6 +140,7 @@
 
             display: flex;
             justify-content: center;
+            flex-grow: 1;
             width: 25%;
             padding: 20px;
             border-right: 1px solid $gray_1;
@@ -151,15 +152,21 @@
             text-align: center;
             cursor: pointer;
 
-            &:last-child {
-                border-right: 0;
-            }
-
-            &--active {
+            &:first-child {
                 font-family: "Montserrat-Bold";
                 color: $blue_0;
                 cursor: default;
             }
+
+            &:last-child {
+                border-right: 0;
+            }
+
+            // &--active {
+            //     font-family: "Montserrat-Bold";
+            //     color: $blue_0;
+            //     cursor: default;
+            // }
         }
     }
 
@@ -224,6 +231,19 @@
                 &_inner {
                     width: 70.46%;
                 }
+
+                p {
+                    @include font(14px, 24px, "Montserrat-Regular");
+
+                    margin-bottom: 24px;
+                    color: $gray_7;
+
+                    span {
+                        @include font(14px, 24px, "Montserrat-Medium");
+    
+                        color: $gray_7;
+                    }
+                }
             }
 
             &_characteristic {
@@ -249,25 +269,25 @@
                 }
             }
 
-            &_definition {
+            // &_definition {
 
-                &_paragraph {
-                    @include font(14px, 24px, "Montserrat-Regular");
+            //     &_paragraph {
+            //         @include font(14px, 24px, "Montserrat-Regular");
 
-                    margin-bottom: 24px;
-                    color: $gray_7;
-                }
+            //         margin-bottom: 24px;
+            //         color: $gray_7;
+            //     }
 
-                &_span {
-                    @include font(14px, 24px, "Montserrat-Medium");
+            //     &_span {
+            //         @include font(14px, 24px, "Montserrat-Medium");
 
-                    color: $gray_7;
-                }
-            }
+            //         color: $gray_7;
+            //     }
+            // }
 
             &_options {
 
-                &_item {
+                li {
                     @include font(14px, 24px, "Montserrat-Medium");
 
                     counter-increment: options-count;
@@ -277,6 +297,17 @@
                         content: counter(options-count) ".";
                     }
                 }
+
+                // &_item {
+                //     @include font(14px, 24px, "Montserrat-Medium");
+
+                //     counter-increment: options-count;
+                //     color: $gray_7;
+
+                //     &::before {
+                //         content: counter(options-count) ".";
+                //     }
+                // }
             }
 
             &_respond {
@@ -591,11 +622,25 @@
                 }
             }
 
+            &_form {
+
+                button {
+                    @include font(18px, 22px, "Montserrat-Bold");
+
+                    width: 100%;
+                    padding: 26px 15px;
+                    border: 0;
+                    background-color: $blue_0;
+                    color: $white_0;
+                    text-align: center;
+                }
+            }
+
             &_link {
                 @include font(18px, 22px, "Montserrat-Bold");
 
                 display: block;
-                padding: 26px 0;
+                padding: 26px 15px;
                 color: $white_0;
                 background-color: $blue_0;
                 text-align: center;

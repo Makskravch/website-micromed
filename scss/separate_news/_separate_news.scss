@@ -36,6 +36,21 @@
         padding-bottom: 5.4%;
         border-bottom: 1px solid $gray_1;
         margin-bottom: 5.4%;
+
+        p {
+            @include font(14px, 24px, "Montserrat-Regular");
+
+            margin-bottom: 24px;
+            color: $black_0;
+
+            &:first-child {
+                color: $blue_0;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
     }
 
     &__paragraph {
@@ -57,6 +72,16 @@
         display: flex;
         justify-content: space-between;
 
+        p {
+
+            &:first-child {
+                @include font(14px, 24px, "Montserrat-Bold");
+
+                width: 13.62%;
+                color: $black_0;
+            }
+        }
+
         &_title {
             @include font(14px, 24px, "Montserrat-Bold");
 
@@ -68,6 +93,13 @@
             display: flex;
             justify-content: space-between;
             width: 76.68%;
+
+            li {
+                @include font(14px, 24px, "Montserrat-Regular");
+
+                width: 30%;
+                color: $black_0;
+            }
         }
 
         &_item {
