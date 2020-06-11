@@ -28,83 +28,8 @@
     &__list {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        grid-auto-flow: row;
-        grid-gap: 1.72vw;
+        grid-gap: 1.56vw;
         margin-bottom: 3.28%;
-    }
-
-    &__item {
-        position: relative;
-
-        &--photo {
-            grid-row: span 2;
-
-            .news__link_photo {
-                display: block;
-            }
-        }
-
-        &--top {
-    
-            &::before {
-                content: '';
-                position: absolute;
-                top: 0;
-                right: 0;
-                width: 0;
-                height: 0;
-                border: 32px solid $blue_0;
-                border-bottom-color: transparent;
-                border-left-color: transparent;
-                z-index: 1;
-            }
-    
-            
-            &::after {
-                @include font(12px, 15px, "Montserrat-Bold");
-    
-                content: 'top';
-                position: absolute;
-                top: 16px;
-                right: 16px;
-                transform: rotate(45deg) translate(25%, -100%);
-                transform-origin: 0% 0%;
-                color: $white_0;
-                text-transform: uppercase;
-                z-index: 1;
-            }
-        }
-    
-        &--new {
-    
-            &::before {
-                content: '';
-                position: absolute;
-                top: 0;
-                right: 0;
-                width: 0;
-                height: 0;
-                border: 32px solid $green_0;
-                border-bottom-color: transparent;
-                border-left-color: transparent;
-                z-index: 1;
-            }
-    
-            
-            &::after {
-                @include font(12px, 15px, "Montserrat-Bold");
-    
-                content: 'new';
-                position: absolute;
-                top: 14px;
-                right: 14px;
-                transform: rotate(45deg) translate(25%, -100%);
-                transform-origin: 0% 0%;
-                color: $white_0;
-                text-transform: uppercase;
-                z-index: 1;
-            }
-        }
     }
 
     &__link {
@@ -121,7 +46,6 @@
         }
 
         &_photo {
-            display: none;
             position: relative;
             width: 100%;
             padding-bottom: 59.1%;
@@ -144,20 +68,23 @@
         }
 
         &_date {
-            @include font(14px, 17px, "Montserrat-Regular");
+            @include adaptiv-font(14, 17, 10, 12, "Montserrat-Regular");
+            // @include font(14px, 17px, "Montserrat-Regular");
 
             margin-bottom: 12px;
             color: $gray_2;
         }
 
         &_title {
-            @include font(22px, 32px, "Montserrat-Regular");
+            @include adaptiv-font(22, 32, 12, 22, "Montserrat-Regular");
+            // @include font(22px, 32px, "Montserrat-Regular");
 
             margin-bottom: 20px;
             color: $black_0;
         }
 
         &_more {
+            @include adaptiv-font(14, 17, 12, 25, "Montserrat-Bold");
             @include font(14px, 17px, "Montserrat-Bold");
 
             color: $blue_0;
