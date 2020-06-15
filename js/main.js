@@ -27,12 +27,12 @@ $(document).ready(function() {
 
     // HEADER
     // Set the width of the 'subnav' blocks
-    if ($('.subnav').length) {
-        const headerMenuBtn = $('.header__menu')[0].clientWidth
-        const headerLogo = $('.header__logo')[0].clientWidth
-        const subnavWidth = 100 - ((headerMenuBtn + headerLogo))*100/documentWidth
-        $('.subnav').css('width', `${subnavWidth}vw`)
-    }
+    // if ($('.subnav').length) {
+    //     const headerMenuBtn = $('.header__menu')[0].clientWidth
+    //     const headerLogo = $('.header__logo')[0].clientWidth
+    //     let subnavWidth = 100 - ((headerMenuBtn + headerLogo))*100/documentWidth
+    //     $('.subnav').css('width', `${subnavWidth}vw`)
+    // }
 
     // POPUP CALLBACK and THANKS
     if (popupCallback.length) {

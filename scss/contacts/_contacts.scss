@@ -1,14 +1,13 @@
 .contacts {
 
     &__head {
-        padding: 27px 43px;
+        padding: 1.41% 2.24%;
         border-bottom: 1px solid $gray_1;
     }
 
     &__all {
-        padding: 40px 44px 60px;
+        padding: 2.08% 2.24% 3.13%;
         border-bottom: 1px solid $gray_1;
-        margin-bottom: 4.27%;
     }
 
     &__title {
@@ -26,7 +25,7 @@
     }
 
     &__callback {
-        padding: 0 44px 4.7%;
+        padding: 4.7% 2.24%;
 
         &_title {
             @include adaptiv-font(14, 24, 10, 18, "Montserrat-Bold");

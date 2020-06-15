@@ -2759,8 +2759,8 @@ input[type=number] {
   top: -webkit-calc(100% - 1px);
   top: calc(100% - 1px);
   left: 0;
-  width: -webkit-calc(100vw - 12vw - 100px);
-  width: calc(100vw - 12vw - 100px);
+  width: -webkit-calc(100vw - 100px - 245px);
+  width: calc(100vw - 100px - 245px);
   border-top: 1px solid #E5E5E5;
   background-color: #fff;
   -webkit-transform: translateY(-200%);
@@ -2821,8 +2821,8 @@ input[type=number] {
 }
 
 .header__logo {
-  width: 12.85%;
-  min-width: 165px;
+  width: 245px;
+  min-width: 150px;
   background-color: #215CCE;
 }
 
@@ -4871,14 +4871,13 @@ input[type=number] {
 }
 
 .contacts__head {
-  padding: 27px 43px;
+  padding: 1.41% 2.24%;
   border-bottom: 1px solid #E5E5E5;
 }
 
 .contacts__all {
-  padding: 40px 44px 60px;
+  padding: 2.08% 2.24% 3.13%;
   border-bottom: 1px solid #E5E5E5;
-  margin-bottom: 4.27%;
 }
 
 .contacts__title {
@@ -4906,7 +4905,7 @@ input[type=number] {
 }
 
 .contacts__callback {
-  padding: 0 44px 4.7%;
+  padding: 4.7% 2.24%;
 }
 
 .contacts__callback_title {
@@ -5973,13 +5972,13 @@ input[type=number] {
     max-width: 550px;
   }
 
+  .menu__btn {
+    width: 80px;
+  }
+
   .menu__head {
     min-height: 80px;
     margin-bottom: 30px;
-  }
-
-  .menu__btn {
-    width: 80px;
   }
 
   .menu__body {
@@ -6015,8 +6014,17 @@ input[type=number] {
     padding: 0 25px;
   }
 
+  .subnav {
+    width: -webkit-calc(100vw - 80px - 200px);
+    width: calc(100vw - 80px - 200px);
+  }
+
   .header__inner {
     min-height: 80px;
+  }
+
+  .header__logo {
+    width: 200px;
   }
 
   .header__contacts {
@@ -6119,10 +6127,6 @@ input[type=number] {
     min-width: 100px;
   }
 
-  .header__logo {
-    width: 23.44%;
-  }
-
   .header__nav {
     display: none;
   }
@@ -6130,6 +6134,10 @@ input[type=number] {
   .header__contacts {
     display: block;
     width: auto;
+    -webkit-box-flex: 0.5;
+    -webkit-flex-grow: 0.5;
+        -ms-flex-positive: 0.5;
+            flex-grow: 0.5;
   }
 
   .header__search {
@@ -6415,13 +6423,6 @@ input[type=number] {
 
   .header__inner {
     min-height: 60px;
-  }
-
-  .header__logo {
-    -webkit-box-flex: 1;
-    -webkit-flex-grow: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
   }
 
   .header__contacts {

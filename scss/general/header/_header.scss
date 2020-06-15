@@ -8,8 +8,8 @@
     }
 
     &__logo {
-        width: 12.85%;
-        min-width: 165px;
+        width: 245px;
+        min-width: 150px;
         background-color: $blue_0;
 
         &_link {
@@ -205,6 +205,10 @@
             min-height: 80px;
         }
 
+        &__logo {
+            width: 200px;
+        }
+
         &__contacts {
             display: none;
         }
@@ -234,10 +238,6 @@
 
     .header {
 
-        &__logo {
-            width: 23.44%;
-        }
-
         &__nav {
             display: none;
         }
@@ -245,6 +245,7 @@
         &__contacts {
             display: block;
             width: auto;
+            flex-grow: 0.5;
         }
 
         &__search {
@@ -261,10 +262,6 @@
 
         &__inner {
             min-height: 60px;
-        }
-
-        &__logo {
-            flex-grow: 1;
         }
 
         &__contacts {

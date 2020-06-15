@@ -52,7 +52,7 @@
     position: absolute;
     top: calc(100% - 1px);
     left: 0;
-    width: calc(100vw - 12vw - 100px);
+    width: calc(100vw - 100px - 245px);
     border-top: 1px solid $gray_1;
     background-color: $white_0;
     transform: translateY(-200%);
@@ -83,6 +83,14 @@
         &_line {
             display: block;
         }
+    }
+}
+
+// 0 - 1280
+@include respond-to(desktop) {
+
+    .subnav {
+        width: calc(100vw - 80px - 200px);
     }
 }
 
