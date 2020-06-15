@@ -4,14 +4,15 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 27px 43px;
+        padding: 1.41% 2.24%;
         border-bottom: 1px solid $gray_1;
     }
 
     &__title {
-        @include font(22px, 27px, "Montserrat-Bold");
+        @include adaptiv-font(22, 27, 14, 17, "Montserrat-Bold");
+        // @include font(22px, 27px, "Montserrat-Bold");
 
-        padding: 39px 27px 39px 43px;
+        padding: 10.16% 7.03% 10.16% 11.2%;
         background-color: $gray_12;
         color: $black_0;
     }
@@ -21,11 +22,11 @@
     }
 
     &__main {
-        width: 80%;
 
         .pagination {
 
             &__list {
+                border-top: 1px solid $gray_1;
                 border-bottom: 1px solid $gray_1;
             }
         }
@@ -36,17 +37,13 @@
 
         &_list {
             display: grid;
-            grid-template-columns: repeat(6, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
         }
 
         &_item {
             padding: 20px;
             border-right: 1px solid $gray_1;
             border-bottom: 1px solid $gray_1;
-            
-            &:nth-child(6n) {
-                border-right: 0;
-            }
         }
 
         &_link {
@@ -81,7 +78,8 @@
         }
 
         &_title {
-            @include font(14px, 17px, "Montserrat-Bold");
+            @include adaptiv-font(14, 17, 12, 14, "Montserrat-Bold");
+            // @include font(14px, 17px, "Montserrat-Bold");
 
             color: $black_0;
             text-align: center;
@@ -90,9 +88,10 @@
 
     .product {
         border-left: 1px solid $gray_1;
+        border-top: 1px solid $gray_1;
 
         &--line {
-            
+
             .product__list {
                 grid-template-columns: 1fr;
             }
@@ -100,13 +99,6 @@
 
         &__list {
             grid-template-columns: repeat(4, 1fr);
-        }
-
-        &__item {
-
-            &:nth-child(4n) {
-                border-right: 0;
-            }
         }
     }
 
@@ -117,16 +109,83 @@
         }
 
         &_title {
-            @include font(14px, 24px, "Montserrat-Bold");
+            @include adaptiv-font(14, 24, 10, 18, "Montserrat-Bold");
+            // @include font(14px, 24px, "Montserrat-Bold");
 
             margin-bottom: 24px;
             color: $black_0;
         }
 
         &_paragraph {
-            @include font(14px, 24px, "Montserrat-Regular");
+            @include adaptiv-font(14, 24, 10, 18, "Montserrat-Regular");
+            // @include font(14px, 24px, "Montserrat-Regular");
 
             color: $black_0;
+        }
+    }
+}
+
+@include respond-to(desktop) {
+
+    .catalog {
+
+        .product {
+
+            &__list {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .tile {
+            max-width: unset;
+        }
+        
+        &__description {
+
+            &_inner {
+                padding: 6.51% 6.51% 6.51% 15px;
+            }
+        }
+    }
+}
+
+@include respond-to(mobile_plus) {
+
+    .catalog {
+
+        .product {
+
+            &__list {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
+}
+
+@include respond-to(mobile) {
+
+    .catalog {
+
+        &__nav {
+
+            &_list {
+                grid-template-columns: 1fr;
+            }
+
+            &_item {
+                padding: 10px 20px;
+            }
+
+            &_link {
+                display: flex;
+                align-items: center;
+            }
+
+            &_photo {
+                width: 90px;
+                padding-bottom: 90px;
+                margin: 0 30px 0 0;
+            }
         }
     }
 }

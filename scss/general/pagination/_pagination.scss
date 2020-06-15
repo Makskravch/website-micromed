@@ -1,8 +1,8 @@
 .pagination {
-    display: flex;
+    text-align: center;
 
     &__list {
-        display: flex;
+        display: inline-flex;
     }
 
     &__item {
@@ -14,7 +14,8 @@
     }
 
     &__link {
-        @include font(16px, 20px, "Montserrat-Bold");
+        @include adaptiv-font(16, 20, 10, 12, "Montserrat-Bold");
+        // @include font(16px, 20px, "Montserrat-Bold");
 
         display: flex;
         justify-content: center;
@@ -45,6 +46,28 @@
             fill: transparent;
             stroke: $gray_8;
             transition: stroke 0.2s;
+        }
+    }
+}
+
+@include respond-to(desktop) {
+
+    .pagination {
+
+        &__link {
+            width: 50px;
+            height: 50px;
+        }
+    }
+}
+
+@include respond-to(tablet) {
+
+    .pagination {
+
+        &__link {
+            width: 40px;
+            height: 40px;
         }
     }
 }

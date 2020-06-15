@@ -288,7 +288,7 @@
     }
 
     &__inner {
-        padding: 95px 15px 50px;
+        padding: 23.75% 15px 12.5%;
 
         .counter {
             display: none;
@@ -431,7 +431,8 @@
         text-align: center;
 
         &_short {
-            @include font(14px, 24px, "Montserrat-Regular");
+            @include adaptiv-font(14, 24, 10, 14, "Montserrat-Regular");
+            // @include font(14px, 24px, "Montserrat-Regular");
 
             display: none;
             color: $gray_7;
