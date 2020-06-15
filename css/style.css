@@ -5746,7 +5746,7 @@ input[type=number] {
 }
 
 .separate_news__head {
-  padding: 27px 43px;
+  padding: 1.41% 2.24%;
   border-bottom: 1px solid #E5E5E5;
 }
 
@@ -5754,8 +5754,7 @@ input[type=number] {
   display: grid;
   grid-template-areas: "photo title" "photo description";
   grid-column-gap: 5.79%;
-  padding: 39px 44px;
-  padding-bottom: 3.8%;
+  padding: 2.08% 2.24% 3.33%;
 }
 
 .separate_news__title {
