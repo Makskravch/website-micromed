@@ -5187,7 +5187,7 @@ input[type=number] {
 }
 
 .service__head {
-  padding: 27px 43px;
+  padding: 1.41% 2.24%;
   border-bottom: 1px solid #E5E5E5;
 }
 
@@ -5203,6 +5203,7 @@ input[type=number] {
 
 .service__body {
   padding: 40px 44px 80px;
+  padding: 2.08% 2.24% 4.17%;
 }
 
 .service__article {
