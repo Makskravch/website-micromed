@@ -106,7 +106,8 @@
     }
 
     &__title {
-        @include font(22px, 40px, "Montserrat-Regular");
+        @include adaptiv-font(22, 40, 20, 27, "Montserrat-Regular");
+        // @include font(22px, 40px, "Montserrat-Regular");
 
         width: 70.46%;
         color: $black_0;

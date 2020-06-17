@@ -1,4 +1,4 @@
-// Classes for different tiles (tile--discontinued, tile--unavailable, tile--sale, tile--new, tile--top)
+// Classes for different tiles (tile--discontinued, tile--unavailable, tile--expected, tile--sale, tile--new, tile--top)
 // <div class="tile tile--discontinued tile--unavailable tile--sale tile--new tile--top">
 //     <div class="tile__label">
 //         <ul class="tile__label_list">
@@ -93,7 +93,7 @@
 .tile {
     position: relative;
     width: 100%;
-    max-width: 400px;
+    max-width: 500px;
     min-width: 100px;
     margin: 0 auto;
 
@@ -126,20 +126,51 @@
 
     &--unavailable {
 
-        .tile__unavailable {
-            display: flex;
-        }
+        .tile {
 
-        .tile__img {
-            filter: grayscale(1);
-        }
+            &__unavailable {
+                display: flex;
 
-        .tile__cart_btn {
-            display: none;
-        }
+                &_expected {
+                    display: none;
+                }
+            }
 
-        .tile__unavailable_btn {
-            display: flex;
+            &__img {
+                filter: grayscale(1);
+            }
+
+            &__cart {
+
+                &_btn {
+                    display: none;
+                }
+            }
+
+            &__unavailable {
+
+                &_btn {
+                    display: flex;
+                }
+            }
+        }
+    }
+
+    &--expected {
+
+        .tile {
+
+            &__unavailable {
+                display: flex;
+
+                &_title {
+                    display: none;
+                }
+            }
+
+            &__img {
+                filter: grayscale(1);
+            }
         }
     }
 
@@ -319,6 +350,14 @@
         object-fit: contain;
     }
 
+    &__footer {
+
+        button {
+            width: 100%;
+            max-width: 160px;
+        }
+    }
+
     &__discontinued {
         display: none;
         position: absolute;
@@ -347,7 +386,6 @@
             display: none;
             justify-content: center;
             align-items: center;
-            width: 160px;
             margin: 0 auto;
             min-height: 56px;
             padding: 10px 25px;
@@ -406,7 +444,6 @@
             display: none;
             justify-content: center;
             align-items: center;
-            width: 160px;
             margin: 0 auto;
             min-height: 56px;
             padding: 10px 25px;
@@ -440,8 +477,7 @@
     }
 
     &__title {
-        @include adaptiv-font(14, 20, 10, 13, "Montserrat-Medium");
-        // @include font(14px, 20px, "Montserrat-Medium");
+        @include font(14px, 20px, "Montserrat-Medium");
 
         height: 40px;
         max-width: 270px;
@@ -511,7 +547,6 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 160px;
             margin: 0 auto;
             min-height: 56px;
             padding: 10px 25px;

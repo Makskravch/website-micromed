@@ -298,6 +298,28 @@ $(document).ready(function() {
         })
     }
 
+    
+    if ($('.product__preview_list').length
+        && document.documentElement.clientWidth < 768) {
+        $('.product__preview_list').slick({
+            // slidesToShow: 4,
+            // slidesToScroll: 1,
+            // arrows: true,
+            // draggable: true,
+            // infinite: true,
+            // speed: 2000,
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1,
+                        arrows: false,
+                    }
+                },
+            ]
+        });
+    }
+
     // New product slider
     if ($('.new__list').length) {
         $('.new__list').slick({
@@ -309,9 +331,15 @@ $(document).ready(function() {
             speed: 2000,
             responsive: [
                 {
-                    breakpoint: 1440,
+                    breakpoint: 1442,
                     settings: {
                         slidesToShow: 3,
+                    }
+                },
+                {
+                    breakpoint: 1026,
+                    settings: {
+                        slidesToShow: 2,
                     }
                 },
                 {
@@ -343,6 +371,19 @@ $(document).ready(function() {
                             arrows: false,
                         }
                     },
+                {
+                    breakpoint: 1026,
+                    settings: {
+                        slidesToShow: 2,
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 2,
+                        arrows: false,
+                    }
+                },
                 ]
             });
         } else if ($('.similar__body_item').length == 2) {
@@ -372,6 +413,12 @@ $(document).ready(function() {
                 infinite: true,
                 speed: 2000,
                 responsive: [
+                    {
+                        breakpoint: 1026,
+                        settings: {
+                            slidesToShow: 2,
+                        }
+                    },
                     {
                         breakpoint: 768,
                         settings: {
