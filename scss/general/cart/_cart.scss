@@ -232,6 +232,8 @@
         a {
             @include adaptiv-font(14, 17, 10, 12, "Montserrat-Bold");
 
+            display: flex;
+            align-items: center;
             min-height: 80px;
             padding: 0 30px;
             border: 0;
