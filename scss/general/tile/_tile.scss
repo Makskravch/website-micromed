@@ -1,5 +1,5 @@
-// Classes for different tiles (tile--discontinued, tile--unavailable, tile--expected, tile--sale, tile--new, tile--top)
-// <div class="tile tile--discontinued tile--unavailable tile--sale tile--new tile--top">
+// Classes for different tiles (tile--discontinued, tile--unavailable, tile--running-out, tile--expected, tile--sale, tile--new, tile--top)
+// <div class="tile tile--discontinued tile--unavailable tile--running-out tile--sale tile--new tile--top">
 //     <div class="tile__label">
 //         <ul class="tile__label_list">
 //             <li class="tile__label_item label__new"></li>
@@ -70,6 +70,9 @@
 
 //                 </span>
 //             </p>
+//             <p class="tile__running-out">
+//                 Товар закінчується
+//             </p>
 //             <button type="button" class="tile__cart_btn">
 //                 <i class="tile__cart_icon">
 //                     <svg class="tile__cart_svg" width="30" height="26" viewBox="0 0 30 26" xmlns="http://www.w3.org/2000/svg">
@@ -92,6 +95,7 @@
 
 .tile {
     position: relative;
+    height: 100%;
     width: 100%;
     max-width: 500px;
     min-width: 100px;
@@ -161,6 +165,20 @@
                 &_btn {
                     display: flex;
                 }
+            }
+        }
+    }
+
+    &--running-out {
+
+        .tile {
+
+            &__running-out {
+                display: block;
+            }
+
+            &__cost {
+                margin-bottom: 0;
             }
         }
     }
@@ -328,6 +346,10 @@
     }
 
     &__inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
         padding: 23.75% 15px 12.5%;
 
         .counter {
@@ -488,7 +510,7 @@
     &__title {
         @include font(14px, 20px, "Montserrat-Medium");
 
-        height: 40px;
+        // height: 40px;
         max-width: 270px;
         margin: 0 auto;
         color: $gray_7;
@@ -524,7 +546,7 @@
         @include adaptiv-font(18, 22, 10, 12, "Montserrat-Bold");
         // @include font(18px, 22px, "Montserrat-Bold");
 
-        height: 44px;
+        // height: 44px;
         margin-bottom: 30px;
         color: $black_0;
         text-align: center;
@@ -545,6 +567,15 @@
             overflow: hidden;
             text-overflow: ellipsis;
         }
+    }
+
+    &__running-out {
+        @include adaptiv-font(14, 18, 10, 14, "Montserrat-Bold");
+
+        display: none;
+        margin-bottom: 30px;
+        text-align: center;
+        color: $red_1;
     }
 
     &__cart {

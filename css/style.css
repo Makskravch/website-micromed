@@ -181,6 +181,7 @@ input[type=number] {
 
 .tile {
   position: relative;
+  height: 100%;
   width: 100%;
   max-width: 500px;
   min-width: 100px;
@@ -243,6 +244,14 @@ input[type=number] {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.tile--running-out .tile__running-out {
+  display: block;
+}
+
+.tile--running-out .tile__cost {
+  margin-bottom: 0;
 }
 
 .tile--expected .tile__unavailable {
@@ -416,6 +425,20 @@ input[type=number] {
 }
 
 .tile__inner {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
   padding: 23.75% 15px 12.5%;
 }
 
@@ -617,7 +640,6 @@ input[type=number] {
 
 .tile__title {
   font: 1.4rem/2rem "Montserrat-Medium";
-  height: 40px;
   max-width: 270px;
   margin: 0 auto;
   color: #646464;
@@ -658,7 +680,6 @@ input[type=number] {
   line-height: -webkit-calc(12px + 10 * ((100vw - 320px) / 1600));
   line-height: calc(12px + 10 * ((100vw - 320px) / 1600));
   font-family: "Montserrat-Bold";
-  height: 44px;
   margin-bottom: 30px;
   color: #000;
   text-align: center;
@@ -681,6 +702,18 @@ input[type=number] {
   overflow: hidden;
   -o-text-overflow: ellipsis;
      text-overflow: ellipsis;
+}
+
+.tile__running-out {
+  font-size: -webkit-calc(10px + 4 * ((100vw - 320px) / 1600));
+  font-size: calc(10px + 4 * ((100vw - 320px) / 1600));
+  line-height: -webkit-calc(14px + 4 * ((100vw - 320px) / 1600));
+  line-height: calc(14px + 4 * ((100vw - 320px) / 1600));
+  font-family: "Montserrat-Bold";
+  display: none;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #F43F3F;
 }
 
 .tile__cart_btn {
@@ -1219,6 +1252,11 @@ input[type=number] {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
@@ -1315,7 +1353,6 @@ input[type=number] {
   -webkit-align-items: flex-end;
       -ms-flex-align: end;
           align-items: flex-end;
-  margin-bottom: 20px;
 }
 
 .product--line .tile__cost_price {
