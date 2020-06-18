@@ -464,6 +464,10 @@ $(document).ready(function() {
                 $(this).find('.filter__dropdown_description').slideToggle()
             }
         })
+        $(document).on('click', '.filter_btn', function() {
+            $('.sidebar__body').toggleClass('is-active')
+            body.toggleClass('overflow')
+        })
     }
 
     // Product display mode switch (grid or lines)

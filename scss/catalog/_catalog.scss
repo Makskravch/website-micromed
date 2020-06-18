@@ -166,6 +166,14 @@
 
     .catalog {
 
+        &__body {
+            flex-direction: column;
+        }
+
+        &__title {
+            padding: 25px 20px;
+        }
+
         &__nav {
 
             &_list {
