@@ -183,6 +183,9 @@ $(document).ready(function() {
                     }
                 },
             ]
+        })
+        .on('setPosition', function (event, slick) {
+            slick.$slides.css('height', slick.$slideTrack.height() + 'px');
         });
     }
 
@@ -218,6 +221,9 @@ $(document).ready(function() {
                     }
                 },
             ]
+        })
+        .on('setPosition', function (event, slick) {
+            slick.$slides.css('height', slick.$slideTrack.height() + 'px');
         });
     }
 
@@ -253,6 +259,9 @@ $(document).ready(function() {
                     }
                 },
             ]
+        })
+        .on('setPosition', function (event, slick) {
+            slick.$slides.css('height', slick.$slideTrack.height() + 'px');
         });
     }
 
@@ -354,6 +363,9 @@ $(document).ready(function() {
                     }
                 },
             ]
+        })
+        .on('setPosition', function (event, slick) {
+            slick.$slides.css('height', slick.$slideTrack.height() + 'px');
         });
     }
 
@@ -389,6 +401,9 @@ $(document).ready(function() {
                     }
                 },
                 ]
+            })
+            .on('setPosition', function (event, slick) {
+                slick.$slides.css('height', slick.$slideTrack.height() + 'px');
             });
         } else if ($('.similar__body_item').length == 2) {
             $('.similar__body_list').slick({
@@ -407,6 +422,9 @@ $(document).ready(function() {
                         }
                     },
                 ]
+            })
+            .on('setPosition', function (event, slick) {
+                slick.$slides.css('height', slick.$slideTrack.height() + 'px');
             });
         } else {
             $('.similar__body_list').slick({
@@ -431,6 +449,9 @@ $(document).ready(function() {
                         }
                     },
                 ]
+            })
+            .on('setPosition', function (event, slick) {
+                slick.$slides.css('height', slick.$slideTrack.height() + 'px');
             });
         }
     }

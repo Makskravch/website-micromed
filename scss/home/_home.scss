@@ -1,5 +1,9 @@
 .home {
 
+    .slick-slide > div {
+        height: 100%;
+    }
+
     &__slider {
 
         &_list {
@@ -167,6 +171,7 @@
     &__tile {
 
         &_item {
+            height: 100%;
             border: 1px solid $gray_1;
             border-left: 0;
         }
