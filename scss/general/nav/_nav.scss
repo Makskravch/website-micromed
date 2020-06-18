@@ -58,7 +58,7 @@
     transform: translateY(-200%);
     will-change: transform;
     transition: transform 0.2s;
-    z-index: 2;
+    z-index: 3;
 
     &__list {
         display: grid;

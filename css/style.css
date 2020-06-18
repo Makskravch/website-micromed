@@ -2799,7 +2799,7 @@ input[type=number] {
   -o-transition: transform 0.2s;
   transition: transform 0.2s;
   transition: transform 0.2s, -webkit-transform 0.2s;
-  z-index: 2;
+  z-index: 3;
 }
 
 .subnav__list {
@@ -2912,7 +2912,7 @@ input[type=number] {
   -o-transition: transform 0.2s;
   transition: transform 0.2s;
   transition: transform 0.2s, -webkit-transform 0.2s;
-  z-index: 2;
+  z-index: 3;
 }
 
 .header__contacts_item {
@@ -2975,7 +2975,7 @@ input[type=number] {
 
 .header__contacts_link--arrow-down {
   position: relative;
-  z-index: 3;
+  z-index: 4;
 }
 
 .header__contacts_link--arrow-down::after {
@@ -4035,6 +4035,21 @@ input[type=number] {
           align-items: center;
 }
 
+.product--expected .product__preview_photo {
+  opacity: 0.5;
+}
+
+.product--expected .product__preview_expected {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .product__preview {
   position: -webkit-sticky;
   position: sticky;
@@ -4118,6 +4133,31 @@ input[type=number] {
   width: 100%;
   padding: 23px 0;
   background-color: #9D9D9D;
+  color: #fff;
+  text-align: center;
+}
+
+.product__preview_expected {
+  display: none;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.product__preview_expected_title {
+  font-size: -webkit-calc(14px + 4 * ((100vw - 320px) / 1600));
+  font-size: calc(14px + 4 * ((100vw - 320px) / 1600));
+  line-height: -webkit-calc(18px + 4 * ((100vw - 320px) / 1600));
+  line-height: calc(18px + 4 * ((100vw - 320px) / 1600));
+  font-family: "Montserrat-Bold";
+  width: 100%;
+  padding: 23px 0;
+  background-color: #215CCE;
   color: #fff;
   text-align: center;
 }
@@ -6882,6 +6922,11 @@ input[type=number] {
     display: none;
   }
 
+  .product__description .similar__title {
+    width: 100%;
+    padding: 0 20px;
+  }
+
   .product__body {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -6891,6 +6936,10 @@ input[type=number] {
   }
 
   .product__preview {
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+        -ms-flex-order: 1;
+            order: 1;
     position: relative;
     width: 100%;
   }
@@ -6951,6 +7000,10 @@ input[type=number] {
     color: #000;
   }
 
+  .product__preview_body {
+    overflow-x: hidden;
+  }
+
   .product__preview_list {
     display: block;
     width: 100%;
@@ -6991,6 +7044,10 @@ input[type=number] {
   }
 
   .product__description {
+    -webkit-box-ordinal-group: 4;
+    -webkit-order: 3;
+        -ms-flex-order: 3;
+            order: 3;
     width: 100%;
   }
 
@@ -7011,13 +7068,87 @@ input[type=number] {
     margin-bottom: 0;
   }
 
+  .product__description_pane_options {
+    padding: 0 20px 20px;
+  }
+
   .product__tab {
     display: none;
   }
 
   .product__buy {
+    -webkit-box-ordinal-group: 3;
+    -webkit-order: 2;
+        -ms-flex-order: 2;
+            order: 2;
     position: relative;
     width: 100%;
+  }
+
+  .product__buy_head {
+    display: none;
+  }
+
+  .product__buy_body {
+    display: none;
+  }
+
+  .product__buy_footer .color {
+    padding: 15px;
+    margin-bottom: 0;
+  }
+
+  .product__buy_footer .color__list {
+    grid-template-columns: repeat(auto-fit, minmax(20px, 1fr));
+    grid-gap: 5px;
+  }
+
+  .product__buy_footer_price {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 50%;
+    height: 50px;
+    background-color: #fff;
+    margin-bottom: 0;
+  }
+
+  .product__buy_footer_link {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 50%;
+    height: 50px;
+    padding: 0 15px;
   }
 
   .catalog__nav_list {

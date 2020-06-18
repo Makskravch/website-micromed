@@ -296,9 +296,13 @@ $(document).ready(function() {
                 }
             }
         })
+
+        $(document).on('click', '.product__description_tab', function() {
+            $(this).next().slideToggle()
+        })
     }
 
-    
+    // Product preview slider (mobile version)
     if ($('.product__preview_list').length
         && document.documentElement.clientWidth < 768) {
         $('.product__preview_list').slick({

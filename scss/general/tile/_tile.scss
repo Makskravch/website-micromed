@@ -99,28 +99,37 @@
 
     &--discontinued {
 
-        .tile__discontinued {
-            display: flex;
-        }
+        .tile {
 
-        .tile__img {
-            filter: grayscale(1);
-        }
+            &__discontinued {
+                display: flex;
+            }
 
-        .tile__cart_btn {
-            display: none;
-        }
+            &__img {
+                filter: grayscale(1);
+            }
 
-        .tile__description {
-            opacity: 0.5;
-        }
+            &__cart {
 
-        .tile__cost {
-            opacity: 0.5;
-        }
+                &_btn {
+                    display: none;
+                }
+            }
 
-        .tile__discontinued_btn {
-            display: flex;
+            &__description {
+                opacity: 0.5;
+            }
+
+            &__cost {
+                opacity: 0.5;
+            }
+
+            &__discontinued {
+
+                &_btn {
+                    display: flex;
+                }
+            }
         }
     }
 
