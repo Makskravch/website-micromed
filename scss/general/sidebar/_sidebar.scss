@@ -81,7 +81,7 @@
     }
 
     &__button {
-        display: flex;
+        display: none;
     }
 
     &__submit {
@@ -147,6 +147,10 @@
 
         .filter {
             padding: 40px 20px;
+        }
+
+        &__button {
+            display: flex;
         }
 
         &__submit {

@@ -2397,10 +2397,7 @@ input[type=number] {
 }
 
 .sidebar__button {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
 }
 
 .sidebar__submit {
@@ -6861,6 +6858,13 @@ input[type=number] {
 
   .sidebar .filter {
     padding: 40px 20px;
+  }
+
+  .sidebar__button {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
   }
 
   .sidebar__submit {
