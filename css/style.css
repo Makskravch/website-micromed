@@ -4259,14 +4259,14 @@ input[type=number] {
   cursor: pointer;
 }
 
-.product__tab_item:first-child {
+.product__tab_item:last-child {
+  border-right: 0;
+}
+
+.product__tab_item.is-active {
   font-family: "Montserrat-Bold";
   color: #215CCE;
   cursor: default;
-}
-
-.product__tab_item:last-child {
-  border-right: 0;
 }
 
 .product__description {
@@ -4282,7 +4282,7 @@ input[type=number] {
   border-right: 1px solid #E5E5E5;
 }
 
-.product__description_item:first-child .product__description_pane {
+.product__description_item.is-active .product__description_pane {
   display: block;
 }
 

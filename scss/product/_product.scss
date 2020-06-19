@@ -198,21 +198,15 @@
             text-align: center;
             cursor: pointer;
 
-            &:first-child {
-                font-family: "Montserrat-Bold";
-                color: $blue_0;
-                cursor: default;
-            }
-
             &:last-child {
                 border-right: 0;
             }
 
-            // &--active {
-            //     font-family: "Montserrat-Bold";
-            //     color: $blue_0;
-            //     cursor: default;
-            // }
+            &.is-active {
+                font-family: "Montserrat-Bold";
+                color: $blue_0;
+                cursor: default;
+            }
         }
     }
 
@@ -225,7 +219,7 @@
 
         &_item {
 
-            &:first-child {
+            &.is-active {
 
                 .product__description_pane {
                     display: block;

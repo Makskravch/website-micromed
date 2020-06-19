@@ -287,22 +287,17 @@ $(document).ready(function() {
         const tabs = $('.product__tab_item')
         const items = $('.product__description_item')
 
-        $("#product__description").click(function(e) {
+        tabs.first().addClass('is-active')
+        items.first().addClass('is-active')
 
-            if ($(e.target).closest('.product__description_tab').length) {
-                items.removeClass('product__description_item--active');
-                $(e.target).closest('.product__description_item').addClass('product__description_item--active')
-            }
+        $(document).on('click', '#product__description', function(e) {
             if ($(e.target).closest('.product__tab_item').length) {
-                tabs.removeClass('product__tab_item--active');
-                $(e.target).closest('.product__tab_item').addClass('product__tab_item--active')
+                tabs.removeClass('is-active')
+                $(e.target).closest('.product__tab_item').addClass('is-active')
+                items.removeClass('is-active')
 
-                for (let i = 0; i < 4; i++) {
-                    if ($(e.target).closest('.product__tab_item')[0] == tabs[i]) {
-                        items.find('.product__description_pane').css('display', 'none')
-                        items[i].querySelector('.product__description_pane').style.display = 'block'
-                    }
-                }
+                let index = tabs.index(e.target)
+                items[index].classList.add('is-active')
             }
         })
 
