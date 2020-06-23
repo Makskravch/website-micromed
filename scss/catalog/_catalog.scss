@@ -105,7 +105,31 @@
     &__description {
 
         &_inner {
+            @include adaptiv-font(14, 24, 10, 18, "Montserrat-Regular");
+
+            color: $black_0;
             padding: 6.51% 6.51% 6.51% 0;
+
+            h2 {
+                @include adaptiv-font(16, 24, 14, 18, "Montserrat-Bold");
+
+                margin-bottom: 24px;
+                color: $black_0;
+            }
+
+            h3 {
+                @include adaptiv-font(14, 20, 12, 16, "Montserrat-Bold");
+
+                margin-bottom: 18px;
+                color: $black_0;
+            }
+
+            h4 {
+                @include adaptiv-font(12, 18, 10, 14, "Montserrat-Bold");
+
+                margin-bottom: 14px;
+                color: $black_0;
+            }
         }
 
         &_title {

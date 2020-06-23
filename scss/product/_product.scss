@@ -268,7 +268,7 @@
                 display: flex;
                 justify-content: center;
                 align-items: flex-start;
-                padding: 4.83% 0 7.72%;
+                padding: 4.83% 0 0;
 
                 &_inner {
                     width: 70.46%;
@@ -301,6 +301,7 @@
             }
 
             &_definition {
+                @include adaptiv-font(14, 24, 10, 14, "Montserrat-Regular");
 
                 &_paragraph {
                     @include adaptiv-font(14, 24, 10, 14, "Montserrat-Regular");
@@ -370,6 +371,10 @@
 
                     &_list {
                         width: 70.46%;
+
+                        p {
+                            @include adaptiv-font(14, 18, 10, 12, "Montserrat-Regular");
+                        }
                     }
 
                     &_item {
@@ -437,12 +442,29 @@
                     margin-bottom: 8.9%;
                     color: $black_0;
                 }
+
+                .control-label {
+                    @include adaptiv-font(12, 14, 10, 12, "Montserrat-Medium");
+                }
+
+                .alert {
+                    @include adaptiv-font(10, 12, 8, 10, "Montserrat-Regular");
+
+                    margin-bottom: 5px;
+                }
             }
 
             &_input_wrap {
+                @include adaptiv-font(12, 14, 8, 10, "Montserrat-Regular");
+
                 display: flex;
+                align-items: center;
                 justify-content: space-between;
                 margin-bottom: 4.66%;
+
+                input {
+                    margin: 0;
+                }
             }
 
             &_input {

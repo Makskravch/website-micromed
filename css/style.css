@@ -2798,7 +2798,7 @@ input[type=number] {
   -webkit-transition: color 0.2s;
   -o-transition: color 0.2s;
   transition: color 0.2s;
-  z-index: 3;
+  z-index: 4;
 }
 
 .nav__link:hover {
@@ -3415,10 +3415,6 @@ input[type=number] {
   -webkit-transition: fill 0.3s;
   -o-transition: fill 0.3s;
   transition: fill 0.3s;
-}
-
-.home .slick-slide > div {
-  height: 100%;
 }
 
 .home__slider_list.slick-dotted {
@@ -4353,7 +4349,7 @@ input[type=number] {
   -webkit-align-items: flex-start;
       -ms-flex-align: start;
           align-items: flex-start;
-  padding: 4.83% 0 7.72%;
+  padding: 4.83% 0 0;
 }
 
 .product__description_pane_body_inner {
@@ -4384,6 +4380,14 @@ input[type=number] {
   line-height: calc(14px + 10 * ((100vw - 320px) / 1600));
   font-family: "Montserrat-Medium";
   color: #000;
+}
+
+.product__description_pane_definition {
+  font-size: -webkit-calc(10px + 4 * ((100vw - 320px) / 1600));
+  font-size: calc(10px + 4 * ((100vw - 320px) / 1600));
+  line-height: -webkit-calc(14px + 10 * ((100vw - 320px) / 1600));
+  line-height: calc(14px + 10 * ((100vw - 320px) / 1600));
+  font-family: "Montserrat-Regular";
 }
 
 .product__description_pane_definition_paragraph {
@@ -4461,6 +4465,14 @@ input[type=number] {
 
 .product__description_pane_respond_body_list {
   width: 70.46%;
+}
+
+.product__description_pane_respond_body_list p {
+  font-size: -webkit-calc(10px + 4 * ((100vw - 320px) / 1600));
+  font-size: calc(10px + 4 * ((100vw - 320px) / 1600));
+  line-height: -webkit-calc(12px + 6 * ((100vw - 320px) / 1600));
+  line-height: calc(12px + 6 * ((100vw - 320px) / 1600));
+  font-family: "Montserrat-Regular";
 }
 
 .product__description_pane_respond_body_item {
@@ -4550,16 +4562,46 @@ input[type=number] {
   color: #000;
 }
 
+.product__description_pane_form .control-label {
+  font-size: -webkit-calc(10px + 2 * ((100vw - 320px) / 1600));
+  font-size: calc(10px + 2 * ((100vw - 320px) / 1600));
+  line-height: -webkit-calc(12px + 2 * ((100vw - 320px) / 1600));
+  line-height: calc(12px + 2 * ((100vw - 320px) / 1600));
+  font-family: "Montserrat-Medium";
+}
+
+.product__description_pane_form .alert {
+  font-size: -webkit-calc(8px + 2 * ((100vw - 320px) / 1600));
+  font-size: calc(8px + 2 * ((100vw - 320px) / 1600));
+  line-height: -webkit-calc(10px + 2 * ((100vw - 320px) / 1600));
+  line-height: calc(10px + 2 * ((100vw - 320px) / 1600));
+  font-family: "Montserrat-Regular";
+  margin-bottom: 5px;
+}
+
 .product__description_pane_input_wrap {
+  font-size: -webkit-calc(8px + 4 * ((100vw - 320px) / 1600));
+  font-size: calc(8px + 4 * ((100vw - 320px) / 1600));
+  line-height: -webkit-calc(10px + 4 * ((100vw - 320px) / 1600));
+  line-height: calc(10px + 4 * ((100vw - 320px) / 1600));
+  font-family: "Montserrat-Regular";
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-bottom: 4.66%;
+}
+
+.product__description_pane_input_wrap input {
+  margin: 0;
 }
 
 .product__description_pane_input {
@@ -5035,7 +5077,43 @@ input[type=number] {
 }
 
 .catalog__description_inner {
+  font-size: -webkit-calc(10px + 4 * ((100vw - 320px) / 1600));
+  font-size: calc(10px + 4 * ((100vw - 320px) / 1600));
+  line-height: -webkit-calc(18px + 6 * ((100vw - 320px) / 1600));
+  line-height: calc(18px + 6 * ((100vw - 320px) / 1600));
+  font-family: "Montserrat-Regular";
+  color: #000;
   padding: 6.51% 6.51% 6.51% 0;
+}
+
+.catalog__description_inner h2 {
+  font-size: -webkit-calc(14px + 2 * ((100vw - 320px) / 1600));
+  font-size: calc(14px + 2 * ((100vw - 320px) / 1600));
+  line-height: -webkit-calc(18px + 6 * ((100vw - 320px) / 1600));
+  line-height: calc(18px + 6 * ((100vw - 320px) / 1600));
+  font-family: "Montserrat-Bold";
+  margin-bottom: 24px;
+  color: #000;
+}
+
+.catalog__description_inner h3 {
+  font-size: -webkit-calc(12px + 2 * ((100vw - 320px) / 1600));
+  font-size: calc(12px + 2 * ((100vw - 320px) / 1600));
+  line-height: -webkit-calc(16px + 4 * ((100vw - 320px) / 1600));
+  line-height: calc(16px + 4 * ((100vw - 320px) / 1600));
+  font-family: "Montserrat-Bold";
+  margin-bottom: 18px;
+  color: #000;
+}
+
+.catalog__description_inner h4 {
+  font-size: -webkit-calc(10px + 2 * ((100vw - 320px) / 1600));
+  font-size: calc(10px + 2 * ((100vw - 320px) / 1600));
+  line-height: -webkit-calc(14px + 4 * ((100vw - 320px) / 1600));
+  line-height: calc(14px + 4 * ((100vw - 320px) / 1600));
+  font-family: "Montserrat-Bold";
+  margin-bottom: 14px;
+  color: #000;
 }
 
 .catalog__description_title {

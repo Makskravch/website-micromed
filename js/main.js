@@ -130,13 +130,11 @@ $(document).ready(function() {
             infinite: false,
             slidesToShow: 1,
             slidesToScroll: 1,
+            rows: 0,
             arrows: false,
             draggable: false,
             dots: true,
             dotsClass: 'home__slider_pagination',
-            // fade: true,
-            // autoplay: true,
-            // infinite: true,
             speed: 1000,
             responsive: [
                 {
