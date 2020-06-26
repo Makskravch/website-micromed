@@ -1,4 +1,5 @@
 .product {
+    @include adaptiv-font(18, 22, 14, 18, "Montserrat-Medium");
 
     &__head {
         padding: 1.41% 2.24%;
@@ -280,6 +281,7 @@
                 &_item {
                     display: grid;
                     grid-template-columns: 1fr 1fr;
+                    grid-gap: 15px;
                     padding: 10px 0;
                     border-bottom: 1px solid $gray_1;
                     margin-bottom: 10px;
@@ -303,18 +305,24 @@
             &_definition {
                 @include adaptiv-font(14, 24, 10, 14, "Montserrat-Regular");
 
+                color: $gray_7;
+
                 &_paragraph {
                     @include adaptiv-font(14, 24, 10, 14, "Montserrat-Regular");
                     // @include font(14px, 24px, "Montserrat-Regular");
-                    
+
                     margin-bottom: 24px;
                     color: $gray_7;
-                    
+
                     span {
                         @include adaptiv-font(14, 24, 10, 14, "Montserrat-Medium");
                         // @include font(14px, 24px, "Montserrat-Medium");
-    
+
                         color: $gray_7;
+                    }
+
+                    a {
+                        @include adaptiv-font(14, 24, 10, 14, "Montserrat-Medium");
                     }
                 }
             }
@@ -373,7 +381,9 @@
                         width: 70.46%;
 
                         p {
-                            @include adaptiv-font(14, 18, 10, 12, "Montserrat-Regular");
+                            @include adaptiv-font(16, 18, 12, 14, "Montserrat-Medium");
+
+                            color: $red_1;
                         }
                     }
 
@@ -445,12 +455,18 @@
 
                 .control-label {
                     @include adaptiv-font(12, 14, 10, 12, "Montserrat-Medium");
+
+                    color: $red_1;
                 }
 
                 .alert {
-                    @include adaptiv-font(10, 12, 8, 10, "Montserrat-Regular");
+                    @include adaptiv-font(12, 14, 10, 12, "Montserrat-Medium");
 
                     margin-bottom: 5px;
+
+                    &-danger {
+                        color: $red_1;
+                    }
                 }
             }
 
