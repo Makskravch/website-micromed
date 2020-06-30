@@ -4986,6 +4986,7 @@ input[type=number] {
   color: #fff;
   background-color: #215CCE;
   text-align: center;
+  cursor: pointer;
 }
 
 .catalog__head {
@@ -5021,6 +5022,10 @@ input[type=number] {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.catalog__main {
+  width: 100%;
 }
 
 .catalog__main .pagination__list {
