@@ -471,7 +471,7 @@ $(document).ready(function() {
 
     // CATALOG page
     // Dropdown elements for filter block
-    if ($('.filter').length) {
+    if ($('.sidebar').length) {
         $('.filter__dropdown').on('click', function(e) {
             if ($(e.target).hasClass('filter__dropdown_title')) {
                 $(this).toggleClass('filter__dropdown--open')
@@ -481,6 +481,9 @@ $(document).ready(function() {
         $(document).on('click', '.filter_btn', function() {
             $('.sidebar__body').toggleClass('is-active')
             body.toggleClass('overflow')
+        })
+        $(document).on('click', '.ocf-option-name', function() {
+            $(this).next().slideToggle()
         })
     }
 
